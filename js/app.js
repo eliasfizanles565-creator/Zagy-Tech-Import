@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. SELECCIÓN DE ELEMENTOS
     const btnColor = document.getElementById('btn-color');
     const btnMenu = document.getElementById('btn-menu');
     const btnClose = document.getElementById('btn-close');
     const mobileMenu = document.getElementById('mobile-menu');
     const html = document.documentElement;
+    const body = document.body;
 
-    // --- LÓGICA MODO OSCURO (UNIFICADA) ---
-    // Al cargar la página, aplicamos lo que esté guardado en la memoria
+    // --- MODO OSCURO ---
     if (localStorage.getItem('theme') === 'dark') {
         html.classList.add('dark');
     }
@@ -15,32 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnColor) {
         btnColor.addEventListener('click', () => {
             html.classList.toggle('dark');
-            // Guardamos el estado actual
-            const isDark = html.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
         });
     }
 
-    // --- LÓGICA MENÚ SÁNDWICH (MÓVIL) ---
+    // --- MENÚ FULL SCREEN ---
     if (btnMenu && mobileMenu) {
-        // Abrir menú lateral
+        // Abrir: Quitamos la traslación negativa (baja desde arriba)
         btnMenu.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.remove('-translate-y-full');
+            body.classList.add('overflow-hidden'); // Evita que la página se mueva detrás
         });
 
-        // Cerrar menú con la "X"
-        if (btnClose) {
-            btnClose.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
-            });
-        }
+        // Cerrar: Volvemos a subirlo
+        const closeMenu = () => {
+            mobileMenu.classList.add('-translate-y-full');
+            body.classList.remove('overflow-hidden'); // Reactiva el scroll
+        };
 
-        // Cerrar menú si el usuario hace click en cualquier parte fuera del menú
-        document.addEventListener('click', (e) => {
-            // Si el click NO fue en el menú y NO fue en el botón de hamburguesa...
-            if (!mobileMenu.contains(e.target) && !btnMenu.contains(e.target)) {
-                mobileMenu.classList.add('translate-x-full');
-            }
-        });
+        if (btnClose) btnClose.addEventListener('click', closeMenu);
+
+        // Cerrar al clickear cualquier link del menú
+        const links = mobileMenu.querySelectorAll('a');
+        links.forEach(link => link.addEventListener('click', closeMenu));
     }
 });
