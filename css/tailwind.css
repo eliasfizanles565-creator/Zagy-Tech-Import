@@ -2,3 +2,116 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+/* "CLASE" PARA QUE FUNCIONE EL DEGRADADO */
+.degradado{
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+/* ."clase" para que funcione el degradado */
+
+
+
+
+/* SEPARAR PALABRAS ENTERAS */
+.spaceletter{
+    word-spacing: 3px;
+}
+
+.spaceletter2{
+    word-spacing: 7px;
+}
+/* .separar palabras enteras */
+
+
+
+
+
+
+.card__article {
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, .5);
+    overflow: hidden;
+    flex: 0 0 64px;
+    transition: flex .5s ease;
+    cursor:url('../assets/cursor3.png'), auto;
+}
+
+@media (width >= 540px) {
+    .card__article {
+        flex: 0 0 97px;
+    }
+}
+@media (width >= 1024px) {
+    .card__article {
+        flex: 0 0 85px;
+    }
+}
+
+
+
+.card__img{
+    transition: scale .4s;
+}
+
+.card__data {
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: opacity .4s ease .1s, transform .4s ease .1s;
+}
+
+
+
+
+/* Card active by default, takes up more space */
+.card__active {
+  flex: 5;
+}
+
+.card__active .card__data {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card__active:hover .card__img {
+  scale: 1.1;
+}
+
+/* Any card expands when you hover over it */
+.card__article:hover {
+  flex: 5 ;
+}
+
+/* If the hover is NOT on the card active, contract card active at base proportion */
+.card:has(.card__article:not(.card__active):hover) .card__active {
+  flex: 0 0 64px;
+}
+
+/* If the hover is NOT in card active, it also hides its contents */
+.card:has(.card__article:not(.card__active):hover) .card__active .card__data {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+/* Show content on the other cards */
+.card__article:hover .card__data {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* BREAKPOINTS DE HOVER */
+
+@media (width >= 540px) {
+    .card:has(.card__article:not(.card__active):hover) .card__active {
+    flex: 0 0 97px;
+    }
+}
+@media (width >= 1024px) {
+    .card:has(.card__article:not(.card__active):hover) .card__active {
+    flex: 0 0 85px;
+    }
+}
+
+
+
+
