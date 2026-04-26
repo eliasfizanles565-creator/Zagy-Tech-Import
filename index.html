@@ -22,16 +22,16 @@
         </div>
 
         <section class="hidden lg:flex gap-10 font-bold uppercase text-sm tracking-widest">
-            <a href="#" class="hover:text-lime-500 transition-colors">Inicio</a>
-            <a href="#" class="hover:text-lime-500 transition-colors">Categorías</a>
-            <a href="#" class="hover:text-lime-500 transition-colors">Productos</a>
-            <a href="#" class="hover:text-lime-500 transition-colors">Ofertas</a>
-            <a href="#" class="hover:text-lime-500 transition-colors">Contacto</a>
+            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Inicio</a>
+            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Categorías</a>
+            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Productos</a>
+            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Ofertas</a>
+            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Contacto</a>
         </section>
 
         <div class="flex items-center gap-6 text-2xl mr-20">
             <button id="btn-menu" class=" order-1">
-                <i class="ri-menu-3-line"></i>
+                <i class="ri-menu-3-line cursor-pointer"></i>
             </button>
             <i class="ri-search-line cursor-pointer order-2"></i>
             <i class="ri-shopping-cart-2-line cursor-pointer order-3"></i>
@@ -46,18 +46,18 @@
     flex flex-col items-center justify-center
     transform -translate-y-full transition-transform duration-500 ease-in-out ">
     
-        <button id="btn-close" class="x-circle absolute top-25 right-8 p-3 text-blue-400 dark:text-rose-500 transition-transform duration-300">
+        <button id="btn-close" class="x-circle absolute top-25 right-8 p-3 text-blue-400 dark:text-rose-500 transition-transform duration-300 cursor-pointer">
             <i class="ri-close-circle-line text-5xl"></i>
         </button>
 
         <!-- NAV ARTICLES -->
         <nav class="flex flex-col gap-6 w-[85%] max-w-3xl max-h-4/5">
 
-            <a href="#" class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-white/10 border border-white/20 dark:border-0
-            dark:bg-linear-to-r from-green-500/80 from-0% via-lime-500 via-30% to-green-600/90 select-none touch-none [-webkit-touch-callout:none]
+            <a href="#"class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-white/10 border border-white/20 dark:border-0 dark:bg-linear-to-r from-green-500/80 from-0% via-lime-500 via-30% to-green-600/90 cursor-pointer dark:shadow-lime-400
             transition-all active:scale-110 shadow-xl">
                 <div class="flex items-center gap-5">
                     <div class="size-12 flex items-center justify-center rounded-2xl bg-lime-500 text-white shadow-[0_0_15px_rgba(132,204,22,0.5)]
+                    dark:shadow-lime-400
                     ">
                         <i class="ri-home-4-line text-2xl"></i>
                     </div>
@@ -67,10 +67,11 @@
             </a>
 
             <a href="#" class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-white/10 border border-white/20 dark:border-0
-            dark:bg-linear-to-r from-fuchsia-500/80 from-0% via-pink-500 via-30% to-rose-600/90
+            dark:bg-linear-to-r from-fuchsia-500/80 from-0% via-pink-500 via-30% to-rose-600/90 cursor-pointer dark:shadow-fuchsia-500
             transition-all active:scale-110 shadow-xl">
                 <div class="flex items-center gap-5">
-                    <div class="size-12 flex items-center justify-center rounded-2xl bg-fuchsia-500 text-white shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+                    <div class="size-12 flex items-center justify-center rounded-2xl bg-fuchsia-500 text-white shadow-[0_0_15px_rgba(139,92,246,0.5)]
+                    dark:shadow-fuchsia-400">
                         <i class="ri-apps-2-line text-2xl"></i>
                     </div>
                     <span class="text-xl font-bold tracking-tight">Categorías</span>
@@ -79,10 +80,11 @@
             </a>
 
             <a href="#" class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-white/10 border border-white/20 dark:border-0
-            dark:bg-linear-to-r from-orange-500/80 from-0% via-amber-500 via-30% to-yellow-500
+            dark:bg-linear-to-r from-orange-500/80 from-0% via-amber-500 via-30% to-yellow-500 cursor-pointer dark:shadow-orange-400
             transition-all active:scale-110 shadow-xl">
                 <div class="flex items-center gap-5">
-                    <div class="size-12 flex items-center justify-center rounded-2xl bg-orange-500 text-white shadow-[0_0_15px_rgba(249,115,22,0.5)]">
+                    <div class="size-12 flex items-center justify-center rounded-2xl bg-orange-500 text-white shadow-[0_0_15px_rgba(249,115,22,0.5)]
+                    dark:shadow-orange-400">
                         <i class="ri-fire-line text-2xl"></i>
                     </div>
                     <span class="text-xl font-bold tracking-tight">Ofertas</span>
@@ -92,9 +94,10 @@
 
             <a href="#" class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-white/10 border border-white/20 dark:border-0
             dark:bg-linear-to-r from-blue-500/80 from-0% via-sky-500 via-30% to-indigo-500
-            transition-all active:scale-110 shadow-xl">
+            transition-all active:scale-110 shadow-xl cursor-pointer dark:shadow-sky-400">
                 <div class="flex items-center gap-5">
-                    <div class="size-12 flex items-center justify-center rounded-2xl bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                    <div class="size-12 flex items-center justify-center rounded-2xl bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]
+                    dark:shadow-blue-400">
                         <i class="ri-customer-service-2-line text-2xl"></i>
                     </div>
                     <span class="text-xl font-bold tracking-tight">Contacto</span>
@@ -108,7 +111,7 @@
 
 
 
-    <button id="btn-color" class="size-12 fixed top-5 right-5 flex items-center justify-center rounded-full shadow-lg bg-zinc-800 text-white dark:bg-violet-100 dark:text-zinc-900 z-[60] transition-all active:scale-95">
+    <button id="btn-color" class="size-12 fixed top-5 right-5 flex items-center cursor-pointer justify-center rounded-full shadow-lg bg-zinc-800 text-white dark:bg-violet-100 dark:text-zinc-900 z-60 transition-all active:scale-95">
         <i class="ri-moon-line text-xl dark:hidden"></i>
         <i class="ri-sun-line text-xl hidden dark:block"></i>
     </button>

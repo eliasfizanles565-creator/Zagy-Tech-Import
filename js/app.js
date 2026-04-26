@@ -39,3 +39,40 @@ document.addEventListener('DOMContentLoaded', () => {
         links.forEach(link => link.addEventListener('click', closeMenu));
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.nav-card-zagi');
+    
+    cards.forEach(card => {
+        // Bloquea el menú contextual (clic derecho / presión larga)
+        card.addEventListener('contextmenu', e => e.preventDefault());
+        
+        // Bloquea el inicio del toque largo en móviles
+        card.addEventListener('touchstart', e => {
+            // Esto evita que el navegador inicie el temporizador del menú contextual
+            // pero deja que el clic siga funcionando.
+        }, { passive: true });
+    });
+});
