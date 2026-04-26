@@ -2018,14 +2018,38 @@
 .dark [class*="navPrincipal"]:hover {
   color: #84cc16;
 }
-.logito:hover {
-  transform: scale(1.30);
-  transition: .5s ease-in-out;
+.logito {
+  animation: latidoLogo 3s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes latidoLogo {
+  0% {
+    transform: scale(1);
+    translate: 0 0;
+  }
+  50% {
+    transform: scale(1.30);
+    translate: 0 0;
+  }
+  100% {
+    transform: scale(1);
+    translate: 0 0;
+  }
 }
 @media (width >= 540px) {
-  .logito:hover {
-    transform: scale(1.40) translateX(3rem);
-    transition: .5s ease-in-out;
+  @keyframes latidoLogo {
+    0% {
+      transform: scale(1);
+      translate: 0 0;
+    }
+    50% {
+      transform: scale(1.40);
+      translate: 3rem 0;
+    }
+    100% {
+      transform: scale(1);
+      translate: 0 0;
+    }
   }
 }
 @property --tw-translate-x {
