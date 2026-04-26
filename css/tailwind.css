@@ -191,3 +191,41 @@
 
 
 
+/* hover para el carrito y lupa */
+.lupita:hover {
+    color:#51a2ff;
+    transform: scale(1.10);
+}
+.dark [class*="lupita"]:hover {
+    color: #84cc16;
+}
+
+/* hover para el botón oscuro y claro */
+.luna:hover {
+    background-color: #51a2ff;
+    transform: scale(1.10) rotate(-45deg);
+}
+.dark [class*="luna"]:hover {
+    background-color: #84cc16;
+}
+
+/* hover para el navPrincipal */
+.navPrincipal:hover {
+    color: #51a2ff;
+    transform: scale(1.10);
+}
+.dark [class*="navPrincipal"]:hover {
+    color: #84cc16;
+}
+
+/* hover para el logo */
+.logito:hover {
+    transform: scale(1.30);
+    transition: .5s ease-in-out;
+}
+@media (width >= 540px) {
+    .logito:hover {
+    transform: scale(1.40) translateX(3rem);
+    transition: .5s ease-in-out;
+    }
+}

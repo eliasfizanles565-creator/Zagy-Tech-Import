@@ -16,25 +16,27 @@
 
 <body class="bg-violet-200 dark:bg-zinc-900 transition-colors duration-500 dark:text-white w-[90%] mx-auto overflow-x-hidden">
 
+    <!-- NAVEGACIÓN -->
     <nav class="flex items-center justify-between py-6">
         <div class="shrink-0">
-            <img class="w-28" src="assets/00 Logo.webp" alt="logo">
+            <img class="w-28 logito
+            " src="assets/00 Logo.webp" alt="logo">
         </div>
 
         <section class="hidden lg:flex gap-10 font-bold uppercase text-sm tracking-widest">
-            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Inicio</a>
-            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Categorías</a>
-            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Productos</a>
-            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Ofertas</a>
-            <a href="#" class="hover:text-lime-500 transition-colors cursor-pointer">Contacto</a>
+            <a href="#" class="navPrincipal cursor-pointer">Inicio</a>
+            <a href="#" class="navPrincipal cursor-pointer">Categorías</a>
+            <a href="#" class="navPrincipal cursor-pointer">Productos</a>
+            <a href="#" class="navPrincipal cursor-pointer">Ofertas</a>
+            <a href="#" class="navPrincipal cursor-pointer">Contacto</a>
         </section>
 
         <div class="flex items-center gap-6 text-2xl mr-20">
-            <button id="btn-menu" class=" order-1">
+            <button id="btn-menu" class=" order-1 lupita">
                 <i class="ri-menu-3-line cursor-pointer"></i>
             </button>
-            <i class="ri-search-line cursor-pointer order-2"></i>
-            <i class="ri-shopping-cart-2-line cursor-pointer order-3"></i>
+            <i class="ri-search-line cursor-pointer order-2 lupita"></i>
+            <i class="ri-shopping-cart-2-line cursor-pointer order-3 lupita"></i>
         </div>
     </nav>
     <!-- navegación -->
@@ -107,14 +109,25 @@
         </nav>
 
     </div>
-    <!-- mobile -->
+    <!-- .mobile -->
 
 
 
-    <button id="btn-color" class="size-12 fixed top-5 right-5 flex items-center cursor-pointer justify-center rounded-full shadow-lg bg-zinc-800 text-white dark:bg-violet-100 dark:text-zinc-900 z-60 transition-all active:scale-95">
+
+
+
+
+
+
+    <!-- BOTÓN MODO OSCURO Y CLARO -->
+    <button id="btn-color" class="size-12 fixed top-5 right-5 flex items-center luna cursor-pointer justify-center rounded-full shadow-lg bg-zinc-800 text-white dark:bg-violet-100 dark:text-zinc-900 z-60 transition-all active:scale-95">
         <i class="ri-moon-line text-xl dark:hidden"></i>
         <i class="ri-sun-line text-xl hidden dark:block"></i>
     </button>
+    <!-- .botón mode dark and light -->
+
+
+
 
     <script src="./js/app.js"></script>
 </body>
