@@ -423,6 +423,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .touch-none {
+    touch-action: none;
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -934,6 +937,10 @@
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
   }
   .\[clip-path\:polygon\(0_0\,100\%_0\,100\%_calc\(100\%-10px\)\,calc\(100\%-10px\)_100\%\,0_100\%\)\] {
     clip-path: polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
