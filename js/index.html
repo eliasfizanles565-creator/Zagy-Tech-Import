@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Tailwind</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+    <body class="bg-negro text-blanco w-9/10 mx-auto
+    ">
+        <!-- HERO Y CARDS-->
+        <header class="mt-10
+        2xl:mt-20
+        ">
+            <!-- HERO -->
+            <div class=" max-w-7xl mx-auto
+            lg:grid grid-cols-2 
+            ">  
+                <!-- IMAGEN-HERO -->
+                <div class="pr-8 animate-pulse">
+                    <picture>
+                        <source 
+                            sizes="1920w"
+                            srcset="assets/header.avif 1920w" 
+                            type="image/avif">
+                        <source 
+                            sizes="1920w"
+                            srcset="assets/header.webp 1920w" 
+                            type="image/webp">
+                        <source 
+                            sizes="1920w"
+                            srcset="assets/header.jpg 1920w" 
+                            type="image/jpeg">
+                        <img loading="lazy" decoding="async" src="assets/header.jpg" lazyalt="imagen" width="1000" height="500" class="">
+                    </picture>
+                </div> <!-- .imagen-hero -->
+
+                <!--  TEXTOS Y PRECIO-HERO -->
+                <div class="mt-5 text-center
+                lg:max-w-[80%] lg:mt-14
+                lg:text-left
+                ">
+                    <p class="font-extrabold text-2xl">
+                        Sonido Profesional
+                    </p>
+
+                    <h1 class="text-transparent text-6xl font-extrabold mt-1 mb-4 degradado bg-linear-to-r from-primario/80 from-0% via-cyan-500 via-30% to-secundario/90 mx-auto w-max
+                    lg:mx-0
+                    ">
+                        TechPRO
+                    </h1>
+
+                    <p class="mb-5 font-light w-9/10 mx-auto spaceletter
+                    lg:mx-0">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi illum harum repudiandae corporis iure neque atque modi quas quidem molestias in, commodi cum unde, possimus rerum veniam eos. Dolorem, ad?
+                    </p>
+                    <p class="text-base spaceletter">
+                        Desde <span class="text-5xl font-extrabold">
+                            S/299
+                        </span>
+                    </p>
+                </div> <!-- .Textos y precio-Hero -->
+            </div> <!-- .hero -->
+
+            <!-- CARDS -->
+            <section class="flex flex-wrap gap-10  justify-center mt-10 text-center spaceletter
+            mx:gap-x-10 mx:gap-y-7
+            lg:gap-10
+            2xl:gap-15
+            ">
+
+                <article class="flex flex-col  items-center w-90 border-2 border-verdeloco px-3 pt-2 pb-5 rounded-4xl bg-stone-900 animate-pulse
+                sm:max-lg:w-76
+                sm:max-lg:justify-center
+                ">
+                    <svg  xmlns="http://www.w3.org/2000/svg" class="size-10 text-primario"
+                        width="24" height="24"  
+                        fill="currentColor" viewBox="0 0 24 24" >
+                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                        <path d="M11 8h2v8h-2zm8 2h2v4h-2zm-4-5h2v14h-2zM7 3h2v18H7zM3 9h2v6H3z"></path>
+                    </svg>
+
+                    <h2 class="text-2xl uppercase font-extrabold text-verdeloco mt-2 mb-4 spaceletter2">
+                        Gran Sonido
+                    </h2>
+
+                    <p class="font-light text-blanco/90">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam ducimus a aspernatur itaque? Inventore dicta quam dolor est quidem.
+                    </p>
+
+                </article>
+
+                <article class="flex flex-col  items-center w-90 border-2 border-verdeloco px-3 pt-2 pb-5 rounded-4xl bg-stone-900 tarjeta-salta
+                sm:max-lg:w-76
+                ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-primario"
+                        width="24" height="24" viewBox="0 0 24 24" fill="currentColor" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12.01 2.011a3.2 3.2 0 0 1 2.113 .797l.154 .145l.698 .698a1.2 1.2 0 0 0 .71 .341l.135 .008h1a3.2 3.2 0 0 1 3.195 3.018l.005 .182v1c0 .27 .092 .533 .258 .743l.09 .1l.697 .698a3.2 3.2 0 0 1 .147 4.382l-.145 .154l-.698 .698a1.2 1.2 0 0 0 -.341 .71l-.008 .135v1a3.2 3.2 0 0 1 -3.018 3.195l-.182 .005h-1a1.2 1.2 0 0 0 -.743 .258l-.1 .09l-.698 .697a3.2 3.2 0 0 1 -4.382 .147l-.154 -.145l-.698 -.698a1.2 1.2 0 0 0 -.71 -.341l-.135 -.008h-1a3.2 3.2 0 0 1 -3.195 -3.018l-.005 -.182v-1a1.2 1.2 0 0 0 -.258 -.743l-.09 -.1l-.697 -.698a3.2 3.2 0 0 1 -.147 -4.382l.145 -.154l.698 -.698a1.2 1.2 0 0 0 .341 -.71l.008 -.135v-1l.005 -.182a3.2 3.2 0 0 1 3.013 -3.013l.182 -.005h1a1.2 1.2 0 0 0 .743 -.258l.1 -.09l.698 -.697a3.2 3.2 0 0 1 2.269 -.944zm3.697 7.282a1 1 0 0 0 -1.414 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
+                    </svg>
+
+                    <h2 class="text-2xl uppercase font-extrabold text-verdeloco mt-2 mb-4 spaceletter2">
+                        Garantía de por vida
+                    </h2>
+
+                    <p class="font-light text-blanco/90">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam ducimus a aspernatur itaque? Inventore dicta quam dolor est quidem.
+                    </p>
+
+                </article>
+
+                <article class="flex flex-col  items-center w-90 border-2 border-verdeloco px-3 pt-2 pb-5 rounded-4xl bg-stone-900 animate-pulse
+                sm:max-lg:w-76
+                ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-10 text-primario"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M16 7h1a2 2 0 0 1 2 2v.5a.5 .5 0 0 0 .5 .5a.5 .5 0 0 1 .5 .5v3a.5 .5 0 0 1 -.5 .5a.5 .5 0 0 0 -.5 .5v.5a2 2 0 0 1 -2 2h-2" /><path d="M8 7h-2a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h1" /><path d="M12 8l-2 4h3l-2 4" /></svg>
+
+                    <h2 class="text-2xl uppercase font-extrabold text-verdeloco mt-2 mb-4 spaceletter2">
+                        +20 Horas de Batería
+                    </h2>
+
+                    <p class="font-light text-blanco/90">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam ducimus a aspernatur itaque? Inventore dicta quam dolor est quidem.
+                    </p>
+
+                </article>
+
+            </section> <!-- cards -->
+
+        </header> <!-- .hero y cards -->
+
+
+        <!-- SOBRE LOS TECH_PRO -->
+        <section class="bg-neutral-900 mt-17 mb-20 grid grid-cols-2 max-w-5xl mx-auto px-5 
+        rounded-4xl gap-x-7 max-h-100 hover1 hover3
+        max-sm:grid-cols-1 max-sm:py-5 
+        max-sm:items-center
+        ">
+                <!-- TEXTOS -->
+                <div class="flex flex-col justify-center ml-auto pl-2
+                md:px-7
+                ">
+
+                    <h2 class="text-3xl font-bold mb-4
+                    ">
+                        Sobre los <span 
+                                    class="text-4xl font-extrabold  text-transparent
+                                    bg-clip-text degradado bg-linear-to-r from-primario from-20% via-50% to-secundario">
+                                    TechPRO
+                                    </span>
+                    </h2>
+
+                    <p class="max-w-85 font-light">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate iure ea corporis alias hic, accusantium necessitatibus. Voluptatibus corrupti, suscipit odit dignissimos quia, sunt repellat accusamus atque vero labore, ad vel.
+                    </p>
+
+                </div> <!-- .textos -->
+
+                <!-- IMAGEN -->
+                <div class="top-5 relative hover2 hover4
+                "> <!-- "relative" sirve para mover un elemento libremente -->
+
+                    <img class="w-7xl h-80 object-cover object-top-left rounded-2xl
+                    "
+                    src="assets/chicoNeko.png" alt="mujer_audifonos">
+
+                </div> <!-- .imagen -->
+
+
+        </section> <!-- sobre los tech_pro -->
+
+
+        <!-- ELIGE TUS TECH_PRO -->
+        <h2 class="text-[42px] font-extrabold text-center mt-42 mb-2 py-5
+        mx-auto w-max text-transparent degradado bg-linear-to-r from-primario/80 from-0% via-cyan-400 via-30% to-secundario/90
+        sm:mt-0 sm:text-7xl sm:mb-5
+        lg:mb-10
+        ">
+            Elige tus TechPRO
+        </h2> 
+
+        <!-- BLOQUES DE CARDS -->
+        <section class="grid gap-3 max-w-7xl mx-auto mb-10 
+        sm:grid-cols-2
+        lg:max-w-3xl
+        2xl:max-w-5xl
+        ">
+
+            <!-- BLOQUE IZQUIERDO -->
+            <article class="grid gap-3">
+
+                <!-- CARD MINI -->
+                <div class="grid grid-cols-2 bg-stone-900 px-7 rounded-4xl gap-5
+                hover1 hover6
+                2xl:py-10
+                ">
+
+                    <!-- T_X -->
+                    <section class="flex flex-col gap-4 justify-center text-blanco">
+                        <div class="text-[28px] font-extrabold spaceletter2
+                        sm:text-2xl
+                        2xl:text-4xl
+                        ">
+                            <h2 class="text-transparent degradado w-max bg-linear-to-r from-secundario/80 from-0% via-cyan-400 via-30% to-primario/90">
+                                TechPRO X
+                            </h2>
+                        </div>
+                        <p class="text-4xl font-extrabold
+                        2xl:text-5xl
+                        ">
+                            S/299
+                        </p>
+                    </section> <!-- t_x -->
+
+                    <!-- T_Y -->
+                    <section class="pl-4 flex items-center justify-center
+                    2xl:pl-2
+                    ">
+                        <img class="size-50 lg:size-53 hover2"
+                        src="assets/modelo-x.svg">
+                    </section> <!-- t_y -->
+
+                </div> <!-- .card mini -->
+                
+                <!-- CARD MINI -->
+                <div class="grid grid-cols-2 bg-stone-900 px-7 rounded-4xl gap-5
+                hover1 hover6
+                2xl:py-10
+                ">
+
+                    <section class="flex flex-col gap-4 justify-center text-primario">
+                        <div class="text-[28px] font-extrabold spaceletter2
+                        sm:text-2xl
+                        2xl:text-4xl
+                        ">
+                            <h2 class="text-transparent degradado w-max bg-linear-to-r from-secundario/80 from-0% via-cyan-400 via-30% to-primario/90">
+                                TechPRO Y
+                            </h2>
+                        </div>
+                        <p class="text-4xl font-extrabold text-blanco
+                        2xl:text-5xl
+                        ">
+                            S/399
+                        </p>
+                    </section>
+
+                    <section class="pl-4 flex items-center justify-center
+                    2xl:pl-0
+                    ">
+                        <img class="size-50 lg:size-55 hover2"
+                        src="assets/modelo-y.svg">
+                    </section>
+
+                </div> <!-- .card mini -->
+                
+            </article> <!-- .bloque izquierdo -->
+
+            <!-- BLOQUE DERECHO -->
+            <article class="cursor-[url('../assets/cursor3.png'),pointer]">
+
+                <div class="grid bg-stone-900 rounded-4xl gap-9 pt-10 pb-20
+                2xl:pt-15 2xl:pb-35 2xl:gap-15 hover1 hover6
+                ">
+
+                    <section class="flex flex-col gap-5 items-center text-primario
+                    2xl:gap-7 
+                    ">
+
+                        <div class="text-4xl spaceletter2 font-extrabold
+                            2xl:text-5xl
+                        ">
+                            <h2 class="text-transparent degradado w-max bg-linear-to-r from-secundario/80 from-0% via-cyan-400 via-30% to-primario/90 
+                            ">
+                                TechPRO Z
+                            </h2>
+                        </div>
+
+                        <p class="text-5xl text-blanco font-extrabold
+                        2xl:text-7xl
+                        ">
+                            S/499
+                        </p>
+
+                    </section>
+
+                    <section class="px-4 mx-auto">
+                        <img class="size-50 lg:size-70 2xl:size-90 hover2"
+                        src="assets/modelo-z.svg">
+                    </section>
+
+                </div>
+
+            </article> <!-- .bloque derecho -->
+
+        </section> <!-- .elige tus tech_pro -->
+
+
+        <!-- FORMULARIO ABSOLUTO -->
+        <section class="grid max-w-2xl items-center justify-center m-2 mx-auto mb-10
+        lg:grid-cols-2 lg:max-w-5xl lg:gap-7
+        2xl:max-w-7xl
+        ">
+            <!-- IMAGEN -->
+            <div class="bg-zinc-900 rounded-4xl hover1">
+                <img src="assets/chicaNeko1.png" 
+                class="w-full h-full border-r-7 border-verdesito animate-pulse rounded-4xl hover2
+                ">
+            </div> <!-- .imagen -->
+
+            <!-- FORMULARIO -->
+            <form class="form-container bg-zinc-900 p-7.5 border-l-5 border-verdesito [clip-path:polygon(0_0,100%_0,100%_calc(100%-20px),calc(100%-20px)_100%,0_100%)] cursor-[url('../assets/cursor3.png'),pointer] hover1 
+            
+            2xl:py-12
+            ">
+
+                <!-- TEXTOS Y BOTONES -->
+                <div>
+                    <!-- TEXTOS Y PLACEHOLDER -->
+                    <span class="block text-white text-2xl font-extrabold mb-5
+                    2xl:text-3xl 2xl:mb-6
+                    ">
+                        TechPRO Importaciones
+                    </span>
+
+                    <span class="block text-[#d3f35f] text-base font-semibold mb-5
+                    2xl:text-xl 2xl:mb-7
+                    ">
+                        Gadgets Épicos a un Click
+                    </span>
+
+                    <input class="w-full bg-azulino text-[#87a4b6] font-bold p-2.5 mb-5 outline-none border-l border-transparent transition-all duration-200 focus:border-l-5 focus:border-verdesito placeholder-[#87a4b6]/50 hover5
+                    2xl:mb-7 2xl:p-3
+                    " type="email" placeholder="Tu mejor correo para cupones..." />
+                    
+                    <span class="block text-white text-base font-semibold mb-5
+                    2xl:text-lg 2xl:mb-8
+                    ">
+                        Stock limitado en las marcas que amas, solo lo mejor
+                    </span> <!-- .textos y placeholder -->
+                    
+
+                    <!-- BOTONOES DE LA PARTE INFERIOR -->
+                    <div class="flex gap-2.5 hover3 ">
+                        <a class="basis-[70%] bg-verdesito cursor-[url('../assets/cursor3.png'),pointer] p-2.5 text-center font-bold border border-transparent transition-all duration-200 hover:bg-negrito hover:border-naranja hover:text-verdesito text-negrito
+                        2xl:text-lg
+                        max-lg:active:bg-negrito max-lg:active:border-naranja max-lg:active:text-verdesito
+                        " href="#" onclick="event.preventDefault()">
+                            Ver ofertas de hoy
+                        </a>
+
+                        <a class="basis-[30%] filter-[drop-shadow(1px_1px_0px_#ff7a01)] 
+                        cursor-[url('../assets/cursor3.png'),pointer] hover4 hover2
+                        2xl:text-lg
+                        " href="#" onclick="event.preventDefault()">
+                            <div class="relative text-center p-2.5 text-verdesito font-bold bg-negrito transition-all duration-200 [clip-path:polygon(0_0,100%_0,100%_calc(100%-10px),calc(100%-10px)_100%,0_100%)] hover:bg-verdesito hover:text-negrito
+                            max-lg:active:bg-verdesito 
+                            max-lg:active:text-negrito
+                            ">
+                            Unirse
+                            </div>
+                        </a>
+                    </div> <!-- .botones de la parte inferior -->
+                </div> <!-- .textos y botones-->
+
+            </form> <!-- .formulario-->
+
+        </section> <!-- .formulario absoluto -->
+
+
+        <footer class="max-w-3xl mx-auto font-extralight text-white/50 px-10 py-5 border-t border-white/20 text-xs flex flex-col justify-center items-center gap-x-1
+        sm:flex-row">
+
+            <p>
+                Todos los derechos reservados
+            </p>
+
+            <span>
+                &copy; Copyright 2026 ®
+            </span>
+
+        </footer>
+
+    </body>
+</html>
