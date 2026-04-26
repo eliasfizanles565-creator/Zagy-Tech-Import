@@ -114,4 +114,52 @@
 
 
 
+/* HOVER ARTICLES */
+/* --- Efecto Hover General --- */
+.nav-card-zagi:hover {
+    transform: scale(1.05); /* El efecto de agrandar que querías */
+    cursor: pointer;
+}
+
+/* Hacer que la flecha aparezca al pasar el mouse */
+.nav-card-zagi:hover .arrow-icon {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* --- Hovers específicos para cada color en Modo Oscuro --- */
+
+/* Hover para el botón de INICIO (Verde) */
+.dark .nav-card-zagi[class*="from-green-500"]:hover {
+    background-color: #84cc16 !important; /* bg-lime-500 */
+    box-shadow: 0 10px 25px rgba(132, 204, 22, 0.5);
+}
+
+/* Hover para CATEGORÍAS (Fucsia) */
+.dark .nav-card-zagi[class*="from-fuchsia-500"]:hover {
+    background-color: #d946ef !important; /* bg-fuchsia-500 */
+    box-shadow: 0 10px 25px rgba(217, 70, 239, 0.5);
+}
+
+/* Hover para OFERTAS (Naranja) */
+.dark .nav-card-zagi[class*="from-orange-500"]:hover {
+    background-color: #f97316 !important; /* bg-orange-500 */
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.5);
+}
+
+/* Hover para CONTACTO (Azul) */
+.dark .nav-card-zagi[class*="from-blue-500"]:hover {
+    background-color: #3b82f6 !important; /* bg-blue-500 */
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
+}
+
+
+.x-circle:hover {
+    transform: scale(1.20) rotate(75deg);
+    cursor: pointer;
+}
+.x-circle[class*="text-rose-500"]:hover {
+    color: #f6339a !important; /* bg-pink-500 */
+    
+}
 
