@@ -154,6 +154,8 @@
 }
 
 
+
+/* BUTTOM X */
 .x-circle:hover {
     transform: scale(1.20) rotate(75deg);
     cursor: pointer;
@@ -163,3 +165,15 @@
     
 }
 
+/* 1. Estado inicial del botón (como está siempre) */
+#btn-close {
+    transition: all 0.3s ease-in-out;
+}
+
+/* 2. El "Hover del Padre" que afecta al "Hijo" */
+#mobile-menu:active #btn-close {
+    transform: rotate(75deg) scale(1.20);
+    color: #f6339a; /* Color pink-500 de Tailwind */
+}
+
+/* buttom x */

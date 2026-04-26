@@ -1440,6 +1440,13 @@
 .x-circle[class*="text-rose-500"]:hover {
   color: #f6339a !important;
 }
+#btn-close {
+  transition: all 0.3s ease-in-out;
+}
+#mobile-menu:active #btn-close {
+  transform: rotate(75deg) scale(1.20);
+  color: #f6339a;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
