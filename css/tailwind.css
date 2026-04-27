@@ -35,6 +35,7 @@
 
     body {
         @apply cursor-[url('../assets/cursorDegradado.png'),pointer]
+        @apply antialiased text-optimize-legibility;
     }
 }
 
