@@ -8,19 +8,29 @@
     --color-verdeloco: #20d200;
     --color-verdesito: #caf438;
     --color-gris: #3B3B3B;
-    --color-blanco: #FFFFFF;
+    --color-blanco: #FFFFFF; /*Cards*/
     --color-negro: #1F1E1E;
     --color-negrito: #001925;
     --color-grisClaro: #e1e1e1;
     --color-naranja: #ff7a01;
     /* --color-azulino: #002733; */
     --color-azulino: #192427;
+
+    --color-fondoBlanco: #F8FAFC;
+    --color-textoFBlanco: #1E293B;
+    --color-textoSFBlanco: #64748B;
+
+    --color-fondoOscuro: #0B1120;
+    --color-navOscuro: #161F32;
+
+
     
 
-    --font-primaria: "Poppins", sans-serif;
-    --font-secundaria: "Playfair Display", serif;
-    --font-terciaria: "Urbanist", sans-serif;
-    --font-cuarta: "Russo One", sans-serif;
+    --font-Poppins: "Poppins", sans-serif;
+    --font-Playfair: "Playfair Display", serif;
+    --font-Urbanist: "Urbanist", sans-serif;
+    --font-Russo: "Russo One", sans-serif;
+    --font-Montserrat: "Montserrat", sans-serif;
 
 }
 
@@ -28,11 +38,11 @@
 @layer base {
 
     body {
-        @apply font-secundaria cursor-[url('../assets/cursorDegradado.png'),pointer]
+        @apply font-Montserrat cursor-[url('../assets/cursorDegradado.png'),pointer]
     }
 
     h1,h2,h3 {
-        @apply font-primaria
+        @apply font-Poppins
     }
 
 }
@@ -182,7 +192,7 @@
 
 /* Hover para el botón de INICIO (Verde) */
 .dark .nav-card-zagi[class*="from-green-500"]:hover {
-    background-color: #84cc16 !important; /* bg-lime-500 */
+    background-color: #7ccf00 !important; /* bg-lime-500 */
     box-shadow: 0 10px 25px rgba(132, 204, 22, 0.5);
 }
 
@@ -240,29 +250,29 @@
 
 /* hover para el carrito y lupa */
 .lupita:hover {
-    color:#51a2ff;
+    color:#51a2ff; /* blue-400 */
     transform: scale(1.10);
 }
 .dark [class*="lupita"]:hover {
-    color: #84cc16;
+    color: #7ccf00; /* lime-500 */
 }
 
 /* hover para el botón oscuro y claro */
 .luna:hover {
-    background-color: #51a2ff;
+    background-color: #51a2ff; /* blue-400 */
     transform: scale(1.10) rotate(-45deg);
 }
 .dark [class*="luna"]:hover {
-    background-color: #84cc16;
+    background-color: #7ccf00; /* lime-500 */
 }
 
 /* hover para el navPrincipal */
 .navPrincipal:hover {
-    color: #51a2ff;
+    color: #51a2ff; /* blue-400 */
     transform: scale(1.10);
 }
 .dark [class*="navPrincipal"]:hover {
-    color: #84cc16;
+    color: #7ccf00; /* lime-500 */
 }
 
 /* /////////////////////////////////////// */
