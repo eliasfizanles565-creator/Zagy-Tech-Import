@@ -989,6 +989,10 @@
   .text-\[42px\] {
     font-size: 42px;
   }
+  .font-\[900\] {
+    --tw-font-weight: 900;
+    font-weight: 900;
+  }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
