@@ -2,6 +2,30 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+    --color-primario: #1073BA;
+    --color-secundario: #00DA55;
+    --color-verdeloco: #20d200;
+    --color-verdesito: #caf438;
+    --color-gris: #3B3B3B;
+    --color-blanco: #FFFFFF;
+    --color-negro: #1F1E1E;
+    --color-negrito: #001925;
+    --color-grisClaro: #e1e1e1;
+    --color-naranja: #ff7a01;
+    /* --color-azulino: #002733; */
+    --color-azulino: #192427;
+    
+
+    --font-principal: "Roboto", sans-serif; 
+    --font-secundaria: "Lato", sans-serif;
+
+    --breakpoint-md: 50rem;
+    --breakpoint-mx: 47rem;
+
+}
+
+
 @layer base {
 
     body {
@@ -15,6 +39,8 @@
 
 
 
+/* /////////////////////////////////////// */
+
 /* "CLASE" PARA QUE FUNCIONE EL DEGRADADO */
 .degradado{
     background-clip: text;
@@ -22,8 +48,11 @@
 }
 /* ."clase" para que funcione el degradado */
 
+/* /////////////////////////////////////// */
 
 
+
+/* /////////////////////////////////////// */
 
 /* SEPARAR PALABRAS ENTERAS */
 .spaceletter{
@@ -35,6 +64,7 @@
 }
 /* .separar palabras enteras */
 
+/* /////////////////////////////////////// */
 
 
 
