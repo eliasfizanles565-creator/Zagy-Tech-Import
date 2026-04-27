@@ -95,6 +95,8 @@
     --color-naranja: #ff7a01;
     --color-azulino: #192427;
     --font-principal: "Roboto", sans-serif;
+    --font-secundaria: "Lato", sans-serif;
+    --font-cuarta: "Playfair Display", serif;
   }
 }
 @layer base {
@@ -937,6 +939,9 @@
   }
   .font-\[Inter\] {
     font-family: Inter;
+  }
+  .font-cuarta {
+    font-family: var(--font-cuarta);
   }
   .font-principal {
     font-family: var(--font-principal);
@@ -2099,6 +2104,7 @@
     }
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @layer base {
   body {
     cursor: url('../assets/cursorDegradado.png'),pointer;
