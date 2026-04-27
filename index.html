@@ -7,6 +7,10 @@
     
     <link rel="stylesheet" href="css/estilos.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!--=============== REMIXICONS - Insert link for icons ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
 
@@ -121,85 +125,94 @@
 
     <!-- HERO -->
 
-    <section class="flex flex-col-reverse mx-auto max-w-7xl
+    <section class="flex flex-col-reverse mx-auto max-w-7xl relative
     lg:flex-row
     ">
 
         <article class="mt-5">
 
             <!-- BOTÓN -->
-            <div class="bg-linear-to-r from-primario from-0% via-cyan-500 via-30% to-secundario px-3 py-1 rounded-full w-70">
-                <span class="uppercase flex justify-center text-bold">
+            <div class="bg-linear-to-r from-primario from-0% via-cyan-500 via-30% to-secundario px-3 py-1 rounded-full w-70 ml-3">
+                <span class="uppercase flex justify-center font-bold font-terciaria text-sm">
                     Tecnología para tu Hogar
                 </span>
             </div>
             <!-- botón -->
             
             <!-- TEXTO -->
-            <div>
+            <section class="ml-5
+            ">
 
-                <h2 class="text-4xl font-[900] tracking-tight font-primaria">
-                    Dispensador <br> de Jabón Automático
-                </h2>
-                <p>
-                    Higiene inteligente al alcance de tu mano <br>
-                    Sensor infrarrojo de alta precisión, <br>
-                    diseño moderno y batería recargable.
-                </p>
+                <div>
 
-            </div>
-            <!-- texto -->
-            
-            <!-- ÍCONOS -->
-            <div class="flex gap-5">
+                    <h2 class="text-[45px]/12 font-extrabold my-4">
+                        Dispensador <br> de Jabón Automático
+                    </h2>
+                    <p class="lg:text-xl lg:font-extralight">
+                        Higiene inteligente al alcance de tu mano <br>
+                        Sensor infrarrojo de alta precisión, <br>
+                        diseño moderno y batería recargable.
+                    </p>
 
-                <article>
-                    <i></i>
-
-                    <span>
-                        Sin Contacto
-                    </span>
-                </article>
-
-                <article>
-                    <i></i>
-
-                    <span>
-                        Higiénico
-                    </span>
-                </article>
-
-                <article>
-                    <i></i>
-
-                    <span>
-                        Eficiente
-                    </span>
-                </article>
-
-
-            </div>
-            <!-- íconos -->
-            
-            <!-- CARRITO -->
-            <div>
+                </div>
+                <!-- texto -->
                 
-                <span>s/ 110</span>
+                <!-- ÍCONOS -->
+                <div class="flex gap-10 my-5 text-sm">
 
-                <section>
-                    <i></i>
-                    <span>Agregar al carrito</span>
-                </section>
+                    <article class="flex flex-col gap-1">
+                        <i class="ri-hand-coin-line text-2xl text-center"></i>
 
+                        <span>
+                            Sin Contacto
+                        </span>
+                    </article>
+
+                    <article class="flex flex-col gap-1">
+                        <i class="ri-shield-check-line text-2xl text-center "></i>
+
+                        <span>
+                            Higiénico
+                        </span>
+                    </article>
+
+                    <article class="flex flex-col gap-1">
+                        <i class="ri-water-flash-line text-2xl text-center"></i>
+
+                        <span>
+                            Eficiente
+                        </span>
+                    </article>
+
+
+                </div>
+                <!-- íconos -->
                 
-            </div>
-            <!-- carrito -->
+                <!-- CARRITO -->
+                <div>
+                    
+                    <span class="text-5xl font-cuarta font-extrabold">
+                        s/ 110
+                    </span>
+
+                    <section>
+                        <i></i>
+                        <span>Agregar al carrito</span>
+                    </section>
+
+                    
+                </div>
+                <!-- carrito -->
+                
+            </section>
+            <!-- .texto -->
 
         </article>
         
         
-        <div>
-            <img src="assets/01 Hero.webp" alt="">
+        <div class="max-w-2xl mx-auto
+        ">
+            <img src="assets/01 Hero.webp" alt="Dispensador de Jabón Líquido">
         </div>
         
 
