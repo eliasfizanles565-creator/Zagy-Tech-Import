@@ -2193,6 +2193,14 @@
       }
     }
   }
+  .sm\:max-lg\:text-\[85px\]\/20 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: 85px;
+        line-height: calc(var(--spacing) * 20);
+      }
+    }
+  }
   .sm\:max-lg\:text-lg {
     @media (width >= 40rem) {
       @media (width < 64rem) {
