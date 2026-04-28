@@ -1808,6 +1808,20 @@
       }
     }
   }
+  .sm\:max-lg\:w-\[98\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        width: 98%;
+      }
+    }
+  }
+  .sm\:max-lg\:w-\[99\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        width: 99%;
+      }
+    }
+  }
   .sm\:max-lg\:w-full {
     @media (width >= 40rem) {
       @media (width < 64rem) {
