@@ -1955,6 +1955,13 @@
       }
     }
   }
+  .sm\:max-lg\:pl-10 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        padding-left: calc(var(--spacing) * 10);
+      }
+    }
+  }
   .sm\:max-lg\:text-2xl {
     @media (width >= 40rem) {
       @media (width < 64rem) {
@@ -1992,6 +1999,30 @@
       @media (width < 64rem) {
         font-size: var(--text-6xl);
         line-height: calc(var(--spacing) * 14);
+      }
+    }
+  }
+  .sm\:max-lg\:text-7xl\/14 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: var(--text-7xl);
+        line-height: calc(var(--spacing) * 14);
+      }
+    }
+  }
+  .sm\:max-lg\:text-7xl\/16 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: var(--text-7xl);
+        line-height: calc(var(--spacing) * 16);
+      }
+    }
+  }
+  .sm\:max-lg\:text-7xl\/17 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: var(--text-7xl);
+        line-height: calc(var(--spacing) * 17);
       }
     }
   }
