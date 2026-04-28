@@ -2632,6 +2632,21 @@
       margin-right: calc(var(--spacing) * 5);
     }
   }
+  .\32 xl\:mr-15 {
+    @media (width >= 96rem) {
+      margin-right: calc(var(--spacing) * 15);
+    }
+  }
+  .\32 xl\:mr-22 {
+    @media (width >= 96rem) {
+      margin-right: calc(var(--spacing) * 22);
+    }
+  }
+  .\32 xl\:mr-25 {
+    @media (width >= 96rem) {
+      margin-right: calc(var(--spacing) * 25);
+    }
+  }
   .\32 xl\:mb-6 {
     @media (width >= 96rem) {
       margin-bottom: calc(var(--spacing) * 6);
@@ -2645,6 +2660,11 @@
   .\32 xl\:mb-8 {
     @media (width >= 96rem) {
       margin-bottom: calc(var(--spacing) * 8);
+    }
+  }
+  .\32 xl\:ml-5 {
+    @media (width >= 96rem) {
+      margin-left: calc(var(--spacing) * 5);
     }
   }
   .\32 xl\:ml-10 {
@@ -2806,6 +2826,21 @@
   .\32 xl\:pl-15 {
     @media (width >= 96rem) {
       padding-left: calc(var(--spacing) * 15);
+    }
+  }
+  .\32 xl\:pl-17 {
+    @media (width >= 96rem) {
+      padding-left: calc(var(--spacing) * 17);
+    }
+  }
+  .\32 xl\:pl-20 {
+    @media (width >= 96rem) {
+      padding-left: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:pl-25 {
+    @media (width >= 96rem) {
+      padding-left: calc(var(--spacing) * 25);
     }
   }
   .\32 xl\:text-3xl {
