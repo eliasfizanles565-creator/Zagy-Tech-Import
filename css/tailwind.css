@@ -324,3 +324,48 @@
 
 /* /////////////////////////////////////// */
 
+
+
+/* /////////////////////////////////////// */
+/* hover para iconos del hero */
+.iconsitos:hover {
+    text-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+    transform: scale(1.15);
+    transition:.2s ease-in-out;
+    
+}
+.dark [class*="iconsitos"]:hover {
+    text-shadow: 0 10px 25px rgba(132, 204, 22, 0.1);
+}
+
+/* /////////////////////////////////////////// */
+
+
+
+/* /////////////////////////////////////////// */
+
+/*  animation para carrito */
+
+.carrito {
+    /* nombre | duración | curva de tiempo | bucle infinito */
+    animation: latidoCarrito 3s ease-in-out infinite;
+    ; /* Importante para que el transform funcione bien */
+}
+/* Definimos la animación */
+@keyframes latidoCarrito {
+    0% {
+        transform: scale(1);
+        translate: 0 0;
+    }
+    50% {
+        transform: scale(1.10);
+        /* Usamos translate en lugar de translateX para mejor rendimiento */
+        translate: 0 0; 
+    }
+    100% {
+        transform: scale(1);
+        translate: 0 0;
+    }
+}
+
+/* /////////////////////////////////////////// */
