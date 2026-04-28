@@ -1629,6 +1629,16 @@
       padding-right: calc(var(--spacing) * 10);
     }
   }
+  .max-sm\:pl-2 {
+    @media (width < 40rem) {
+      padding-left: calc(var(--spacing) * 2);
+    }
+  }
+  .max-sm\:pl-12 {
+    @media (width < 40rem) {
+      padding-left: calc(var(--spacing) * 12);
+    }
+  }
   .sm\:mx-auto {
     @media (width >= 40rem) {
       margin-inline: auto;
