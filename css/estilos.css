@@ -1656,6 +1656,12 @@
       line-height: calc(var(--spacing) * 11);
     }
   }
+  .max-sm\:text-\[45px\]\/12 {
+    @media (width < 40rem) {
+      font-size: 45px;
+      line-height: calc(var(--spacing) * 12);
+    }
+  }
   .sm\:mx-auto {
     @media (width >= 40rem) {
       margin-inline: auto;
