@@ -1629,6 +1629,11 @@
       padding-right: calc(var(--spacing) * 10);
     }
   }
+  .max-sm\:pl-1 {
+    @media (width < 40rem) {
+      padding-left: calc(var(--spacing) * 1);
+    }
+  }
   .max-sm\:pl-2 {
     @media (width < 40rem) {
       padding-left: calc(var(--spacing) * 2);
