@@ -75,6 +75,7 @@
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
+    --text-8xl: 6rem;
     --font-weight-extralight: 200;
     --font-weight-light: 300;
     --font-weight-semibold: 600;
@@ -1920,6 +1921,13 @@
       }
     }
   }
+  .sm\:max-lg\:gap-12 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        gap: calc(var(--spacing) * 12);
+      }
+    }
+  }
   .sm\:max-lg\:rounded-3xl {
     @media (width >= 40rem) {
       @media (width < 64rem) {
@@ -2105,6 +2113,14 @@
       }
     }
   }
+  .sm\:max-lg\:text-8xl\/19 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: var(--text-8xl);
+        line-height: calc(var(--spacing) * 19);
+      }
+    }
+  }
   .sm\:max-lg\:text-\[55px\]\/14 {
     @media (width >= 40rem) {
       @media (width < 64rem) {
@@ -2158,6 +2174,22 @@
       @media (width < 64rem) {
         font-size: 60px;
         line-height: calc(var(--spacing) * 14);
+      }
+    }
+  }
+  .sm\:max-lg\:text-\[80px\]\/19 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: 80px;
+        line-height: calc(var(--spacing) * 19);
+      }
+    }
+  }
+  .sm\:max-lg\:text-\[80px\]\/20 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: 80px;
+        line-height: calc(var(--spacing) * 20);
       }
     }
   }
