@@ -18,19 +18,29 @@
 </head>
 
 
-<body class="bg-indigo-50 dark:bg-zinc-900 transition-colors duration-500 dark:text-white  overflow-x-hidden">
+<body class="bg-indigo-50 dark:bg-zinc-900 transition-colors duration-500 dark:text-white  overflow-x-hidden mx-auto
+2xl:max-w-430
+">
 
 <!-- ///////////////////////////////////////////////// -->
 
     <!-- NAVEGACIÓN -->
     <nav class="sticky top-0 flex items-center justify-between py-6 px-5 bg-indigo-100/10 dark:bg-zinc-950/10 backdrop-blur-md z-40 border-b border-slate-200 dark:border-zinc-800 font-Russo
-    lg:px-10">
-        <div class="shrink-0">
-            <img class="w-28 logito select-none touch-manipulation 
+    lg:px-10
+    2xl:ml-15
+    ">
+        <div class="shrink-0
+        
+        ">
+            <img class="w-28 logito select-none touch-manipulation
+            lg:w
             " src="assets/00 Logo.webp" alt="logo" draggable="false" oncontextmenu="return false;">
         </div>
 
-        <section class="hidden lg:flex gap-10 uppercase text-sm tracking-widest">
+        <section class="hidden gap-10 uppercase text-sm tracking-widest
+        lg:flex lg:gap-17 lg:pl-18
+        2xl:gap-30 2xl:pl-10
+        ">
             <a href="#" class="navPrincipal cursor-pointer">Inicio</a>
             <a href="#" class="navPrincipal cursor-pointer">Categorías</a>
             <a href="#" class="navPrincipal cursor-pointer">Productos</a>
@@ -38,7 +48,10 @@
             <a href="#" class="navPrincipal cursor-pointer">Contacto</a>
         </section>
 
-        <div class="flex items-center gap-6 text-2xl mr-20">
+        <div class="flex items-center gap-6 text-2xl mr-20
+        lg:gap-8 lg:mr-17
+        2xl:mr-5 2xl:gap-11
+        ">
             <button id="btn-menu" class=" order-1 lupita">
                 <i class="ri-menu-3-line cursor-pointer"></i>
             </button>
@@ -135,8 +148,12 @@
         <article class="mb-20">
 
             <!-- BOTÓN -->
-            <div class="bg-blue-400 dark:bg-lime-500 px-3 py-2 rounded-full w-70 ml-3 text-white">
-                <span class="uppercase flex justify-center text-sm font-bold font-terciaria ">
+            <div class="bg-blue-400 dark:bg-lime-500 px-3 py-2 rounded-full w-70 ml-3 text-white
+            sm:max-lg:w-90
+            ">
+                <span class="uppercase flex justify-center text-sm font-bold font-terciaria 
+                sm:max-lg:text-lg
+                ">
                     Tecnología para tu Hogar
                 </span>
             </div>
@@ -148,10 +165,14 @@
 
                 <div>
 
-                    <h2 class="text-[45px]/12 font-extrabold my-4">
+                    <h2 class="text-[45px]/12 font-extrabold my-4
+                    sm:max-lg:text-[55px]/14 sm:max-lg:my-6
+                    ">
                         Dispensador <br> de Jabón Automático
                     </h2>
-                    <p class="lg: font-light ">
+                    <p class="lg: font-light 
+                    sm:max-lg:text-2xl
+                    ">
                         Higiene inteligente al alcance de tu mano <br>
                         Sensor infrarrojo de alta precisión, <br>
                         diseño moderno y batería recargable.
@@ -162,10 +183,14 @@
                 
                 <!-- ÍCONOS -->
                 <div class="flex gap-10 mt-7 text-sm font-Urbanist
-                text-blue-400 dark:text-lime-500">
+                text-blue-400 dark:text-lime-500
+                sm:max-lg:text-xl sm:max-lg:mt-10
+                ">
 
                     <article class="flex flex-col gap-1 iconsitos cursor-pointer">
-                        <i class="ri-hand-coin-line text-3xl text-center"></i>
+                        <i class="ri-hand-coin-line text-3xl text-center
+                        sm:max-lg:text-5xl
+                        "></i>
 
                         <span>
                             Sin Contacto
@@ -173,7 +198,9 @@
                     </article>
 
                     <article class="flex flex-col gap-1 iconsitos cursor-pointer">
-                        <i class="ri-shield-check-line text-3xl text-center "></i>
+                        <i class="ri-shield-check-line text-3xl text-center 
+                        sm:max-lg:text-5xl
+                        "></i>
 
                         <span>
                             Higiénico
@@ -181,7 +208,9 @@
                     </article>
 
                     <article class="flex flex-col gap-1 iconsitos cursor-pointer">
-                        <i class="ri-water-flash-line text-3xl text-center "></i>
+                        <i class="ri-water-flash-line text-3xl text-center 
+                        sm:max-lg:text-5xl
+                        "></i>
 
                         <span>
                             Eficiente
@@ -193,9 +222,13 @@
                 <!-- íconos -->
                 
                 <!-- PRECIO -->
-                <div class="mt-10">
+                <div class="mt-10
+                sm:max-lg:mt-15
+                ">
                     
-                    <span class="text-5xl font-Russo font-bold">
+                    <span class="text-5xl font-Russo font-bold
+                    sm:max-lg:text-[55px]
+                    ">
                         s/ 110
                     </span>
                     
@@ -208,9 +241,12 @@
             <!-- CARRITO -->
             <section class="text-white font-Urbanist flex gap-2 items-center justify-center mt-3 w-50 py-2 px-3 ml-3 rounded-full cursor-pointer bg-blue-400 dark:bg-lime-500
             shadow-2xl shadow-blue-400 dark:shadow-lime-500 carrito
+            sm:max-lg:w-65 sm:max-lg:px-5 sm:max-lg:py-3 sm:max-lg:text-[22px]
+            sm:max-lg:mt-4
             ">
                 <i class="ri-shopping-cart-2-line text-shadow-lg text-shadow-blue-300/30"></i>
-                <span class="text-shadow-lg text-shadow-blue-300/50">Agregar al carrito</span>
+                <span class="text-shadow-lg text-shadow-blue-300/50
+                ">Agregar al carrito</span>
             </section>
             <!-- carrito -->
             
