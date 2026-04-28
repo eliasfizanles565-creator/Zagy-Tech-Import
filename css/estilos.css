@@ -2097,6 +2097,14 @@
       }
     }
   }
+  .sm\:max-lg\:text-7xl\/19 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: var(--text-7xl);
+        line-height: calc(var(--spacing) * 19);
+      }
+    }
+  }
   .sm\:max-lg\:text-\[55px\]\/14 {
     @media (width >= 40rem) {
       @media (width < 64rem) {
