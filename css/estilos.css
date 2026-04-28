@@ -1650,6 +1650,12 @@
       line-height: calc(var(--spacing) * 10);
     }
   }
+  .max-sm\:text-\[45px\]\/11 {
+    @media (width < 40rem) {
+      font-size: 45px;
+      line-height: calc(var(--spacing) * 11);
+    }
+  }
   .sm\:mx-auto {
     @media (width >= 40rem) {
       margin-inline: auto;
@@ -2074,6 +2080,14 @@
       @media (width < 64rem) {
         font-size: var(--text-7xl);
         line-height: calc(var(--spacing) * 17);
+      }
+    }
+  }
+  .sm\:max-lg\:text-7xl\/18 {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        font-size: var(--text-7xl);
+        line-height: calc(var(--spacing) * 18);
       }
     }
   }
