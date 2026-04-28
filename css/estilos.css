@@ -35,7 +35,10 @@
     --color-fuchsia-500: oklch(66.7% 0.295 322.15);
     --color-fuchsia-600: oklch(59.1% 0.293 322.896);
     --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
@@ -83,6 +86,11 @@
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
+    --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.15);
+    --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 0.12);
+    --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
+    --drop-shadow-xl: 0 9px 7px rgb(0 0 0 / 0.1);
+    --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --blur-md: 12px;
@@ -2379,7 +2387,7 @@
     cursor: url('../assets/cursorCeleste.png'),pointer;
     font-family: var(--font-Montserrat);
     &:where(.dark, .dark *) {
-      cursor: url('../assets/cursorVerde.png'),pointer;
+      cursor: url('../assets/cursorDegradado.png'),pointer;
     }
   }
   h1,h2,h3 {
@@ -2390,7 +2398,7 @@
   cursor: url('../assets/touchCeleste.png'), auto;
 }
 .dark [class*="cursor-pointer"]:hover {
-  cursor: url('../assets/touchVerde.png'), auto;
+  cursor: url('../assets/touchDegradado.png'), auto;
 }
 .degradado {
   background-clip: text;
