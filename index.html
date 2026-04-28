@@ -29,12 +29,14 @@
     lg:px-10
     
     ">
-        <div class="shrink-0
-        
-        ">
-            <img class="w-28 logito select-none touch-manipulation
-            2xl:ml-5
-            " src="assets/00 Logo.webp" alt="logo" draggable="false" oncontextmenu="return false;">
+        <div class="shrink-0 relative w-28 h-10 2xl:ml-5"> 
+            <img class="absolute inset-0 w-full h-full object-contain dark:opacity-0 dark:invisible transition-all duration-300 logito" 
+                src="assets/01 LogoCeleste.webp" 
+                alt="logo claro">
+
+            <img class="absolute inset-0 w-full h-full object-contain opacity-0 invisible dark:opacity-100 dark:visible transition-all duration-300 logito" 
+                src="assets/00 Logo.webp" 
+                alt="logo oscuro">
         </div>
 
         <section class="hidden gap-10 uppercase text-sm tracking-widest
