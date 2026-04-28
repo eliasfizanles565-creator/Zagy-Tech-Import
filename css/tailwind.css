@@ -38,7 +38,8 @@
 @layer base {
 
     body {
-        @apply font-Montserrat cursor-[url('../assets/cursorDegradado.png'),pointer]
+        @apply font-Montserrat cursor-[url('../assets/cursorCeleste.png'),pointer]
+        dark:cursor-[url('../assets/cursorVerde.png'),pointer]
     }
 
     h1,h2,h3 {
@@ -48,7 +49,10 @@
 }
 
 .cursor-pointer {
-    cursor:url('../assets/touchDegradado.png'), auto;
+    cursor:url('../assets/touchCeleste.png'), auto;
+}
+.dark [class*="cursor-pointer"]:hover {
+    cursor:url('../assets/touchVerde.png'), auto;
 }
 
 
