@@ -1589,6 +1589,21 @@
       }
     }
   }
+  .max-sm\:w-\[95\%\] {
+    @media (width < 40rem) {
+      width: 95%;
+    }
+  }
+  .max-sm\:w-\[97\%\] {
+    @media (width < 40rem) {
+      width: 97%;
+    }
+  }
+  .max-sm\:w-\[98\%\] {
+    @media (width < 40rem) {
+      width: 98%;
+    }
+  }
   .max-sm\:grid-cols-1 {
     @media (width < 40rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
