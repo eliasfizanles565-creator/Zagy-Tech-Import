@@ -1644,6 +1644,12 @@
       padding-left: calc(var(--spacing) * 12);
     }
   }
+  .max-sm\:text-\[45px\]\/10 {
+    @media (width < 40rem) {
+      font-size: 45px;
+      line-height: calc(var(--spacing) * 10);
+    }
+  }
   .sm\:mx-auto {
     @media (width >= 40rem) {
       margin-inline: auto;
