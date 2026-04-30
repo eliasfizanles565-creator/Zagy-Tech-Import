@@ -43,7 +43,7 @@
         lg:flex lg:gap-17 lg:pl-18
         2xl:gap-30 2xl:pl-25
         ">
-            <a href="#" class="navPrincipal cursor-pointer">Inicio</a>
+            <a href="#inicio" class="navPrincipal cursor-pointer">Inicio</a>
             <a href="#categorias" class="navPrincipal cursor-pointer">Categorías</a>
             <a href="#" class="navPrincipal cursor-pointer">Productos</a>
             <a href="#" class="navPrincipal cursor-pointer">Ofertas</a>
@@ -77,7 +77,7 @@
         <!-- NAV ARTICLES -->
         <nav class="flex flex-col gap-6 w-[85%] max-w-3xl max-h-4/5">
 
-            <a href="#"class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-lime-600/10 border border-white/20 dark:border-0  cursor-pointer dark:shadow-lime-400
+            <a href="#inicio"class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-lime-600/10 border border-white/20 dark:border-0  cursor-pointer dark:shadow-lime-400
             text-shadow-md text-shadow-lime-600/10
             transition-all active:scale-110 shadow-xl">
                 <div class="flex items-center gap-5">
@@ -143,13 +143,14 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- HERO -->
-    <section class="flex flex-col-reverse mx-auto max-w-7xl relative w-[90%] items-center gap-y-5
+    <section id="inicio" class="flex flex-col-reverse mx-auto max-w-7xl relative w-[90%] items-center gap-y-5 
     max-sm:w-[97%]
     sm:max-lg:w-[97%]
-    lg:flex-row
+    lg:flex-row lg:mb-20
+    2xl:min-h-[calc(100vh-208px)] 2xl:scroll-mt-30
     ">
 
-        <article class="mb-20 
+        <article class="mb-20
         max-sm:pl-1
         sm:max-lg:pl-10
         ">
@@ -281,7 +282,8 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- CARDS DE CATEGORÍAS -->
-    <section id="categorias" class="relative min-h-dvh py-5 flex flex-col justify-center items-center">
+    <section id="categorias" class="relative min-h-dvh pt-8 flex flex-col justify-center items-center
+    ">
         <!-- Background -->
         <img class="absolute inset-0 w-full h-full object-cover object-center"
         src="assets/GIRLS PRO/img-bg.png" alt="background">
@@ -289,7 +291,7 @@
         <div class="absolute inset-0 w-full h-full">
         </div>
 
-        <h2 class="text-5xl text-white z-10 relative my-15 font-Russo">
+        <h2 class="text-5xl text-white z-10 relative mt-15 mb-5 font-Russo">
             Categorías
         </h2>
 
