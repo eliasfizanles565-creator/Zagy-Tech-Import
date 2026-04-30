@@ -1574,9 +1574,19 @@
       }
     }
   }
+  .max-sm\:min-h-\[calc\(100vh-208px\)\] {
+    @media (width < 40rem) {
+      min-height: calc(100vh - 208px);
+    }
+  }
   .max-sm\:w-\[97\%\] {
     @media (width < 40rem) {
       width: 97%;
+    }
+  }
+  .max-sm\:scroll-mt-30 {
+    @media (width < 40rem) {
+      scroll-margin-top: calc(var(--spacing) * 30);
     }
   }
   .max-sm\:grid-cols-1 {
@@ -1954,6 +1964,21 @@
   .lg\:text-left {
     @media (width >= 64rem) {
       text-align: left;
+    }
+  }
+  .xl\:flex {
+    @media (width >= 80rem) {
+      display: flex;
+    }
+  }
+  .xl\:gap-17 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 17);
+    }
+  }
+  .xl\:pl-18 {
+    @media (width >= 80rem) {
+      padding-left: calc(var(--spacing) * 18);
     }
   }
   .\32 xl\:mt-10 {
