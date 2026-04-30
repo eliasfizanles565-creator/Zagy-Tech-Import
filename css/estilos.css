@@ -630,6 +630,21 @@
   .cursor-\[url\(\'\.\.\/assets\/touchVerde\.png\'\)\,pointer\] {
     cursor: url('../assets/touchVerde.png'),pointer;
   }
+  .cursor-\[url\(\.\.\/assets\/cursorCeleste\.png\)\,pointer\] {
+    cursor: url(../assets/cursorCeleste.png),pointer;
+  }
+  .cursor-\[url\(\.\.\/assets\/cursorDegradado\.png\)\,pointer\] {
+    cursor: url(../assets/cursorDegradado.png),pointer;
+  }
+  .cursor-\[url\(\.\.\/assets\/cursorVerde\.png\)\,pointer\] {
+    cursor: url(../assets/cursorVerde.png),pointer;
+  }
+  .cursor-auto {
+    cursor: auto;
+  }
+  .cursor-default {
+    cursor: default;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
