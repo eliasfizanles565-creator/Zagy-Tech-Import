@@ -31,6 +31,7 @@
     --font-Urbanist: "Urbanist", sans-serif;
     --font-Russo: "Russo One", sans-serif;
     --font-Montserrat: "Montserrat", sans-serif;
+    --font-Epic:"Montserrat Alternates", sans-serif;
 
 }
 
@@ -373,3 +374,26 @@
 }
 
 /* /////////////////////////////////////////// */
+
+
+
+
+/* /////////////////////////////////////////// */
+/* CARDS CATEGORÍAS BEDIMCODE */
+.card__shadow {
+    background: linear-gradient(180deg, 
+                hsla(0, 0%, 0%, 0) 70%, 
+                hsl(0, 0%, 0%) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////// */
+
