@@ -58,12 +58,12 @@
 
 
 :root {
-    --pink-color: 328.25; /*pink-500*/
-    --blue-color: 216.89; /*blue-500*/
-    --fuchsia-color: 292.61; /*fuchsia-500*/
-    --lime-color: 78.99; /*lime-500*/
-    --amber-color: 40.58; /*pink-500*/
-    --purple-color: 272.11; /*pink-500*/
+    --pink-color: 328.25; /*pink-500 rgb(246, 51, 154) #f6339a */
+    --blue-color: 216.89; /*blue-500 rgb(43, 127, 255) #2b7fff */
+    --fuchsia-color: 292.61; /*fuchsia-500 rgb(225, 42, 251) #e12afb */
+    --lime-color: 78.99; /*lime-500 rgb(124, 207, 0) #7ccf00 */
+    --amber-color: 40.58; /*pink-500 rgb(246, 51, 154) #fe9a00 */
+    --purple-color: 272.11; /*purple-500 rgb(173, 70, 255) #ad46ff */
 }
 
 
