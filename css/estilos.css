@@ -412,11 +412,17 @@
   .mb-\[7px\] {
     margin-bottom: 7px;
   }
+  .ml-1 {
+    margin-left: calc(var(--spacing) * 1);
+  }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
   }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
+  }
+  .ml-\[3px\] {
+    margin-left: 3px;
   }
   .ml-auto {
     margin-left: auto;
@@ -1030,6 +1036,10 @@
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .text-7xl {
+    font-size: var(--text-7xl);
+    line-height: var(--tw-leading, var(--text-7xl--line-height));
   }
   .text-\[45px\]\/12 {
     font-size: 45px;
