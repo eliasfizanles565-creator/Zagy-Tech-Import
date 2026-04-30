@@ -71,7 +71,6 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --tracking-tight: -0.025em;
-    --tracking-wider: 0.05em;
     --tracking-widest: 0.1em;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
@@ -651,25 +650,9 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-3 {
-    border-style: var(--tw-border-style);
-    border-width: 3px;
-  }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
-  }
-  .border-5 {
-    border-style: var(--tw-border-style);
-    border-width: 5px;
-  }
-  .border-6 {
-    border-style: var(--tw-border-style);
-    border-width: 6px;
-  }
-  .border-7 {
-    border-style: var(--tw-border-style);
-    border-width: 7px;
   }
   .border-t {
     border-top-style: var(--tw-border-style);
@@ -2323,11 +2306,11 @@
   transition: clip-path .5s ease-in-out;
 }
 .info__button {
-  box-shadow: 0 0 16px hsl(var(--hue), 90%, 50%);
-  transition: box-shadow .4s;
+  transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
 }
 .info__button:hover {
-  box-shadow: 0 0 20px 4px hsl(var(--hue), 90%, 50%);
+  box-shadow: 0 0 20px 4px hsla(var(--hue), 90%, 50%) !important;
+  transform: scale(1.08) !important;
 }
 .info__link {
   box-shadow: 0 0 12px hsl(var(--hue), 90%, 50%);
@@ -2341,6 +2324,26 @@
 }
 .info:hover, .card__clip:hover ~ .info {
   clip-path: circle(100%);
+}
+.info__button {
+  animation: latidoButton 3s ease-in-out infinite;
+}
+@keyframes latidoButton {
+  0% {
+    transform: scale(1);
+    translate: 0 0;
+    box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
+  }
+  50% {
+    transform: scale(1.07);
+    translate: 0 0;
+    box-shadow: 0 0 16px 4px hsla(var(--hue), 90%, 50%, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    translate: 0 0;
+    box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
+  }
 }
 @property --tw-translate-x {
   syntax: "*";

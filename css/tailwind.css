@@ -438,13 +438,14 @@
 }
 
 .info__button {
-    box-shadow: 0 0 16px hsl(var(--hue), 90%, 50%);
-    transition: box-shadow .4s;
+    transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
 }
 
 .info__button:hover {
-    box-shadow: 0 0 20px 4px hsl(var(--hue), 90%, 50%);
+    box-shadow: 0 0 20px 4px hsla(var(--hue), 90%, 50%) !important;
+    transform: scale(1.08) !important;
 }
+
 
 .info__link {
     box-shadow: 0 0 12px hsl(var(--hue), 90%, 50%);
@@ -467,5 +468,43 @@
 }
 
 
+
+
+
 /* /////////////////////////////////////////// */
 
+
+
+/* /////////////////////////////////////////// */
+
+/*  animation para Button */
+
+.info__button {
+    /* nombre | duración | curva de tiempo | bucle infinito */
+    animation: latidoButton 3s ease-in-out infinite;
+    ; /* Importante para que el transform funcione bien */
+}
+/* Definimos la animación */
+@keyframes latidoButton {
+    0% {
+        transform: scale(1);
+        translate: 0 0;
+        /* Botón sin sombra al inicio */
+        box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
+    }
+    50% {
+        transform: scale(1.07);
+        /* Usamos translate en lugar de translateX para mejor rendimiento */
+        translate: 0 0; 
+        /* La sombra se agranda y se hace más intensa cuando el botón crece */
+        box-shadow: 0 0 16px 4px hsla(var(--hue), 90%, 50%, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        translate: 0 0;
+        /* Regresa a 0 de sombra */
+        box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
+    }
+}
+
+/* /////////////////////////////////////////// */
