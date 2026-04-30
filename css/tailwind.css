@@ -456,7 +456,7 @@
 }
 
 /* Rotate icon */
-.card__article:hover .card__clip {
+.card__article1:hover .card__clip {
     transform: rotate(-45deg);
 }
 

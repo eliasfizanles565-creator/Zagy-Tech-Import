@@ -2319,7 +2319,7 @@
 .info__link:hover {
   transform: translateY(-.25rem);
 }
-.card__article:hover .card__clip {
+.card__article1:hover .card__clip {
   transform: rotate(-45deg);
 }
 .info:hover, .card__clip:hover ~ .info {
