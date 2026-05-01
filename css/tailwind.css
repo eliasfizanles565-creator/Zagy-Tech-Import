@@ -516,7 +516,17 @@
 
 
 /* /////////////////////////////////////////// */
+/* CAROUSEL PRODUCTOS */
+.carousel {
+    overflow-x: auto;
+}
+
+.card {
+    background-color: hsl(var(--hue), 90%, 50%);
+    flex: 0 0 15rem;
+    
+}
 
 
-
+/* .carousel products */
 /* /////////////////////////////////////////// */

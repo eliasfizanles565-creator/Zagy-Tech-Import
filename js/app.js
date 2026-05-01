@@ -45,23 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.nav-card-zagi');
     
@@ -76,3 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     });
 });
+
+
+
+// CARROUSEL PRODUCTOS
+
