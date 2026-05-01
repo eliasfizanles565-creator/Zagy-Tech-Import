@@ -51,7 +51,7 @@
             <a href="#inicio" class="navPrincipal cursor-pointer">Inicio</a>
             <a href="#categorias" class="navPrincipal cursor-pointer">Categorías</a>
             <a href="#" class="navPrincipal cursor-pointer">Productos</a>
-            <a href="#" class="navPrincipal cursor-pointer">Ofertas</a>
+            <a href="#ofertas" class="navPrincipal cursor-pointer">Ofertas</a>
             <a href="#" class="navPrincipal cursor-pointer">Contacto</a>
         </section>
 
@@ -110,7 +110,7 @@
                 <i class="arrow-icon ri-arrow-right-s-line text-2xl opacity-0 transition-opacity"></i>
             </a>
 
-            <a href="#" class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-amber-500/10 border border-white/20 dark:border-0
+            <a href="#ofertas" class="nav-card-zagi group flex items-center justify-between p-5 rounded-3xl bg-amber-500/10 border border-white/20 dark:border-0
             cursor-pointer dark:shadow-orange-400
             text-shadow-md text-shadow-amber-500/10
             transition-all active:scale-110 shadow-xl">
@@ -287,7 +287,7 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- CARDS DE CATEGORÍAS -->
-    <section id="categorias" class="relative min-h-dvh pt-8 flex flex-col justify-center items-center
+    <section id="categorias" class="relative min-h-dvh pt-8 flex flex-col justify-center items-center pb-30
     ">
         <!-- Background -->
         <img class="absolute inset-0 w-full h-full object-cover object-center"
@@ -712,10 +712,23 @@
 
 <!-- /////////////////////////////////////////////////// -->
 
-    <section>
-        <div class=" mx-5 py-12 h-screen flex flex-col gap-4 card 
+
+
+
+
+
+<!-- /////////////////////////////////////////////////// -->
+    <!-- OFERTAS -->
+        <h2 id="ofertas" class="text-5xl font-Russo text-center mt-23 mb-7
+        max-lg:mb-0
+        ">
+            Ofertas
+        </h2>
+
+
+        <section class=" mx-5 py-12 h-screen flex flex-col gap-4 card text-white
         sm:max-w-160 sm:mx-auto sm:gap-5.5
-        lg:flex-row lg:items-center lg:gap-4.5 lg:max-w-6xl
+        lg:flex-row lg:items-center lg:gap-4.5 lg:max-w-6xl lg:h-160 lg:py-0 lg:pb-28 lg:mb-35
 
         ">
             <!-- CARD 1 -->
@@ -903,397 +916,10 @@
                 </div>
 
             </article>
-        </div>
-    </section>
+        </section>
     
-    <section>
-        <div class=" mx-5 py-12 h-screen flex flex-col gap-4 card 
-        sm:max-w-160 sm:mx-auto sm:gap-5.5
-        lg:flex-row lg:items-center lg:gap-4.5 lg:max-w-6xl
 
-        ">
-            <!-- CARD 1 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article
-            sm:h-30
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-center inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/02.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class=" absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Majestic Fog
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 2 -->
-            <article class="relative rounded-[3rem] overflow-hidden 
-            card__article
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-[50%_25%] inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/04.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class="absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Autumn Trees
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 3 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article card__active 
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-center inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/06.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class="absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Winter Forest
-                        </h2>
-                        <p class="text-xs opacity-80
-                        ">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 4 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-[50%_25%] inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/08.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class=" absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Hidden Lake
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 5 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-center inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/10.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class=" absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Frozen River
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-        </div>
-    </section>
-
-    <section>
-        <div class=" mx-5 py-12 h-screen flex flex-col gap-4 card 
-        sm:max-w-160 sm:mx-auto sm:gap-5.5
-        lg:flex-row lg:items-center lg:gap-4.5 lg:max-w-6xl
-
-        ">
-            <!-- CARD 1 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article
-            sm:h-30
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-center inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/02.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class=" absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Majestic Fog
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 2 -->
-            <article class="relative rounded-[3rem] overflow-hidden 
-            card__article
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-[50%_25%] inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/04.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class="absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Autumn Trees
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 3 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article card__active 
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-center inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/06.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class="absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Winter Forest
-                        </h2>
-                        <p class="text-xs opacity-80
-                        ">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 4 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-[50%_25%] inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/08.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class=" absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Hidden Lake
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-
-            <!-- CARD 5 -->
-            <article class="relative rounded-[3rem] overflow-hidden
-            card__article
-            sm:h-30 
-            lg:h-120 lg:w-110
-            ">
-                <!-- IMAGE & SHADOW -->
-                <img class="absolute object-cover object-center inset-0 h-full w-full
-                card__img
-                "
-                src="assets/GIRLS PRO/10.webp" alt="Forest">
-                <div class="absolute h-full w-full bg-linear-to-b from-transparent via-transparent via-50% to-black/40"></div>
-
-                <!-- TEXT -->
-                <div class=" absolute flex gap-4 items-center left-4 bottom-4
-                card__data
-                ">
-
-                    <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
-                        <i class="ri-landscape-fill"></i>
-                    </div>
-
-                    <div>
-                        <h2 class="text-xl font-bold
-                        sm:text-2xl
-                        ">
-                            Frozen River
-                        </h2>
-                        <p class="text-xs opacity-80">
-                            Beautiful scenary to enjoy
-                        </p>
-                    </div>
-
-                </div>
-
-            </article>
-        </div>
-    </section>
-
+    
 
 
 
