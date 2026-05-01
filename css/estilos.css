@@ -1791,14 +1791,9 @@
       align-items: center;
     }
   }
-  .lg\:justify-center {
+  .lg\:gap-4\.5 {
     @media (width >= 64rem) {
-      justify-content: center;
-    }
-  }
-  .lg\:gap-4 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 4);
+      gap: calc(var(--spacing) * 4.5);
     }
   }
   .lg\:gap-6 {
@@ -2206,7 +2201,6 @@
   overflow: hidden;
   flex: 0 0 64px;
   transition: flex .5s ease;
-  cursor: url('../assets/cursor3.png'), auto;
 }
 @media (width >= 540px) {
   .card__article {
@@ -2215,7 +2209,7 @@
 }
 @media (width >= 1024px) {
   .card__article {
-    flex: 0 0 105px;
+    flex: 0 0 95px;
   }
 }
 .card__img {
@@ -2257,7 +2251,7 @@
 }
 @media (width >= 1024px) {
   .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 105px;
+    flex: 0 0 95px;
   }
 }
 .nav-card-zagi:hover {

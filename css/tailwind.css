@@ -128,7 +128,7 @@
     overflow: hidden;
     flex: 0 0 64px;
     transition: flex .5s ease;
-    cursor:url('../assets/cursor3.png'), auto;
+    
 }
 
 @media (width >= 540px) {
@@ -138,7 +138,7 @@
 }
 @media (width >= 1024px) {
     .card__article {
-        flex: 0 0 105px;
+        flex: 0 0 95px;
     }
 }
 
@@ -203,10 +203,8 @@
 }
 @media (width >= 1024px) {
     .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 105px;
+    flex: 0 0 95px;
     }
-
-
 }
 
 /* .bedimcode */
