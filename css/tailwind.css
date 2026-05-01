@@ -128,7 +128,10 @@
     overflow: hidden;
     flex: 0 0 64px;
     transition: flex .5s ease;
-    
+}
+.dark .card__article {
+    /* box-shadow: 0 4px 24px hsla(314, 100%, 47%, 0.5); */
+    box-shadow: 0px 2px 2px 5px hsla(var(--hue), 90%, 50%, 1);
 }
 
 @media (width >= 540px) {
