@@ -1017,8 +1017,44 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-\[50\%_0\%\] {
+    object-position: 50% 0%;
+  }
+  .object-\[50\%_2\%\] {
+    object-position: 50% 2%;
+  }
+  .object-\[50\%_5\%\] {
+    object-position: 50% 5%;
+  }
+  .object-\[50\%_10\%\] {
+    object-position: 50% 10%;
+  }
   .object-\[50\%_25\%\] {
     object-position: 50% 25%;
+  }
+  .object-\[50\%_30\%\] {
+    object-position: 50% 30%;
+  }
+  .object-\[50\%_35\%\] {
+    object-position: 50% 35%;
+  }
+  .object-\[50\%_45\%\] {
+    object-position: 50% 45%;
+  }
+  .object-\[50\%_55\%\] {
+    object-position: 50% 55%;
+  }
+  .object-\[50\%_60\%\] {
+    object-position: 50% 60%;
+  }
+  .object-\[50\%_65\%\] {
+    object-position: 50% 65%;
+  }
+  .object-\[50\%_75\%\] {
+    object-position: 50% 75%;
+  }
+  .object-\[50\%_80\%\] {
+    object-position: 50% 80%;
   }
   .object-center {
     object-position: center;
