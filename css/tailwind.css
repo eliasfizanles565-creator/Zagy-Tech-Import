@@ -519,12 +519,53 @@
 /* CAROUSEL PRODUCTOS */
 .carousel {
     overflow-x: auto;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
 }
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel::scroll-button(right), .carousel::scroll-button(left) {
+    content: '→';
+    border:none;
+    background-color: greenyellow;
+    height: 60px;
+    width: 60px;
+    color: white;
+    font-size:2rem;
+    border-radius: 50%;
+    cursor: url(../assets/touchPink.png),pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: 20%;
+}
+
+.carousel::scroll-button(left) {
+    content: '←';
+    position-area: left center;
+    translate: -20%;
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+    opacity:0.5;
+    cursor: auto;
+}
+
 
 .card {
     background-color: hsl(var(--hue), 90%, 50%);
     flex: 0 0 15rem;
-    
+    scroll-snap-align: start;
+}
+
+@media(max-width: 500px) {
+    .card {
+        flex: 0 0 100%;
+    }
 }
 
 
