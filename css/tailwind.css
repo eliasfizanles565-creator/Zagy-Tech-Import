@@ -58,12 +58,12 @@
 
 
 :root {
-    --pink-color: 328.25; /*pink-500 rgb(246, 51, 154) #f6339a */
-    --blue-color: 216.89; /*blue-500 rgb(43, 127, 255) #2b7fff */
-    --fuchsia-color: 292.61; /*fuchsia-500 rgb(225, 42, 251) #e12afb */
-    --lime-color: 78.99; /*lime-500 rgb(124, 207, 0) #7ccf00 */
-    --amber-color: 40.58; /*pink-500 rgb(246, 51, 154) #fe9a00 */
-    --purple-color: 272.11; /*purple-500 rgb(173, 70, 255) #ad46ff */
+    --pink-color: 328.25; /*pink-500 #f6339a #fb64b6 */
+    --blue-color: 216.89; /*blue-500 #2b7fff */
+    --fuchsia-color: 292.61; /*fuchsia-500 #e12afb #ed6aff */
+    --lime-color: 78.99; /*lime-500 #7ccf00 */
+    --amber-color: 40.58; /*pink-500 #fe9a00 #ffb900 */
+    --purple-color: 272.11; /*purple-500 #ad46ff #c27aff */
 }
 
 
@@ -138,7 +138,7 @@
 }
 @media (width >= 1024px) {
     .card__article {
-        flex: 0 0 85px;
+        flex: 0 0 105px;
     }
 }
 
@@ -203,8 +203,10 @@
 }
 @media (width >= 1024px) {
     .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 85px;
+    flex: 0 0 105px;
     }
+
+
 }
 
 /* .bedimcode */
@@ -380,6 +382,7 @@
 
 
 
+
 /* /////////////////////////////////////////// */
 
 /*  animation para carrito */
@@ -407,6 +410,9 @@
 }
 
 /* /////////////////////////////////////////// */
+
+
+
 
 
 
@@ -468,14 +474,7 @@
 }
 
 
-
-
-
-/* /////////////////////////////////////////// */
-
-
-
-/* /////////////////////////////////////////// */
+/*  ////   */
 
 /*  animation para Button */
 
@@ -506,5 +505,17 @@
         box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
     }
 }
+
+/* .cards categorías bedimcode */
+/* /////////////////////////////////////////// */
+
+
+
+
+
+
+/* /////////////////////////////////////////// */
+
+
 
 /* /////////////////////////////////////////// */
