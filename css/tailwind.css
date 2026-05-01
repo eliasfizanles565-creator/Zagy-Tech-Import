@@ -558,11 +558,11 @@
 
 .card {
     background-color: hsl(var(--hue), 90%, 50%);
-    flex: 0 0 15rem;
+    flex: 0 0 17rem;
     scroll-snap-align: start;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 1024px) {
     .card {
         flex: 0 0 100%;
     }
