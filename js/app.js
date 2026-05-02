@@ -342,37 +342,53 @@ function finalizarCompraWhatsApp() {
 ///////////////////////////////////////////////
 
 //// ====== CARDS PRODUCTOS EXPANSION ======
-// Abrir el modal con los datos del producto
-function abrirModalProducto(nombre, precio, imagenUrl, categoria, descripcion, idProducto) {
-    // 1. Seleccionamos los elementos en el HTML del modal
-    document.getElementById('modal-nombre').textContent = nombre;
-    document.getElementById('modal-precio').textContent = `S/ ${precio.toFixed(2)}`;
-    document.getElementById('modal-imagen').src = imagenUrl;
-    document.getElementById('modal-categoria').textContent = categoria;
-    document.getElementById('modal-descripcion').textContent = descripcion;
+function abrirModalGeneral(producto) {
+    // 1. Rellenar textos básicos
+    document.getElementById('modal-nombre').textContent = producto.nombre;
+    document.getElementById('modal-precio').textContent = `S/ ${producto.precio.toFixed(2)}`;
+    document.getElementById('modal-categoria').textContent = producto.categoria;
+    document.getElementById('modal-descripcion').textContent = producto.descripcion;
+    document.getElementById('modal-imagen').src = producto.imagenes[0]; // Muestra la primera imagen por defecto
 
-    // 2. Vinculamos el botón de agregar al carrito del modal
+    // 2. Llenar características dinámicamente
+    const listaCaracteristicas = document.getElementById('modal-caracteristicas');
+    listaCaracteristicas.innerHTML = '';
+    producto.caracteristicas.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        listaCaracteristicas.appendChild(li);
+    });
+
+    // 3. Crear miniaturas dinámicas
+    const contenedorMiniaturas = document.getElementById('modal-miniaturas');
+    contenedorMiniaturas.innerHTML = '';
+    
+    producto.imagenes.forEach(imgUrl => {
+        const img = document.createElement('img');
+        img.src = imgUrl;
+        img.className = 'w-[64px] h-[64px] object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0';
+        img.onclick = () => cambiarImagenPrincipal(imgUrl);
+        contenedorMiniaturas.appendChild(img);
+    });
+
+    // 4. Configurar botón de agregar al carrito
     const botonAgregar = document.getElementById('modal-boton-agregar');
-    // Le pasamos los datos del producto al hacer clic en agregar
     botonAgregar.onclick = function() {
-        agregarAlCarrito(idProducto, nombre, precio, imagenUrl);
-        cerrarModalProducto(); // Cerramos el modal tras agregarlo
-        abrirCarrito();       // Abrimos el panel del carrito
+        agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+        cerrarModalProducto();
+        abrirCarrito();
     };
 
-    // 3. Mostramos el modal y el fondo oscuro
+    // 5. Mostrar modal y overlay
     document.getElementById('producto-modal').classList.remove('hidden');
     document.getElementById('producto-modal-overlay').classList.remove('hidden');
 }
 
-// Cerrar el modal
+function cambiarImagenPrincipal(nuevaSrc) {
+    document.getElementById('modal-imagen').src = nuevaSrc;
+}
+
 function cerrarModalProducto() {
     document.getElementById('producto-modal').classList.add('hidden');
     document.getElementById('producto-modal-overlay').classList.add('hidden');
-}
-
-// Intercambio de Imagenes
-function cambiarImagenPrincipal(nuevaSrc) {
-    const imagenPrincipal = document.getElementById('modal-imagen');
-    imagenPrincipal.src = nuevaSrc;
 }
