@@ -159,18 +159,25 @@ function actualizarCarritoUI() {
 
         // Creamos un nuevo elemento <li> para la lista
         const itemLi = document.createElement('li');
-        itemLi.className = 'flex items-center justify-between gap-4 bg-zinc-800 p-2 rounded-xl';
+        itemLi.className = 'flex items-center justify-between gap-3 bg-zinc-800 p-3 rounded-xl w-full';
         
         itemLi.innerHTML = `
-            <div class="flex items-center gap-4">
-                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-12 h-12 object-cover rounded-md">
-                <div>
-                    <h4 class="font-medium text-sm">${producto.nombre}</h4>
-                    <p class="text-xs text-gray-400">S/ ${producto.precio} x ${producto.cantidad}</p>
+            <div class="flex items-center gap-3 flex-1 min-w-0">
+                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-12 h-12 object-cover rounded-md flex-shrink-0">
+                <div class="min-w-0 flex-1">
+                    <h4 class="font-medium text-sm text-white break-words line-clamp-2 leading-tight">
+                        ${producto.nombre}
+                    </h4>
+                    <p class="text-xs text-gray-400 mt-0.5">
+                        S/ ${producto.precio} x ${producto.cantidad}
+                    </p>
                 </div>
             </div>
-            <span class="font-bold">S/ ${subtotal}</span>
-            <button onclick="eliminarProducto(${producto.id})" class="text-blue-500 hover:text-red-400 text-sm">❌</button>
+            
+            <div class="flex items-center gap-4 flex-shrink-0">
+                <span class="font-bold text-sm text-white whitespace-nowrap">S/ ${subtotal}</span>
+                <button onclick="eliminarProducto(${producto.id})" class="text-blue-500 hover:text-red-400 text-sm p-1">❌</button>
+            </div>
         `;
 
         listaCarrito.appendChild(itemLi);
