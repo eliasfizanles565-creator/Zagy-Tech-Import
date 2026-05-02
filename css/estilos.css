@@ -1874,6 +1874,11 @@
       height: calc(var(--spacing) * 10);
     }
   }
+  .max-md\:h-30 {
+    @media (width < 52rem) {
+      height: calc(var(--spacing) * 30);
+    }
+  }
   .max-sm\:mb-11 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 11);

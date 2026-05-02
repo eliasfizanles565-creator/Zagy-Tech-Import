@@ -1178,7 +1178,7 @@
             </div>
 
             <div class="flex flex-col justify-between gap-6 ">
-                <div>
+                <div class="overflow-y-auto ocultar-scrollbar w-full max-md:h-30">
                     <span id="modal-categoria" class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                         Categoría
                     </span>
@@ -1191,20 +1191,20 @@
                         S/ 0.00
                     </p>
                     
-                    <section class="overflow-y-auto ocultar-scrollbar w-full max-md:h-10">
-                        <div class="mb-6">
-                            <h3 class="text-sm font-bold text-white mb-2">Descripción</h3>
-                            <p id="modal-descripcion" class="text-sm text-gray-400 leading-relaxed">
+                    
+                    <div class="mb-6">
+                        <h3 class="text-sm font-bold text-white mb-2">Descripción</h3>
+                        <p id="modal-descripcion" class="text-sm text-gray-400 leading-relaxed">
                                 Cargando...
-                            </p>
-                        </div>
+                        </p>
+                    </div>
                         
-                        <div class="mb-6">
-                            <h3 class="text-sm font-bold text-white mb-2">Características</h3>
-                            <ul id="modal-caracteristicas" class="text-xs text-gray-400 space-y-1 list-disc list-inside">
-                                </ul>
-                        </div>
-                    </section>
+                    <div class="mb-6">
+                        <h3 class="text-sm font-bold text-white mb-2">Características</h3>
+                        <ul id="modal-caracteristicas" class="text-xs text-gray-400 space-y-1 list-disc list-inside">
+                        </ul>
+                    </div>
+                    
                 </div>
 
                 <button id="modal-boton-agregar" class="w-full bg-cyan-400 hover:bg-cyan-500 text-zinc-950 font-bold py-4 rounded-2xl text-lg transition-all flex items-center justify-center gap-2 transform hover:scale-[1.01] active:scale-95 shadow-md">
