@@ -1869,6 +1869,11 @@
       }
     }
   }
+  .max-md\:h-10 {
+    @media (width < 52rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .max-sm\:mb-11 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 11);
@@ -2138,6 +2143,11 @@
       left: auto;
     }
   }
+  .md\:h-10 {
+    @media (width >= 52rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .md\:max-h-full {
     @media (width >= 52rem) {
       max-height: 100%;
@@ -2221,6 +2231,11 @@
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 70);
       height: calc(var(--spacing) * 70);
+    }
+  }
+  .lg\:h-10 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 10);
     }
   }
   .lg\:h-120 {
