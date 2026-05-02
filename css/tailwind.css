@@ -541,6 +541,10 @@
     color: var(--second-color);
 }
 
+/* Swiper class */
+.testimonial .swiper-pagination-bullets {
+    bottom: ;
+}
 
 /* .carousel products */
 /* /////////////////////////////////////////// */

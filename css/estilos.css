@@ -531,9 +531,6 @@
   .w-\[90\%\] {
     width: 90%;
   }
-  .w-\[280px\] {
-    width: 280px;
-  }
   .w-full {
     width: 100%;
   }
@@ -2550,6 +2547,9 @@
 }
 .testimonial__stars i {
   color: var(--second-color);
+}
+.testimonial .swiper-pagination-bullets {
+  bottom: ;
 }
 @property --tw-translate-x {
   syntax: "*";
