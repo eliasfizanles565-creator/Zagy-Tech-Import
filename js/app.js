@@ -289,7 +289,9 @@ const botonHeaderCarrito = document.getElementById('carrito');
 
 // ¡REEMPLAZA ESTO POR TU NÚMERO DE TELÉFONO!
 // Debe incluir el código de país (51 para Perú) y sin espacios ni '+'
-const NUMERO_WHATSAPP_NEGOCIO = "51900556685"; 
+// ====== INTEGRACIÓN WHATSAPP CORREGIDA ======
+
+const NUMERO_WHATSAPP_NEGOCIO = "51912345678"; // ¡REEMPLAZA ESTE NÚMERO!
 
 function finalizarCompraWhatsApp() {
     if (carrito.length === 0) {
@@ -315,10 +317,15 @@ function finalizarCompraWhatsApp() {
     mensaje += `%0A💵 *TOTAL A PAGAR: S/ ${total.toFixed(2)}*%0A`;
     mensaje += `%0A¿Podrían confirmarme los métodos de pago y envío? ¡Gracias!`;
 
-    // 2. Crear la URL de WhatsApp
-    // Para PC es web.whatsapp.com, para móvil es api.whatsapp.com o wa.me
-    const url = `https://wa.me/${NUMERO_WHATSAPP_NEGOCIO}?text=${mensaje}`;
+    // 2. Crear la URL
+    const url = `https://api.whatsapp.com/send?phone=${NUMERO_WHATSAPP_NEGOCIO}&text=${mensaje}`;
 
-    // 3. Abrir en una nueva pestaña
-    window.open(url, '_blank').focus();
+    // 3. Detectar si es dispositivo móvil para abrir directo en la misma pestaña
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // Redirige en la misma pestaña (evita el salto de página nueva)
+        window.location.href = url;
+    } else {
+        // Para PC, lo seguimos abriendo en una pestaña nueva para no cerrar la tienda
+        window.open(url, '_blank').focus();
+    }
 }
