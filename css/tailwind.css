@@ -573,6 +573,7 @@
 .testimonial .swiper-pagination-bullet {
     background-color: var(--first-color);
     transition: opacity .4s;
+    cursor: url('../assets/cursorPurple.png'), auto;
 }
 
 .testimonial .swiper-button-prev {
@@ -597,6 +598,7 @@
     color: var(--white-color);
     border-radius: 50%;
     font-size: 1.5rem;
+    cursor: url('../assets/touchPurple.png'), auto;
 }
 
 /* .carousel products */
