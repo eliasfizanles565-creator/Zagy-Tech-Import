@@ -138,6 +138,7 @@ function agregarAlCarrito(id, nombre, precio, imagenUrl) {
     guardarCarrito();
 }
 
+
 // 4. Función para actualizar la interfaz (HTML)
 function actualizarCarritoUI() {
     const listaCarrito = document.getElementById('lista-carrito');
@@ -169,14 +170,19 @@ function actualizarCarritoUI() {
                         ${producto.nombre}
                     </h4>
                     <p class="text-xs text-gray-400 mt-0.5">
-                        S/ ${producto.precio} x ${producto.cantidad}
+                        S/ ${producto.precio}
                     </p>
                 </div>
             </div>
             
-            <div class="flex items-center gap-4 flex-shrink-0">
+            <div class="flex flex-col items-end gap-2 flex-shrink-0">
                 <span class="font-bold text-sm text-white whitespace-nowrap">S/ ${subtotal}</span>
-                <button onclick="eliminarProducto(${producto.id})" class="text-blue-500 hover:text-red-400 text-sm p-1">❌</button>
+                
+                <div class="flex items-center gap-2 bg-zinc-700 rounded-lg px-2 py-0.5">
+                    <button onclick="cambiarCantidad(${producto.id}, -1)" class="text-blue-400 hover:text-blue-300 font-bold px-2 py-0.5">-</button>
+                    <span class="text-white text-xs font-bold min-w-[16px] text-center">${producto.cantidad}</span>
+                    <button onclick="cambiarCantidad(${producto.id}, 1)" class="text-blue-400 hover:text-blue-300 font-bold px-2 py-0.5">+</button>
+                </div>
             </div>
         `;
 
@@ -187,6 +193,28 @@ function actualizarCarritoUI() {
     totalCarrito.textContent = `S/ ${total.toFixed(2)}`;
 }
 
+// 4.5. Función para cambiar la cantidad con los botones
+function cambiarCantidad(id, operacion) {
+    // Buscamos el producto en el arreglo
+    const producto = carrito.find(item => item.id === id);
+
+    if (producto) {
+        producto.cantidad += operacion;
+
+        // Si la cantidad llega a 0, eliminamos el producto del carrito
+        if (producto.cantidad <= 0) {
+            eliminarProducto(id);
+            return; // Salimos de la función ya que el producto fue eliminado
+        }
+    }
+
+    // Actualizamos la vista y guardamos en el Local Storage
+    actualizarCarritoUI();
+    guardarCarrito();
+}
+
+
+
 // 5. Función extra para eliminar productos del carrito
 function eliminarProducto(id) {
     // Filtramos el carrito dejando solo los productos que no coinciden con el id a eliminar
@@ -196,6 +224,7 @@ function eliminarProducto(id) {
     actualizarCarritoUI();
     guardarCarrito();
 }
+
 
 // 6. Funciones de Local Storage //////////////
 function guardarCarrito() {
