@@ -130,99 +130,6 @@
 
 
 
-/* /////////////////////////////////////// */
-/* BEDIMCODE */
-
-.card__article {
-    box-shadow: 0 4px 8px hsla(0, 0%, 0%, .5);
-    overflow: hidden;
-    flex: 0 0 64px;
-    transition: flex .5s ease;
-}
-.dark .card__article {
-    /* box-shadow: 0 4px 24px hsla(314, 100%, 47%, 0.5); */
-    box-shadow: 0px 2px 2px 5px hsla(var(--hue), 90%, 50%, 1);
-}
-
-@media (width >= 540px) {
-    .card__article {
-        flex: 0 0 97px;
-    }
-}
-@media (width >= 1024px) {
-    .card__article {
-        flex: 0 0 95px;
-    }
-}
-
-
-
-.card__img{
-    transition: scale .4s;
-}
-
-.card__data {
-    transform: translateY(2rem);
-    opacity: 0;
-    transition: opacity .4s ease .1s, transform .4s ease .1s;
-}
-
-
-
-
-/* Card active by default, takes up more space */
-.card__active {
-  flex: 5;
-}
-
-.card__active .card__data {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card__active:hover .card__img {
-  scale: 1.1;
-}
-
-/* Any card expands when you hover over it */
-.card__article:hover {
-  flex: 5 ;
-}
-
-/* If the hover is NOT on the card active, contract card active at base proportion */
-.card:has(.card__article:not(.card__active):hover) .card__active {
-  flex: 0 0 64px;
-}
-
-/* If the hover is NOT in card active, it also hides its contents */
-.card:has(.card__article:not(.card__active):hover) .card__active .card__data {
-  opacity: 0;
-  transform: translateY(2rem);
-}
-
-/* Show content on the other cards */
-.card__article:hover .card__data {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* BREAKPOINTS DE HOVER */
-
-@media (width >= 540px) {
-    .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 97px;
-    }
-}
-@media (width >= 1024px) {
-    .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 95px;
-    }
-}
-
-/* .bedimcode */
-/* /////////////////////////////////////// */
-
 
 
 /* /////////////////////////////////////// */
@@ -525,12 +432,126 @@
 
 
 
+
+
+
+
+/* /////////////////////////////////////// */
+/* BEDIMCODE OFERTAS*/
+
+.card__article {
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, .5);
+    overflow: hidden;
+    flex: 0 0 64px;
+    transition: flex .5s ease;
+}
+.dark .card__article {
+    /* box-shadow: 0 4px 24px hsla(314, 100%, 47%, 0.5); */
+    box-shadow: 0px 2px 2px 5px hsla(var(--hue), 90%, 50%, 1);
+}
+
+@media (width >= 540px) {
+    .card__article {
+        flex: 0 0 97px;
+    }
+}
+@media (width >= 1024px) {
+    .card__article {
+        flex: 0 0 95px;
+    }
+}
+
+
+
+.card__img{
+    transition: scale .4s;
+}
+
+.card__data {
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: opacity .4s ease .1s, transform .4s ease .1s;
+}
+
+
+
+
+/* Card active by default, takes up more space */
+.card__active {
+  flex: 5;
+}
+
+.card__active .card__data {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card__active:hover .card__img {
+  scale: 1.1;
+}
+
+/* Any card expands when you hover over it */
+.card__article:hover {
+  flex: 5 ;
+}
+
+/* If the hover is NOT on the card active, contract card active at base proportion */
+.card:has(.card__article:not(.card__active):hover) .card__active {
+  flex: 0 0 64px;
+}
+
+/* If the hover is NOT in card active, it also hides its contents */
+.card:has(.card__article:not(.card__active):hover) .card__active .card__data {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+/* Show content on the other cards */
+.card__article:hover .card__data {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* BREAKPOINTS DE HOVER */
+
+@media (width >= 540px) {
+    .card:has(.card__article:not(.card__active):hover) .card__active {
+    flex: 0 0 97px;
+    }
+}
+@media (width >= 1024px) {
+    .card:has(.card__article:not(.card__active):hover) .card__active {
+    flex: 0 0 95px;
+    }
+}
+
+/* .bedimcode */
+/* /////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* /////////////////////////////////////////// */
 /* CAROUSEL PRODUCTOS */
 
 .testimonial__card {
     background-color: var(--container-color);
     box-shadow: 0 8px 16px hsla(265, 75%, 4%, .1); 
+}
+.dark .testimonial__card {
+    background-color: var(--color-negro);
+    box-shadow: 
 }
 
 .testimonial__img {
@@ -539,6 +560,9 @@
 
 .testimonial__stars i {
     color: var(--second-color);
+}
+.dark .testimonial__stars i {
+    color: rgb(255, 191, 0);
 }
 
 /* Swiper class */

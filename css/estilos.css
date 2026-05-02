@@ -9,7 +9,6 @@
       "Courier New", monospace;
     --color-orange-400: oklch(75% 0.183 55.934);
     --color-orange-500: oklch(70.5% 0.213 47.604);
-    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-lime-400: oklch(84.1% 0.238 128.85);
@@ -427,6 +426,9 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
+  .mb-15 {
+    margin-bottom: calc(var(--spacing) * 15);
+  }
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
   }
@@ -800,9 +802,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
     }
-  }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
   }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
@@ -2304,67 +2303,6 @@
 .spaceletter2 {
   word-spacing: 7px;
 }
-.card__article {
-  box-shadow: 0 4px 8px hsla(0, 0%, 0%, .5);
-  overflow: hidden;
-  flex: 0 0 64px;
-  transition: flex .5s ease;
-}
-.dark .card__article {
-  box-shadow: 0px 2px 2px 5px hsla(var(--hue), 90%, 50%, 1);
-}
-@media (width >= 540px) {
-  .card__article {
-    flex: 0 0 97px;
-  }
-}
-@media (width >= 1024px) {
-  .card__article {
-    flex: 0 0 95px;
-  }
-}
-.card__img {
-  transition: scale .4s;
-}
-.card__data {
-  transform: translateY(2rem);
-  opacity: 0;
-  transition: opacity .4s ease .1s, transform .4s ease .1s;
-}
-.card__active {
-  flex: 5;
-}
-.card__active .card__data {
-  opacity: 1;
-  transform: translateY(0);
-}
-.card__active:hover .card__img {
-  scale: 1.1;
-}
-.card__article:hover {
-  flex: 5;
-}
-.card:has(.card__article:not(.card__active):hover) .card__active {
-  flex: 0 0 64px;
-}
-.card:has(.card__article:not(.card__active):hover) .card__active .card__data {
-  opacity: 0;
-  transform: translateY(2rem);
-}
-.card__article:hover .card__data {
-  opacity: 1;
-  transform: translateY(0);
-}
-@media (width >= 540px) {
-  .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 97px;
-  }
-}
-@media (width >= 1024px) {
-  .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 95px;
-  }
-}
 .nav-card-zagi:hover {
   transform: scale(1.05);
 }
@@ -2538,15 +2476,83 @@
     box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
   }
 }
+.card__article {
+  box-shadow: 0 4px 8px hsla(0, 0%, 0%, .5);
+  overflow: hidden;
+  flex: 0 0 64px;
+  transition: flex .5s ease;
+}
+.dark .card__article {
+  box-shadow: 0px 2px 2px 5px hsla(var(--hue), 90%, 50%, 1);
+}
+@media (width >= 540px) {
+  .card__article {
+    flex: 0 0 97px;
+  }
+}
+@media (width >= 1024px) {
+  .card__article {
+    flex: 0 0 95px;
+  }
+}
+.card__img {
+  transition: scale .4s;
+}
+.card__data {
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: opacity .4s ease .1s, transform .4s ease .1s;
+}
+.card__active {
+  flex: 5;
+}
+.card__active .card__data {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card__active:hover .card__img {
+  scale: 1.1;
+}
+.card__article:hover {
+  flex: 5;
+}
+.card:has(.card__article:not(.card__active):hover) .card__active {
+  flex: 0 0 64px;
+}
+.card:has(.card__article:not(.card__active):hover) .card__active .card__data {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+.card__article:hover .card__data {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (width >= 540px) {
+  .card:has(.card__article:not(.card__active):hover) .card__active {
+    flex: 0 0 97px;
+  }
+}
+@media (width >= 1024px) {
+  .card:has(.card__article:not(.card__active):hover) .card__active {
+    flex: 0 0 95px;
+  }
+}
 .testimonial__card {
   background-color: var(--container-color);
   box-shadow: 0 8px 16px hsla(265, 75%, 4%, .1);
+}
+.dark .testimonial__card {
+  background-color: var(--color-negro);
+  box-shadow: ;
 }
 .testimonial__img {
   border-color: var(--first-color);
 }
 .testimonial__stars i {
   color: var(--second-color);
+}
+.dark .testimonial__stars i {
+  color: rgb(255, 191, 0);
 }
 .testimonial .swiper-pagination-bullets {
   bottom: ;
