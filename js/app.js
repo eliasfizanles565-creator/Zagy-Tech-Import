@@ -97,3 +97,108 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
         disableOnInteraction: false,
     }
 });
+
+
+
+
+
+///////////////////////////////////////////////////
+//============ CARRITO ================
+
+// ============ CARRITO ================
+
+// 1. Arreglo para guardar los productos
+let carrito = [];
+
+// 2. Cargamos el carrito automáticamente cuando la página abre
+document.addEventListener("DOMContentLoaded", () => {
+    cargarCarrito();
+});
+
+// 3. Función para agregar productos
+function agregarAlCarrito(id, nombre, precio, imagenUrl) {
+    // Verificamos si el producto ya está en el carrito
+    const productoExistente = carrito.find(item => item.id === id);
+
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        // Si no existe, lo añadimos con su imagen
+        carrito.push({
+            id: id,
+            nombre: nombre,
+            precio: precio,
+            imagen: imagenUrl,
+            cantidad: 1
+        });
+    }
+
+    // Actualizamos la vista en pantalla, el total y guardamos en el Local Storage
+    actualizarCarritoUI();
+    guardarCarrito();
+}
+
+// 4. Función para actualizar la interfaz (HTML)
+function actualizarCarritoUI() {
+    const listaCarrito = document.getElementById('lista-carrito');
+    const totalCarrito = document.getElementById('total-carrito');
+
+    // Verificamos que los elementos existan en el HTML para evitar errores en consola
+    if (!listaCarrito || !totalCarrito) return;
+
+    // Limpiamos la lista para no duplicar elementos al actualizar
+    listaCarrito.innerHTML = '';
+    
+    let total = 0;
+
+    // Recorremos cada producto del carrito
+    carrito.forEach(producto => {
+        // Calculamos el subtotal por producto
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+
+        // Creamos un nuevo elemento <li> para la lista
+        const itemLi = document.createElement('li');
+        itemLi.className = 'flex items-center justify-between gap-4 bg-zinc-800 p-2 rounded-xl';
+        
+        itemLi.innerHTML = `
+            <div class="flex items-center gap-4">
+                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-12 h-12 object-cover rounded-md">
+                <div>
+                    <h4 class="font-medium text-sm">${producto.nombre}</h4>
+                    <p class="text-xs text-gray-400">S/ ${producto.precio} x ${producto.cantidad}</p>
+                </div>
+            </div>
+            <span class="font-bold">S/ ${subtotal}</span>
+            <button onclick="eliminarProducto(${producto.id})" class="text-blue-500 hover:text-red-400 text-sm">❌</button>
+        `;
+
+        listaCarrito.appendChild(itemLi);
+    });
+
+    // Actualizamos el total general
+    totalCarrito.textContent = `S/ ${total.toFixed(2)}`;
+}
+
+// 5. Función extra para eliminar productos del carrito
+function eliminarProducto(id) {
+    // Filtramos el carrito dejando solo los productos que no coinciden con el id a eliminar
+    carrito = carrito.filter(item => item.id !== id);
+    
+    // Actualizamos la vista y guardamos en el Local Storage
+    actualizarCarritoUI();
+    guardarCarrito();
+}
+
+// 6. Funciones de Local Storage //////////////
+function guardarCarrito() {
+    localStorage.setItem('carritoTienda', JSON.stringify(carrito));
+}
+
+function cargarCarrito() {
+    const carritoGuardado = localStorage.getItem('carritoTienda');
+    if (carritoGuardado) {
+        carrito = JSON.parse(carritoGuardado);
+        actualizarCarritoUI(); // Dibujamos el carrito en pantalla con los datos cargados
+    }
+}
