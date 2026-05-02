@@ -1157,45 +1157,85 @@
 
 
 <!-- INFO OCULTA CARD -->
-    <div id="producto-modal-overlay" class="fixed inset-0 bg-black/70 z-[100] hidden backdrop-blur-sm" onclick="cerrarModalProducto()">
-    </div>
+    <div id="producto-modal-overlay" class="fixed inset-0 bg-black/70 z-[100] hidden backdrop-blur-sm" onclick="cerrarModalProducto()"></div>
 
-    <div id="producto-modal" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110] bg-zinc-900 border border-zinc-800 rounded-3xl p-6 w-11/12 max-w-2xl text-white hidden max-h-[85vh] overflow-y-auto shadow-2xl">
+    <div id="producto-modal" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110] bg-zinc-950 border border-zinc-800 rounded-3xl pt-12 p-6 pb-6 w-11/12 max-w-2xl text-white hidden max-h-[90vh] overflow-y-auto shadow-2xl transition-all duration-300">
         
-        <button onclick="cerrarModalProducto()" class="absolute top-4 right-4 text-zinc-500 hover:text-white text-3xl">&times;</button>
+        <button onclick="cerrarModalProducto()" 
+            class="absolute top-3 right-3 z-[120] bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-white rounded-full p-2.5 transition flex items-center justify-center shadow-lg border border-zinc-700/50">
+            <span class="text-3xl leading-none">&times;</span>
+        </button>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <div class="h-64 md:h-80 bg-zinc-800 rounded-2xl overflow-hidden mb-4">
-                    <img id="modal-imagen" src="image_884895.jpg" alt="Producto" class="w-full h-full object-cover">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div class="">
+                <div class="aspect-square  bg-zinc-800 rounded-2xl overflow-hidden mb-4 flex items-center justify-center border border-zinc-700">
+                    <img id="modal-imagen" 
+                        src="https://via.placeholder.com/600x600" 
+                        alt="Producto" 
+                        class="w-full h-full object-cover transition-opacity duration-300 ">
                 </div>
                 
-                <div class="flex gap-3">
-                    <img src="assets/GIRLS PRO/03.webp" onclick="cambiarImagenPrincipal(this.src)" class="w-20 h-20 object-cover rounded-xl cursor-pointer border-2 border-cyan-400 hover:opacity-80 transition" alt="Miniatura 1">
-                    <img src="assets/GIRLS PRO/04.webp" onclick="cambiarImagenPrincipal(this.src)" class="w-20 h-20 object-cover rounded-xl cursor-pointer border border-cyan-400 hover:opacity-80 transition" alt="Miniatura 2">
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start 
+                max-h-[100px] overflow-y-auto  ocultar-scrollbar w-full">
+    
+                    <img src="assets/GIRLS OFERTAS/02.webp" onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border-2 border-cyan-400 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 1">
+                        
+                    <img src="assets/GIRLS PRO/03.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 2">
+                        
+                    <img src="assets/GIRLS PRO/04.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 3">
+                        
+                    <img src="assets/GIRLS OFERTAS/03.webp" onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 4">
+
+                    <img src="assets/GIRLS PRO/05.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 5">
+
+                    <img src="assets/GIRLS PRO/06.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 5">
+
+                    <img src="assets/GIRLS PRO/07.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 5">
+
+                    <img src="assets/GIRLS PRO/08.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 5">
+
+                    <img src="assets/GIRLS PRO/09.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 5">
+
+                    <img src="assets/GIRLS PRO/10.webp" 
+                    onclick="cambiarImagenPrincipal(this.src)" 
+                        class="w-16 h-16 object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0" alt="Miniatura 5">
                 </div>
             </div>
 
-            <div class="flex flex-col justify-between">
+            <div class="flex flex-col justify-between gap-6">
                 <div>
                     <span id="modal-categoria" class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                        Categoría
+                        Soportes
                     </span>
                     
-                    <h2 id="modal-nombre" class="text-2xl font-bold mt-4 mb-2 leading-tight">
-                        Nombre del Producto
+                    <h2 id="modal-nombre" class="text-2xl font-bold mt-4 mb-2 leading-tight text-white">
+                        Soporte Imantado Supremo
                     </h2>
                     
                     <p id="modal-precio" class="text-xl font-bold text-cyan-400 mb-6">
-                        S/ 0.00
+                        S/ 20.00
                     </p>
                     
                     <div class="mb-6">
-                        <h3 class="text-sm font-bold text-white mb-2">
-                            Descripción
-                        </h3>
-                        <p id="modal-descripcion" class="text-xs text-gray-400 leading-relaxed mb-6">
-                            Descripción detallada del producto...
+                        <h3 class="text-sm font-bold text-white mb-2">Descripción</h3>
+                        <p id="modal-descripcion" class="text-sm text-gray-400 leading-relaxed">
+                            Todos los productos que puedes querer...
                         </p>
                     </div>
                     
@@ -1209,8 +1249,9 @@
                     </div>
                 </div>
 
-                <button id="modal-boton-agregar" onclick="" class="w-full bg-cyan-400 hover:bg-cyan-500 text-zinc-950 font-bold py-4 rounded-2xl text-lg transition-all">
-                    <i class="ri-shopping-cart-2-line mr-2"></i> Agregar al Carrito
+                <button id="modal-boton-agregar" onclick="agregarAlCarrito(...)" 
+                    class="w-full bg-cyan-400 hover:bg-cyan-500 text-zinc-950 font-bold py-4 rounded-2xl text-lg transition-all flex items-center justify-center gap-2 transform hover:scale-[1.01] active:scale-95 shadow-md">
+                    <i class="ri-shopping-cart-2-line"></i> Agregar al Carrito
                 </button>
             </div>
         </div>

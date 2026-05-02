@@ -23,6 +23,8 @@
     --color-fondoOscuro: #0B1120;
     --color-navOscuro: #161F32;
 
+    --breakpoint-md: 50rem;
+
 
     
 
@@ -603,3 +605,30 @@
 
 /* .carousel products */
 /* /////////////////////////////////////////// */
+
+
+
+
+
+
+
+/* /////////////////////////////////////////// */
+/* ====== PRODUCTOS EXPANSIBLES ======= */
+
+/* MINIATURAS SCROLL */
+/* Oculta la barra de scroll en navegadores modernos (Chrome, Safari, Edge) */
+.ocultar-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Oculta la barra de scroll en Firefox */
+.ocultar-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE y Edge antiguo */
+}
+
+
+/* /////////////////////////////////////////// */
+
+
+
+
