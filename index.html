@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Zagi Tech Import</title>
-    
-    <link rel="stylesheet" href="css/estilos.css">
 
+    <!--=============== GOOGLE FONTS ===============-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,6 +13,11 @@
     <!--=============== REMIXICONS - Insert link for icons ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
 
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/estilos.css">
     
 </head>
 
@@ -277,7 +281,6 @@
 
     </section>
     <!-- .hero -->
-
 
 <!-- /////////////////////////////////////////////////// -->
 
@@ -718,6 +721,7 @@
 
 
 <!-- /////////////////////////////////////////////////// -->
+
     <!-- OFERTAS -->
         <h2 id="ofertas" class="text-5xl font-Russo text-center mt-23 mb-7
         max-lg:mb-0
@@ -917,6 +921,7 @@
             </article>
         </section>
     <!-- .ofertas -->
+    
 <!-- /////////////////////////////////////////////////// -->
     
 
@@ -925,96 +930,146 @@
 
 <!-- /////////////////////////////////////////////////// -->
 
-    <!-- PRODUCTOS CARDS DESLIZANTES -->
-    <section class="carousel card-pink flex mx-auto m-20 gap-4 max-w-6xl
-    max-sm:max-w-85
-    max-lg:max-w-2xl
-    ">
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center
-        max-sm:h-115
-        sm:max-lg:h-200
-        ">
-            <h2>
-                Card 1
-            </h2>
+    <!-- ========== PRODUCTOS CARDS DESLIZANTES ================ -->
+    <section class="testimonial bg-amber-200 min-h-dvh flex flex-col justify-center items-center overflow-hidden">
+        <h2 class="testimonial__title font-Russo text-center mb-12 text-2xl">
+            WHAT <br> CUSTOMERS SAY
+        </h2>
+
+        <div class="testimonial__swiper swiper maw-w-xl w-full mx-auto pb-28">
+            <div class="swiper-wrapper">
+                <article class="testimonial__card swiper-slide max-w-70 pt-8 px-6
+                pb-12 rounded-3xl text-center
+                ">
+                    <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                    " src="assets/avatar-1.png" alt="image" >
+    
+                    <h3 class="testimonial__name mb-8 font-bold">
+                        Damyz Julz
+                    </h3>
+    
+                    <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                        <div class="testimonial__stars flex items-center gap-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+    
+                        <h3 class="testimonial__number">5.0</h3>
+                    </div>
+    
+                    <p class="testimonial__description">
+                        The company offers many easy-to-use services, 
+                        with hard work and round-the-clock support 
+                        on all projects.
+                    </p>
+                </article>
+                
+                <article class="testimonial__card swiper-slide max-w-70 pt-8 px-6
+                pb-12 rounded-3xl text-center
+                ">
+                    <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                    " src="assets/avatar-2.png" alt="image" >
+    
+                    <h3 class="testimonial__name mb-8 font-bold">
+                        Damyz Julz
+                    </h3>
+    
+                    <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                        <div class="testimonial__stars flex items-center gap-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+    
+                        <h3 class="testimonial__number">5.0</h3>
+                    </div>
+    
+                    <p class="testimonial__description">
+                        The company offers many easy-to-use services, 
+                        with hard work and round-the-clock support 
+                        on all projects.
+                    </p>
+                </article>
+
+                <article class="testimonial__card swiper-slide max-w-70 pt-8 px-6
+                pb-12 rounded-3xl text-center
+                ">
+                    <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                    " src="assets/avatar-3.png" alt="image" >
+    
+                    <h3 class="testimonial__name mb-8 font-bold">
+                        Damyz Julz
+                    </h3>
+    
+                    <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                        <div class="testimonial__stars flex items-center gap-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+    
+                        <h3 class="testimonial__number">5.0</h3>
+                    </div>
+    
+                    <p class="testimonial__description">
+                        The company offers many easy-to-use services, 
+                        with hard work and round-the-clock support 
+                        on all projects.
+                    </p>
+                </article>
+
+                <article class="testimonial__card swiper-slide max-w-70 pt-8 px-6
+                pb-12 rounded-3xl text-center
+                ">
+                    <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                    " src="assets/avatar-4.png" alt="image" >
+    
+                    <h3 class="testimonial__name mb-8 font-bold">
+                        Damyz Julz
+                    </h3>
+    
+                    <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                        <div class="testimonial__stars flex items-center gap-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+    
+                        <h3 class="testimonial__number">5.0</h3>
+                    </div>
+    
+                    <p class="testimonial__description">
+                        The company offers many easy-to-use services, 
+                        with hard work and round-the-clock support 
+                        on all projects.
+                    </p>
+                </article>
+    
+                
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-long-line"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-long-line"></i>
+            </div>
         </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 2
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 3
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 4
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 5
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 6
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 7
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 8
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center 
-        max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 9
-            </h2>
-        </div>
-
-        <div class="card h-95 p-1 rounded-2xl text-center flex items-center justify-center max-sm:h-115
-        sm:max-lg:h-200">
-            <h2>
-                Card 10
-            </h2>
-        </div>
-
-
-
-        
     </section>
-    
+    <!-- ========== .productos cards deslizantes ================ -->
 
 
 <!-- /////////////////////////////////////////////////// -->
@@ -1037,6 +1092,10 @@
 <!-- ////////////////////////////////////////////////////// -->
 
 
+<!--=============== SWIPER JS ===============-->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
     <script src="./js/app.js"></script>
 </body>
 

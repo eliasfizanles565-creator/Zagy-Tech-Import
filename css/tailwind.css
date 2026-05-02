@@ -64,6 +64,16 @@
     --lime-color: 78.99; /*lime-500 #7ccf00 */
     --amber-color: 40.58; /*pink-500 #fe9a00 #ffb900 */
     --purple-color: 272.11; /*purple-500 #ad46ff #c27aff */
+
+    /*========== Colors CARD PRODUCTOS ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(265, 75%, 48%);
+    --second-color: hsl(18, 88%, 58%);
+    --title-color: hsl(220, 20%, 8%);
+    --text-color: hsl(220, 8%, 35%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(220, 4%, 99%);
+    --container-color: hsl(0, 0%, 100%);
 }
 
 
@@ -517,55 +527,18 @@
 
 /* /////////////////////////////////////////// */
 /* CAROUSEL PRODUCTOS */
-.carousel {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    anchor-name: --carousel;
-    scroll-snap-type: x mandatory;
+
+.testimonial__card {
+    background-color: var(--container-color);
+    box-shadow: 0 8px 16px hsla(265, 75%, 4%, .1); 
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
+.testimonial__img {
+    border-color: var(--first-color);
 }
 
-.carousel::scroll-button(right), .carousel::scroll-button(left) {
-    content: '→';
-    border:none;
-    background-color: greenyellow;
-    height: 60px;
-    width: 60px;
-    color: white;
-    font-size:2rem;
-    border-radius: 50%;
-    cursor: url(../assets/touchPink.png),pointer;
-    position: fixed;
-    position-anchor: --carousel;
-    position-area: right center;
-    translate: 20%;
-}
-
-.carousel::scroll-button(left) {
-    content: '←';
-    position-area: left center;
-    translate: -20%;
-}
-
-.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
-    opacity:0.5;
-    cursor: auto;
-}
-
-
-.card {
-    background-color: hsl(var(--hue), 90%, 50%);
-    flex: 0 0 17rem;
-    scroll-snap-align: start;
-}
-
-@media(max-width: 1024px) {
-    .card {
-        flex: 0 0 100%;
-    }
+.testimonial__stars i {
+    color: var(--second-color);
 }
 
 

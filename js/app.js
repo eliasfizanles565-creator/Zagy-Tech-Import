@@ -64,3 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // CARROUSEL PRODUCTOS
 
+const swiperTestimonial = new Swiper('.testimonial__swiper', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    spaceBetween: 16,
+    grabCursor: true,
+    speed: 600,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
