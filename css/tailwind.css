@@ -551,7 +551,7 @@
 }
 .dark .testimonial__card {
     background-color: var(--color-negro);
-    box-shadow: 
+    box-shadow: 0 8px 16px hsla(265, 75%, 1%, .5); 
 }
 
 .testimonial__img {
@@ -567,7 +567,36 @@
 
 /* Swiper class */
 .testimonial .swiper-pagination-bullets {
-    bottom: ;
+    bottom: 4rem ;
+}
+
+.testimonial .swiper-pagination-bullet {
+    background-color: var(--first-color);
+    transition: opacity .4s;
+}
+
+.testimonial .swiper-button-prev {
+    left: calc(50% - 3rem);
+}
+
+.testimonial .swiper-button-next {
+    right: calc(50% - 3rem)
+}
+
+.testimonial .swiper-button-prev::after,
+.testimonial .swiper-button-next::after {
+    content: '';
+}
+
+.testimonial :is(.swiper-button-prev, .swiper-button-next){
+    top: initial;
+    bottom: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
 }
 
 /* .carousel products */
