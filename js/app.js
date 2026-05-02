@@ -17,8 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
         });
     }
+///////////////////////////////////////////////////
 
-    // --- MENÚ FULL SCREEN ---
+
+
+///////////////////////////////////////////////////
+    // ======= MENÚ FULL SCREEN ==========
+
     if (btnMenu && mobileMenu) {
         // Abrir: Quitamos la traslación negativa (baja desde arriba)
         btnMenu.addEventListener('click', () => {
@@ -42,9 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.nav-card-zagi');
     
@@ -59,10 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     });
 });
+///////////////////////////////////////////////////
 
 
 
-// CARROUSEL PRODUCTOS
+
+
+
+///////////////////////////////////////////////////
+// ======== CARROUSEL PRODUCTOS ===========
 
 const swiperTestimonial = new Swiper('.testimonial__swiper', {
     // Optional parameters
@@ -98,7 +105,7 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
     }
 });
 
-
+///////////////////////////////////////////////////
 
 
 
@@ -238,3 +245,40 @@ function cargarCarrito() {
         actualizarCarritoUI(); // Dibujamos el carrito en pantalla con los datos cargados
     }
 }
+
+
+
+// 7. Obtener referencias a los elementos
+const carritoPanel = document.getElementById('carrito-panel');
+const carritoOverlay = document.getElementById('carrito-overlay');
+
+function abrirCarrito() {
+    carritoOverlay.classList.remove('hidden');
+    // Forzar un pequeño delay para que la transición de opacidad del overlay sea suave
+    setTimeout(() => {
+        carritoPanel.classList.remove('-translate-y-full', 'md:translate-x-full');
+    }, 10);
+}
+
+function cerrarCarrito() {
+    // Primero, ocultar el panel
+    carritoPanel.classList.add('-translate-y-full', 'md:translate-x-full');
+
+    // Esperar a que termine la animación (300ms es el duration de Tailwind) para ocultar el overlay
+    setTimeout(() => {
+        carritoOverlay.classList.add('hidden');
+    }, 300);
+}
+
+// Opcional: Cerrar con la tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !carritoPanel.classList.contains('md:translate-x-full')) {
+        cerrarCarrito();
+    }
+});
+
+// 08. Asignar el evento abrir al botón del header (si lo tienes)
+const botonHeaderCarrito = document.getElementById('carrito');
+    if (botonHeaderCarrito) {
+        botonHeaderCarrito.addEventListener('click', abrirCarrito);
+    }
