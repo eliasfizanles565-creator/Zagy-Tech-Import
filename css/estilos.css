@@ -381,8 +381,8 @@
     @media (width >= 40rem) {
       max-width: 40rem;
     }
-    @media (width >= 50rem) {
-      max-width: 50rem;
+    @media (width >= 60rem) {
+      max-width: 60rem;
     }
     @media (width >= 64rem) {
       max-width: 64rem;
@@ -2119,59 +2119,59 @@
     }
   }
   .md\:top-0 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       top: calc(var(--spacing) * 0);
     }
   }
   .md\:right-0 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       right: calc(var(--spacing) * 0);
     }
   }
   .md\:bottom-0 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       bottom: calc(var(--spacing) * 0);
     }
   }
   .md\:left-auto {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       left: auto;
     }
   }
   .md\:max-h-full {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       max-height: 100%;
     }
   }
   .md\:w-\[400px\] {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       width: 400px;
     }
   }
   .md\:translate-x-full {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       --tw-translate-x: 100%;
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .md\:translate-y-0 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       --tw-translate-y: calc(var(--spacing) * 0);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .md\:grid-cols-2 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:gap-8 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       gap: calc(var(--spacing) * 8);
     }
   }
   .md\:px-7 {
-    @media (width >= 50rem) {
+    @media (width >= 60rem) {
       padding-inline: calc(var(--spacing) * 7);
     }
   }
