@@ -277,8 +277,48 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// 08. Asignar el evento abrir al botón del header (si lo tienes)
+// 8. Asignar el evento abrir al botón del header (si lo tienes)
 const botonHeaderCarrito = document.getElementById('carrito');
     if (botonHeaderCarrito) {
         botonHeaderCarrito.addEventListener('click', abrirCarrito);
     }
+
+
+
+// 9 ====== INTEGRACIÓN WHATSAPP ======
+
+// ¡REEMPLAZA ESTO POR TU NÚMERO DE TELÉFONO!
+// Debe incluir el código de país (51 para Perú) y sin espacios ni '+'
+const NUMERO_WHATSAPP_NEGOCIO = "51900556685"; 
+
+function finalizarCompraWhatsApp() {
+    if (carrito.length === 0) {
+        alert("¡Tu carrito está vacío!");
+        return;
+    }
+
+    // 1. Construir el mensaje
+    let mensaje = `Hola *ZZAGY*, me gustaría finalizar mi pedido:%0A%0A`;
+    mensaje += `--- *RESUMEN DEL PEDIDO* ---%0A`;
+
+    let total = 0;
+
+    carrito.forEach((producto, index) => {
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+        mensaje += `${index + 1}. *${producto.nombre}*%0A`;
+        mensaje += `   🛒 Cantidad: ${producto.cantidad} x S/ ${producto.precio.toFixed(2)}%0A`;
+        mensaje += `   💰 Subtotal: *S/ ${subtotal.toFixed(2)}*%0A`;
+        mensaje += `-----------------------%0A`;
+    });
+
+    mensaje += `%0A💵 *TOTAL A PAGAR: S/ ${total.toFixed(2)}*%0A`;
+    mensaje += `%0A¿Podrían confirmarme los métodos de pago y envío? ¡Gracias!`;
+
+    // 2. Crear la URL de WhatsApp
+    // Para PC es web.whatsapp.com, para móvil es api.whatsapp.com o wa.me
+    const url = `https://wa.me/${NUMERO_WHATSAPP_NEGOCIO}?text=${mensaje}`;
+
+    // 3. Abrir en una nueva pestaña
+    window.open(url, '_blank').focus();
+}
