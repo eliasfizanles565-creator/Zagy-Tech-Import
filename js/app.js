@@ -329,3 +329,50 @@ function finalizarCompraWhatsApp() {
         window.open(url, '_blank').focus();
     }
 }
+
+///////////////////////////////////////////////
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////
+
+//// ====== CARDS PRODUCTOS EXPANSION ======
+// Abrir el modal con los datos del producto
+function abrirModalProducto(nombre, precio, imagenUrl, categoria, descripcion, idProducto) {
+    // 1. Seleccionamos los elementos en el HTML del modal
+    document.getElementById('modal-nombre').textContent = nombre;
+    document.getElementById('modal-precio').textContent = `S/ ${precio.toFixed(2)}`;
+    document.getElementById('modal-imagen').src = imagenUrl;
+    document.getElementById('modal-categoria').textContent = categoria;
+    document.getElementById('modal-descripcion').textContent = descripcion;
+
+    // 2. Vinculamos el botón de agregar al carrito del modal
+    const botonAgregar = document.getElementById('modal-boton-agregar');
+    // Le pasamos los datos del producto al hacer clic en agregar
+    botonAgregar.onclick = function() {
+        agregarAlCarrito(idProducto, nombre, precio, imagenUrl);
+        cerrarModalProducto(); // Cerramos el modal tras agregarlo
+        abrirCarrito();       // Abrimos el panel del carrito
+    };
+
+    // 3. Mostramos el modal y el fondo oscuro
+    document.getElementById('producto-modal').classList.remove('hidden');
+    document.getElementById('producto-modal-overlay').classList.remove('hidden');
+}
+
+// Cerrar el modal
+function cerrarModalProducto() {
+    document.getElementById('producto-modal').classList.add('hidden');
+    document.getElementById('producto-modal-overlay').classList.add('hidden');
+}
+
+// Intercambio de Imagenes
+function cambiarImagenPrincipal(nuevaSrc) {
+    const imagenPrincipal = document.getElementById('modal-imagen');
+    imagenPrincipal.src = nuevaSrc;
+}
