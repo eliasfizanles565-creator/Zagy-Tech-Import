@@ -265,7 +265,7 @@
             sm:max-lg:mt-4
             ">
                 <i class="ri-shopping-cart-2-line text-shadow-lg text-shadow-blue-300/30"></i>
-                <button class="text-shadow-lg text-shadow-blue-300/50" onclick="agregarAlCarrito(3, 'Dispensador de Jabón', 110, 'assets/01 Hero.webp')">
+                <button class="text-shadow-lg text-shadow-blue-300/50 cursor-pointer" onclick="agregarAlCarrito(3, 'Dispensador de Jabón', 110, 'assets/01 Hero.webp'); abrirCarrito();" id="carrito">
                 Agregar al carrito
                 </button>
             </section>
@@ -937,7 +937,167 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- ========== PRODUCTOS CARDS DESLIZANTES ================ -->
-    <div id="productos" class="bg-white dark:bg-neutral-900 cursor-[url(../assets/cursorPurple.png),pointer]">
+    <div id="productos" class="bg-pink-500 cursor-[url(../assets/cursorPurple.png),pointer]">
+        <section class="testimonial bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-2xl mx-auto cursor-[url(../assets/cursorPurple.png),pointer]">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl">
+                Accesorios
+            </h2>
+
+            <div class="testimonial__swiper swiper w-full mx-auto pb-35">
+                <div class="swiper-wrapper mb-25 mt-5">
+                    
+                    
+                    <article class="cursor-[url(../assets/touchPurple.png),pointer] testimonial__card swiper-slide max-w-80 py-25 px-6
+                    pb-12 rounded-3xl text-center
+                    ">
+                        <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                        " src="assets/avatar-2.png" alt="image" >
+        
+                        <h3 class="testimonial__name mb-8 font-bold text-xl">
+                            Taylor Carter
+                        </h3>
+        
+                        <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                            <div class="testimonial__stars flex items-center gap-1">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+        
+                            <h3 class="testimonial__number font-bold text-lg">5.0</h3>
+                        </div>
+        
+                        <p class="testimonial__description">
+                            The company offers many easy-to-use services, 
+                            with hard work and round-the-clock support 
+                            on all projects.
+                        </p>
+                    </article>
+
+                    <article class="cursor-[url(../assets/touchPurple.png),pointer] testimonial__card swiper-slide max-w-80 py-25 px-6
+                    pb-12 rounded-3xl text-center
+                    ">
+                        <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                        " src="assets/avatar-2.png" alt="image" >
+        
+                        <h3 class="testimonial__name mb-8 font-bold text-xl">
+                            Taylor Carter
+                        </h3>
+        
+                        <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                            <div class="testimonial__stars flex items-center gap-1">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+        
+                            <h3 class="testimonial__number font-bold text-lg">5.0</h3>
+                        </div>
+        
+                        <p class="testimonial__description">
+                            The company offers many easy-to-use services, 
+                            with hard work and round-the-clock support 
+                            on all projects.
+                        </p>
+                    </article>
+
+                    <article class="cursor-[url(../assets/touchPurple.png),pointer] testimonial__card swiper-slide max-w-80 py-25 px-6
+                    pb-12 rounded-3xl text-center
+                    ">
+                        <img class="testimonial__img w-25 rounded-[4rem] border-4 mt-0 mx-auto mb-2
+                        " src="assets/avatar-3.png" alt="image" >
+        
+                        <h3 class="testimonial__name mb-8 font-bold text-xl">
+                            Rina Ownel
+                        </h3>
+        
+                        <div class="testimonial__rating flex justify-center items-center gap-4 mb-3">
+                            <div class="testimonial__stars flex items-center gap-1">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+        
+                            <h3 class="testimonial__number font-bold text-lg">5.0</h3>
+                        </div>
+        
+                        <p class="testimonial__description">
+                            The company offers many easy-to-use services, 
+                            with hard work and round-the-clock support 
+                            on all projects.
+                        </p>
+                    </article>
+
+                    <article class="cursor-[url(../assets/touchPurple.png),pointer] testimonial__card swiper-slide max-w-80 py-6 pb-15
+                    rounded-3xl text-center flex flex-col items-center
+                    "onclick="abrirModalGeneral({
+                    id: 1,
+                    nombre: 'Soporte Imantado Supremo',
+                    precio: 20.00,
+                    categoria: 'Soportes',
+                    descripcion: 'Todos los productos que puedes querer.',
+                    caracteristicas: ['Garantía de 1 año', 'Envíos a nivel nacional', 'Disponible en stock'],
+                    imagenes: ['assets/GIRLS OFERTAS/02.webp', 'assets/GIRLS PRO/03.webp', 'assets/GIRLS PRO/04.webp', 'assets/GIRLS PRO/05.webp', 'assets/GIRLS PRO/06.webp', 'assets/GIRLS PRO/07.webp', 'assets/GIRLS PRO/08.webp', 'assets/GIRLS PRO/09.webp', 'assets/GIRLS PRO/10.webp', 'assets/GIRLS PRO/11.webp']
+                    })"
+                    >
+                        <div class="size-70 mx-auto">
+                            <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl border-4 mt-0 mx-auto mb-2
+                            " src="assets/GIRLS OFERTAS/02.webp" alt="image" >
+                        </div>
+                        
+                        <div class="font-Epic">
+                            <h3 class="testimonial__name mb-8 font-bold text-xl">
+                                Jhon Patel
+                            </h3>
+            
+                            <p class="testimonial__description">
+                                The company offers many easy-to-use services, 
+                                with hard work and round-the-clock support 
+                                on all projects.
+                            </p>
+
+                            <button class="size-10 rounded-full bg-green-500"
+                            onclick="agregarYVerCarrito(event, 3, 'Dispensador de Jabón', 110, 'assets/01 Hero.webp')" id="carrito">
+                                <i class="ri-shopping-cart-2-line"></i>
+                            </button>
+
+
+
+                        </div>
+                    </article>
+        
+                    
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev ">
+                    <i class="ri-arrow-left-long-line cursor-[url(../assets/touchPurple.png),pointer]"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-long-line cursor-[url(../assets/touchPurple.png),pointer]"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- ========== .productos cards deslizantes ================ -->
+
+
+<!-- /////////////////////////////////////////////////// -->
+
+
+<!-- /////////////////////////////////////////////////// -->
+
+    <!-- ========== PRODUCTOS CARDS DESLIZANTES OFICIAL ================ -->
+    <div id="productos" class="bg-amber-300 cursor-[url(../assets/cursorPurple.png),pointer]">
         <section class="testimonial bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-2xl mx-auto cursor-[url(../assets/cursorPurple.png),pointer]">
             <h2 class="testimonial__title font-Russo text-center mb-12 text-2xl">
                 WHAT <br> CUSTOMERS SAY
@@ -1092,7 +1252,7 @@
 
 <!-- ======= CARDS PRODUCTOS ========== -->
 
-<!-- CARDS-->
+
 
     <!-- CARD 1 -->
     <div class="bg-zinc-800 p-4 rounded-3xl max-w-2xl mx-auto

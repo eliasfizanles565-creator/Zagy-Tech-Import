@@ -99,10 +99,10 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    }
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // }
 });
 
 ///////////////////////////////////////////////////
@@ -334,6 +334,20 @@ function finalizarCompraWhatsApp() {
 
 
 
+///////////////////////////////////////////////
+///////// ======= ABRIR CARRITO AL PRESIONAR EL BOTTON ======
+// Seleccionamos todos los botones que tengan esta clase
+const botones = document.querySelectorAll('.boton-agregar');
+
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        // Lógica que quieres que hagan todos los botones
+        abrirCarrito();
+    });
+});
+
+
+///////////////////////////////////////////////
 
 
 
@@ -341,7 +355,7 @@ function finalizarCompraWhatsApp() {
 
 ///////////////////////////////////////////////
 
-//// ====== CARDS PRODUCTOS EXPANSION ======
+//// ====== CARDS PRODUCTOS INFO EXPANSION ======
 function abrirModalGeneral(producto) {
     // 1. Rellenar textos básicos
     document.getElementById('modal-nombre').textContent = producto.nombre;
@@ -391,4 +405,28 @@ function cambiarImagenPrincipal(nuevaSrc) {
 function cerrarModalProducto() {
     document.getElementById('producto-modal').classList.add('hidden');
     document.getElementById('producto-modal-overlay').classList.add('hidden');
+}
+
+
+// ////////////////////////////////////////////////
+
+
+
+
+
+
+// /////////////////////////////////////////////////
+
+// ====== BOTON AGREGAR CARRITO SIN INFO OCULTA ========
+
+
+function agregarYVerCarrito(event, id, nombre, precio, imagen) {
+    // 1. Detiene la propagación para que no se abra el modal de la card
+    event.stopPropagation();
+
+    // 2. Ejecuta tu función para agregar al carrito
+    agregarAlCarrito(id, nombre, precio, imagen);
+
+    // 3. Abre el carrito
+    abrirCarrito();
 }
