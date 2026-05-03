@@ -306,6 +306,11 @@
 /* /////////////////////////////////////////// */
 
 /*  animation para carrito */
+.carritoCard:hover {
+    box-shadow: 0 0 20px 4px hsla(var(--hue), 90%, 50%) !important;
+    transform: scale(1.08) !important;
+}
+
 
 .carrito {
     /* nombre | duración | curva de tiempo | bucle infinito */
@@ -528,7 +533,7 @@
     }
 }
 
-/* .bedimcode */
+/* .bedimcode ofertas*/
 /* /////////////////////////////////////// */
 
 
@@ -548,16 +553,14 @@
 /* CAROUSEL PRODUCTOS */
 
 .testimonial__card {
-    background-color: var(--container-color);
-    box-shadow: 0 8px 16px hsla(265, 75%, 4%, .1); 
+    box-shadow: 0 8px 16px hsla(var(--hue), 75%, 50%, .2); 
 }
 .dark .testimonial__card {
-    background-color: var(--color-negro);
-    box-shadow: 0 8px 16px hsla(265, 75%, 1%, .5); 
+    box-shadow: 0px 2px 5px 5px hsla(var(--hue), 90%, 50%, 1);
 }
 
 .testimonial__img {
-    border-color: var(--first-color);
+    border-color: hsl(var(--hue) 90% 50%);
 }
 
 .testimonial__stars i {
@@ -573,9 +576,12 @@
 }
 
 .testimonial .swiper-pagination-bullet {
-    background-color: var(--first-color);
+    background-color: hsl(var(--hue) 90% 50%);
     transition: opacity .4s;
-    cursor: url('../assets/cursorPurple.png'), auto;
+}
+
+.card-pink .swiper-pagination-bullet {
+    cursor: url('../assets/cursorPink.png'), auto;
 }
 
 .testimonial .swiper-button-prev {
@@ -596,12 +602,55 @@
     bottom: 0;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--first-color);
+    background-color: hsl(var(--hue) 90% 50%);
     color: var(--white-color);
     border-radius: 50%;
     font-size: 1.5rem;
-    cursor: url('../assets/touchPurple.png'), auto;
 }
+
+.card-pink :is(.swiper-button-prev, .swiper-button-next){
+    cursor: url('../assets/touchPink.png'), auto;
+}
+
+
+.dark .carritoCard {
+    box-shadow: 0px 3px 15px 1px hsla(var(--hue), 90%, 50%, 1);
+}
+
+
+
+
+
+/*  animation para carrito */
+.carrito2:hover {
+    box-shadow: 0 0 20px 4px hsla(var(--hue), 90%, 50%) !important;
+    transform: scale(1.08) !important;
+}
+
+
+.carrito2 {
+    /* nombre | duración | curva de tiempo | bucle infinito */
+    animation: latidoCarrito2 3s ease-in-out infinite;
+    ; /* Importante para que el transform funcione bien */
+}
+/* Definimos la animación */
+@keyframes latidoCarrito2 {
+    0% {
+        transform: scale(1);
+        translate: 0 0;
+    }
+    50% {
+        transform: scale(1.10);
+        /* Usamos translate en lugar de translateX para mejor rendimiento */
+        translate: 0 0; 
+    }
+    100% {
+        transform: scale(1);
+        translate: 0 0;
+    }
+}
+
+
 
 /* .carousel products */
 /* /////////////////////////////////////////// */
