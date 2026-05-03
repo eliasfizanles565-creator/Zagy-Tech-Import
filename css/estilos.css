@@ -1462,6 +1462,14 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-3xl\/7 {
+    font-size: var(--text-3xl);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .text-3xl\/8 {
+    font-size: var(--text-3xl);
+    line-height: calc(var(--spacing) * 8);
+  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
