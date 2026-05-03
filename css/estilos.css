@@ -3230,6 +3230,7 @@
 .zoomPro {
   transition: transform 0.2s ease;
   transform-origin: center center;
+  touch-action: none;
 }
 .zoomPro:hover {
   transform: scale(2.5);
