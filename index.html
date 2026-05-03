@@ -954,7 +954,18 @@
     <!-- ========== PRODUCTOS CARDS DESLIZANTES ================ -->
     
     <!-- ACCESORIOS -->
-    <div id="accesorios" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPink.png),pointer]">
+    <div id="accesorios" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPink.png),pointer] relative">
+
+        <!-- Background -->
+            <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
+            max-lg:object-left"
+            src="assets/GIRLS PRO/FondoAccesorios.png" alt="background">
+
+            <img class="absolute inset-0 w-full h-full object-cover object-center opacity-0  dark:opacity-100 invisible dark:visible transition-all duration-300
+            max-lg:object-left"
+            src="assets/GIRLS PRO/FondoAccesoriosDark.png" alt="background">
+        <!-- .background -->
+
         <section class="testimonial card-pink bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorPink.png),pointer]">
             <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl text-pink-500">
                 Accesorios
@@ -964,7 +975,7 @@
                 <div class="swiper-wrapper mb-25 mt-5">
                     
                     <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
-                    rounded-3xl text-center flex flex-col items-center bg-white dark:bg-pink-900/10  shadow-2xl shadow-pink-500
+                    rounded-3xl text-center flex flex-col items-center bg-white/10 dark:bg-pink-950/20  shadow-2xl shadow-pink-500
                     "onclick="abrirModalGeneral({
                     id: 4,
                     nombre: 'Soporte Imantado Supremo',
@@ -981,25 +992,25 @@
                         </div>
                         
                         <div class="font-Epic">
-                            <h3 class="testimonial__name mt-2 mb-12 font-bold text-3xl/8.5 text-pink-500">
+                            <h3 class="testimonial__name mt-2 mb-12 font-bold text-3xl/8.5 text-pink-500 dark:text-pink-100">
                                 Soporte Imantado <br> Supremo
                             </h3>
             
 
-                            <button class="size-10 rounded-full bg-white dark:bg-pink-500 absolute right-5 bottom-4 text-pink-500 dark:text-white text-xl shadow-lg shadow-pink-500/20  carrito2 carritoGrande
+                            <button class="size-10 rounded-full bg-white/10 dark:bg-pink-500 absolute right-5 bottom-4 text-pink-500 dark:text-white text-xl shadow-lg shadow-pink-500/20  carrito2 carritoGrande
                             cursor-[url(../assets/touchPink.png),pointer]"
                             onclick="agregarYVerCarrito(event, 4, 'Soporte Imantado Supremo', 30, 'assets/01 SOPORTE IMANTADO/01 Negro.png')" id="carrito">
                                 <i class="ri-shopping-cart-2-line"></i>
                             </button>
 
 
-                            <button class="size-10 rounded-full bg-white dark:bg-zinc-950 absolute right-5 top-3 text-pink-500 text-xl
+                            <button class="size-10 rounded-full bg-white/10 dark:bg-zinc-950/20 absolute right-5 top-3 text-pink-500 text-xl
                             cursor-[url(../assets/touchPink.png),pointer]"
                             >
                                 <i class="ri-heart-fill"></i>
                             </button>
 
-                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-pink-500 left-5 top-3 text-uppercase font-bold text-pink-500 dark:text-white shadow-lg shadow-pink-500/10
+                            <a class="h-10 w-25 rounded-full bg-white/10 absolute dark:bg-pink-500/50 left-5 top-3 text-uppercase font-bold text-pink-500 dark:text-white shadow-lg shadow-pink-500/10
                             cursor-[url(../assets/touchPink.png),pointer] flex items-center justify-center"
                             onclick="event.stopPropagation()" href="#categorias">
                                 Soporte
