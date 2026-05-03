@@ -167,28 +167,37 @@ function actualizarCarritoUI() {
 
         // Creamos un nuevo elemento <li> para la lista
         const itemLi = document.createElement('li');
-        itemLi.className = 'flex items-center justify-between gap-3 bg-zinc-800 p-3 rounded-xl w-full';
+        itemLi.className = 'flex items-center justify-between gap-3 bg-white dark:bg-zinc-950/20 p-3 rounded-xl w-full border border-blue-400 dark:border-lime-500';
         
         itemLi.innerHTML = `
             <div class="flex items-center gap-3 flex-1 min-w-0">
                 <img src="${producto.imagen}" alt="${producto.nombre}" class="w-12 h-12 object-cover rounded-md flex-shrink-0">
                 <div class="min-w-0 flex-1">
-                    <h4 class="font-medium text-sm text-white break-words line-clamp-2 leading-tight">
+                    <h4 class="font-medium text-sm break-words line-clamp-2 leading-tight">
                         ${producto.nombre}
                     </h4>
-                    <p class="text-xs text-gray-400 mt-0.5">
+                    <p class="text-xs text-blue-400 dark:text-lime-500 mt-0.5">
                         S/ ${producto.precio}
                     </p>
                 </div>
             </div>
             
             <div class="flex flex-col items-end gap-2 flex-shrink-0">
-                <span class="font-bold text-sm text-white whitespace-nowrap">S/ ${subtotal}</span>
+                <span class="font-bold text-sm  whitespace-nowrap">S/ ${subtotal}</span>
                 
-                <div class="flex items-center gap-2 bg-zinc-700 rounded-lg px-2 py-0.5">
-                    <button onclick="cambiarCantidad(${producto.id}, -1)" class="text-blue-400 hover:text-blue-300 font-bold px-2 py-0.5">-</button>
-                    <span class="text-white text-xs font-bold min-w-[16px] text-center">${producto.cantidad}</span>
-                    <button onclick="cambiarCantidad(${producto.id}, 1)" class="text-blue-400 hover:text-blue-300 font-bold px-2 py-0.5">+</button>
+                <div class="flex items-center gap-2 bg-white/10 dark:bg-zinc-950/20 rounded-lg px-2 py-0.5">
+
+                    <button onclick="cambiarCantidad(${producto.id}, -1)" class="text-blue-400 hover:text-blue-300 dark:text-lime-500 dark:hover:text-lime-400 font-bold px-2 py-0.5">
+                    -
+                    </button>
+
+                    <span class=" text-xs font-bold min-w-[16px] text-center">
+                    ${producto.cantidad}
+                    </span>
+
+                    <button onclick="cambiarCantidad(${producto.id}, 1)" class="text-blue-400 hover:text-blue-300 dark:text-lime-500 dark:hover:text-lime-400 font-bold px-2 py-0.5">
+                    +
+                    </button>
                 </div>
             </div>
         `;

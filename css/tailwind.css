@@ -953,8 +953,6 @@
 .zoomPro {
     transition: transform 0.2s ease;
     transform-origin: center center;
-    /* Evita que el toque del móvil intente arrastrar toda la página al hacer zoom */
-    touch-action: none;
 }
 
 .zoomPro:hover {
