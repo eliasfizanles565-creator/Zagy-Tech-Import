@@ -1337,6 +1337,10 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .text-4xl\/10 {
+    font-size: var(--text-4xl);
+    line-height: calc(var(--spacing) * 10);
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -3228,7 +3232,7 @@
   transform-origin: center center;
 }
 .zoomPro:hover {
-  transform: scale(3);
+  transform: scale(2.5);
   cursor: zoom-in;
 }
 @property --tw-translate-x {

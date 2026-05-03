@@ -956,7 +956,7 @@
 }
 
 .zoomPro:hover {
-    transform: scale(3);
+    transform: scale(2.5);
     cursor: zoom-in;
 }
 
