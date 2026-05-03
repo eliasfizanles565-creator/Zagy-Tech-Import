@@ -380,7 +380,7 @@ function abrirModalGeneral(producto) {
     producto.imagenes.forEach(imgUrl => {
         const img = document.createElement('img');
         img.src = imgUrl;
-        img.className = 'w-[64px] h-[64px] object-cover rounded-xl cursor-pointer border border-zinc-700 hover:opacity-80 transition flex-shrink-0';
+        img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
         img.onclick = () => cambiarImagenPrincipal(imgUrl);
         contenedorMiniaturas.appendChild(img);
     });
