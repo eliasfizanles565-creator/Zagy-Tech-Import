@@ -430,3 +430,41 @@ function agregarYVerCarrito(event, id, nombre, precio, imagen) {
     // 3. Abre el carrito
     abrirCarrito();
 }
+
+// /////////////////////////////////////////////////
+
+
+
+
+// /////////////////////////////////////////////////
+// ======== ZOOM TIPO AMAZON ==========
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.zoomEpic');
+    const img = container.querySelector('.zoomPro');
+
+    container.addEventListener('mousemove', (e) => {
+        // Obtenemos la posición del contenedor en la pantalla
+        const rect = container.getBoundingClientRect();
+        
+        // Calculamos la posición del cursor dentro del contenedor (en píxeles)
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Convertimos esa posición a porcentaje (0% a 100%)
+        const xPercent = (x / rect.width) * 100;
+        const yPercent = (y / rect.height) * 100;
+        
+        // Aplicamos el origen de la transformación justo donde está el cursor
+        img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+    });
+
+    // Reiniciamos el origen al salir del contenedor
+    container.addEventListener('mouseleave', () => {
+        img.style.transformOrigin = 'center center';
+    });
+});
+
+
+
+// /////////////////////////////////////////////////
