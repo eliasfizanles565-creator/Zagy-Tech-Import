@@ -622,35 +622,73 @@
 
 
 /*  animation para carrito */
-.carrito2:hover {
-    box-shadow: 0 0 20px 4px hsla(var(--hue), 90%, 50%) !important;
-    transform: scale(1.08) !important;
-}
 
 
 .carrito2 {
-    /* nombre | duración | curva de tiempo | bucle infinito */
-    animation: latidoCarrito2 3s ease-in-out infinite;
-    ; /* Importante para que el transform funcione bien */
+    transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
+    animation: latidoCarrito1 3s ease-in-out infinite;
 }
+.dark .carrito2 {
+    transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
+    animation: latidoCarrito2 3s ease-in-out infinite;
+}
+
+.carrito2:hover {
+    box-shadow: 0 0 16px 4px hsla(var(--hue), 90%, 50%,0.2) !important;
+    transform: scale(1.08)  translateY(-.25rem) !important;
+    /* 1. Congelamos la animación para que no siga latiendo ni moviéndose sola */
+    animation-play-state: paused !important;
+}
+.dark .carrito2:hover {
+    box-shadow: 0 0 20px 4px hsla(var(--hue), 90%, 50%) !important;
+}
+
+
+/*  animation para Button */
+
 /* Definimos la animación */
-@keyframes latidoCarrito2 {
+@keyframes latidoCarrito1 {
     0% {
         transform: scale(1);
         translate: 0 0;
+        /* Botón sin sombra al inicio */
+        box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.1);
     }
     50% {
-        transform: scale(1.10);
+        transform: scale(1);
         /* Usamos translate en lugar de translateX para mejor rendimiento */
-        translate: 0 0; 
+        translate: 0 -.25rem; 
+        /* La sombra se agranda y se hace más intensa cuando el botón crece */
+        box-shadow: 0 0 16px 4px hsla(var(--hue), 90%, 50%, 0.2);
     }
     100% {
         transform: scale(1);
         translate: 0 0;
+        /* Regresa a 0 de sombra */
+        box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.1);
     }
 }
-
-
+@keyframes latidoCarrito2 {
+    0% {
+        transform: scale(1);
+        translate: 0 0;
+        /* Botón sin sombra al inicio */
+        box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
+    }
+    50% {
+        transform: scale(1);
+        /* Usamos translate en lugar de translateX para mejor rendimiento */
+        translate: 0 -.25rem; 
+        /* La sombra se agranda y se hace más intensa cuando el botón crece */
+        box-shadow: 0 0 16px 4px hsla(var(--hue), 90%, 50%, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        translate: 0 0;
+        /* Regresa a 0 de sombra */
+        box-shadow: 0 0 8px 2px hsla(var(--hue), 90%, 50%, 0.4);
+    }
+}
 
 /* .carousel products */
 /* /////////////////////////////////////////// */
