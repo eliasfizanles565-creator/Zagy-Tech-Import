@@ -443,24 +443,62 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector('.zoomEpic');
     const img = container.querySelector('.zoomPro');
 
-    container.addEventListener('mousemove', (e) => {
-        // Obtenemos la posición del contenedor en la pantalla
-        const rect = container.getBoundingClientRect();
+    // Función para manejar la posición del cursor o el dedo
+    function actualizarZoom(e, rect) {
+        let clientX, clientY;
+
+        // Detecta si es un evento táctil (móvil) o de ratón (PC)
+        if (e.type.startsWith('touch')) {
+            // e.targetTouches[0] obtiene el primer dedo en la pantalla
+            clientX = e.targetTouches[0].clientX;
+            clientY = e.targetTouches[0].clientY;
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+
+        // Calcula la posición relativa dentro del contenedor
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
         
-        // Calculamos la posición del cursor dentro del contenedor (en píxeles)
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        // Convertimos esa posición a porcentaje (0% a 100%)
         const xPercent = (x / rect.width) * 100;
         const yPercent = (y / rect.height) * 100;
         
-        // Aplicamos el origen de la transformación justo donde está el cursor
         img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+    }
+
+    // --- Eventos para PC (Ratón) ---
+    container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        actualizarZoom(e, rect);
     });
 
-    // Reiniciamos el origen al salir del contenedor
+    container.addEventListener('mouseenter', () => {
+        img.style.transform = 'scale(2.5)';
+    });
+
     container.addEventListener('mouseleave', () => {
+        img.style.transform = 'scale(1)';
+        img.style.transformOrigin = 'center center';
+    });
+
+    // --- Eventos para Celular (Táctil) ---
+    container.addEventListener('touchstart', (e) => {
+        // Aumenta la imagen al tocarla
+        img.style.transform = 'scale(2.5)';
+        const rect = container.getBoundingClientRect();
+        actualizarZoom(e, rect);
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+        // Actualiza el origen mientras el dedo se desplaza por la imagen
+        const rect = container.getBoundingClientRect();
+        actualizarZoom(e, rect);
+    }, { passive: true });
+
+    container.addEventListener('touchend', () => {
+        // Devuelve la imagen a su estado original al retirar el dedo
+        img.style.transform = 'scale(1)';
         img.style.transformOrigin = 'center center';
     });
 });
