@@ -162,7 +162,7 @@ function actualizarCarritoUI() {
     // Recorremos cada producto del carrito
     carrito.forEach(producto => {
         // Calculamos el subtotal por producto
-        const subtotal = producto.precio * producto.cantidad;
+        const subtotal = Number((producto.precio * producto.cantidad).toFixed(2));
         total += subtotal;
 
         // Creamos un nuevo elemento <li> para la lista
@@ -365,6 +365,7 @@ botones.forEach(boton => {
 ///////////////////////////////////////////////
 
 //// ====== CARDS PRODUCTOS INFO EXPANSION ======
+
 function abrirModalGeneral(producto) {
     // 1. Rellenar textos básicos
     document.getElementById('modal-nombre').textContent = producto.nombre;
