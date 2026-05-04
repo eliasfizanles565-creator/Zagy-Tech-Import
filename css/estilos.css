@@ -31,6 +31,7 @@
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-pink-200: oklch(89.9% 0.061 343.231);
     --color-pink-300: oklch(82.3% 0.12 346.018);
+    --color-pink-400: oklch(71.8% 0.202 349.761);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-pink-950: oklch(28.4% 0.109 3.907);
     --color-rose-500: oklch(64.5% 0.246 16.439);
@@ -1556,6 +1557,12 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-white\/20 {
+    color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+  }
   .text-white\/50 {
     color: color-mix(in srgb, #fff 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1829,6 +1836,18 @@
     --tw-text-shadow-color: color-mix(in srgb, oklch(68.5% 0.169 237.323) 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-sky-500) 10%, transparent) var(--tw-text-shadow-alpha), transparent);
+    }
+  }
+  .text-shadow-white {
+    --tw-text-shadow-color: #fff;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-text-shadow-color: color-mix(in oklab, var(--color-white) var(--tw-text-shadow-alpha), transparent);
+    }
+  }
+  .text-shadow-white\/20 {
+    --tw-text-shadow-color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-white) 20%, transparent) var(--tw-text-shadow-alpha), transparent);
     }
   }
   .hover\:scale-\[1\.02\] {
@@ -2857,6 +2876,14 @@
       }
     }
   }
+  .dark\:text-shadow-black\/10 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: color-mix(in srgb, #000 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 10%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
   .dark\:text-shadow-black\/20 {
     &:where(.dark, .dark *) {
       --tw-text-shadow-color: color-mix(in srgb, #000 20%, transparent);
@@ -2939,6 +2966,38 @@
       }
     }
   }
+  .dark\:text-shadow-pink-300\/20 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: color-mix(in srgb, oklch(82.3% 0.12 346.018) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-pink-300) 20%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:text-shadow-pink-400\/20 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: color-mix(in srgb, oklch(71.8% 0.202 349.761) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-pink-400) 20%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:text-shadow-pink-500\/10 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: color-mix(in srgb, oklch(65.6% 0.241 354.308) 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-pink-500) 10%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:text-shadow-pink-500\/20 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: color-mix(in srgb, oklch(65.6% 0.241 354.308) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-pink-500) 20%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
   .dark\:text-shadow-pink-950\/20 {
     &:where(.dark, .dark *) {
       --tw-text-shadow-color: color-mix(in srgb, oklch(28.4% 0.109 3.907) 20%, transparent);
@@ -2969,6 +3028,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-white) 50%, transparent) var(--tw-text-shadow-alpha), transparent);
       }
+    }
+  }
+  .dark\:text-shadow-xs {
+    &:where(.dark, .dark *) {
+      text-shadow: 0px 1px 1px var(--tw-text-shadow-color, rgb(0 0 0 / 0.2));
     }
   }
   .dark\:hover\:bg-lime-400 {
