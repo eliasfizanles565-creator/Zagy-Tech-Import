@@ -58,7 +58,6 @@
     cursor:url('../assets/touchDegradado.png'), auto;
 }
 
-
 :root {
     --pink-color: 328.25; /*pink-500 #f6339a #fb64b6 */
     --blue-color: 216.89; /*blue-500 #2b7fff */
@@ -960,6 +959,16 @@
     cursor: zoom-in;
 }
 
+/* boton X de carrito de Compras */
+.botonX {
+    transition: 0.2s ease;
+}
 
+.botonX:hover {
+    background-color: rgb(81, 162, 255);
+    transform: scale(1.10);
+}
 
-
+.dark .botonX:hover {
+    background-color: #7ccf00;
+}

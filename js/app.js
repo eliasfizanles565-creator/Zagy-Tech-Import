@@ -167,7 +167,7 @@ function actualizarCarritoUI() {
 
         // Creamos un nuevo elemento <li> para la lista
         const itemLi = document.createElement('li');
-        itemLi.className = 'flex items-center justify-between gap-3 bg-white dark:bg-zinc-950/20 p-3 rounded-xl w-full border border-blue-400 dark:border-lime-500';
+        itemLi.className = 'flex items-center justify-between gap-3 bg-white/10 dark:bg-zinc-950/20 p-3 rounded-xl w-full border border-blue-400 dark:border-lime-500';
         
         itemLi.innerHTML = `
             <div class="flex items-center gap-3 flex-1 min-w-0">
@@ -185,9 +185,9 @@ function actualizarCarritoUI() {
             <div class="flex flex-col items-end gap-2 flex-shrink-0">
                 <span class="font-bold text-sm  whitespace-nowrap">S/ ${subtotal}</span>
                 
-                <div class="flex items-center gap-2 bg-white/10 dark:bg-zinc-950/20 rounded-lg px-2 py-0.5">
+                <div class="flex items-center gap-2 bg-transparent rounded-lg px-2 py-0.5">
 
-                    <button onclick="cambiarCantidad(${producto.id}, -1)" class="text-blue-400 hover:text-blue-300 dark:text-lime-500 dark:hover:text-lime-400 font-bold px-2 py-0.5">
+                    <button onclick="cambiarCantidad(${producto.id}, -1)" class="text-blue-400 hover:text-blue-300 dark:text-lime-500 dark:hover:text-lime-400 font-bold px-2 py-0.5 cursor-pointer">
                     -
                     </button>
 
@@ -195,7 +195,7 @@ function actualizarCarritoUI() {
                     ${producto.cantidad}
                     </span>
 
-                    <button onclick="cambiarCantidad(${producto.id}, 1)" class="text-blue-400 hover:text-blue-300 dark:text-lime-500 dark:hover:text-lime-400 font-bold px-2 py-0.5">
+                    <button onclick="cambiarCantidad(${producto.id}, 1)" class="text-blue-400 hover:text-blue-300 dark:text-lime-500 dark:hover:text-lime-400 font-bold px-2 py-0.5 cursor-pointer">
                     +
                     </button>
                 </div>
