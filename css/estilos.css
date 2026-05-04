@@ -914,6 +914,9 @@
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
   }
+  .gap-y-6 {
+    row-gap: calc(var(--spacing) * 6);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -2311,6 +2314,11 @@
   .md\:h-45 {
     @media (width >= 52rem) {
       height: calc(var(--spacing) * 45);
+    }
+  }
+  .md\:h-47 {
+    @media (width >= 52rem) {
+      height: calc(var(--spacing) * 47);
     }
   }
   .md\:h-50 {
