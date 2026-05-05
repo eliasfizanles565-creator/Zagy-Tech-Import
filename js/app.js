@@ -366,18 +366,14 @@ botones.forEach(boton => {
 
 //// ====== CARDS PRODUCTOS INFO EXPANSION ======
 
-// Función para abrir el modal general
 function abrirModalGeneral(producto) {
-    // 1. Rellenar textos básicos
     document.getElementById('modal-nombre').textContent = producto.nombre;
     document.getElementById('modal-precio').textContent = `S/ ${producto.precio.toFixed(2)}`;
     document.getElementById('modal-categoria').textContent = producto.categoria;
     document.getElementById('modal-descripcion').textContent = producto.descripcion;
     
-    // Mostramos la primera imagen por defecto al abrir el modal y ocultamos cualquier video anterior
     cambiarImagenPrincipal(producto.imagenes[0]);
 
-    // 2. Llenar características dinámicamente
     const listaCaracteristicas = document.getElementById('modal-caracteristicas');
     listaCaracteristicas.innerHTML = '';
     producto.caracteristicas.forEach(item => {
@@ -386,7 +382,6 @@ function abrirModalGeneral(producto) {
         listaCaracteristicas.appendChild(li);
     });
 
-    // 3. Crear miniaturas dinámicas
     const contenedorMiniaturas = document.getElementById('modal-miniaturas');
     contenedorMiniaturas.innerHTML = '';
     
@@ -394,19 +389,15 @@ function abrirModalGeneral(producto) {
         const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
         
         if (esVideo) {
-            // Creamos un contenedor o elemento para la miniatura de video
-            const videoThumb = document.createElement('video'); // O puedes usar un img con ícono de video si prefieres
+            const videoThumb = document.createElement('video');
             videoThumb.src = imgUrl;
-            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0 cursor-pointer'; // Añadimos cursor-pointer
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0 cursor-pointer';
             
-            // Llama a la misma función del botón de video cuando haces clic en esta miniatura
             videoThumb.onclick = () => {
-                // Actualizamos el botón del video con la URL de este video
                 const botonVideo = document.getElementById('btn-video-modal');
                 if (botonVideo) {
                     botonVideo.setAttribute('data-video-url', imgUrl);
                 }
-                // Ejecutamos la función que reproduce el video
                 reproducirVideoDelBoton();
             };
             
@@ -420,7 +411,6 @@ function abrirModalGeneral(producto) {
         }
     });
 
-    // 4. Configurar botón de agregar al carrito
     const botonAgregar = document.getElementById('modal-boton-agregar');
     if (botonAgregar) {
         botonAgregar.onclick = function() {
@@ -430,37 +420,140 @@ function abrirModalGeneral(producto) {
         };
     }
 
-    // 5. Configurar el botón de video para este producto
     const botonVideo = document.getElementById('btn-video-modal');
     const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
 
     if (urlVideo) {
         botonVideo.setAttribute('data-video-url', urlVideo);
-        botonVideo.classList.remove('hidden'); // Muestra el botón si el producto tiene video
+        botonVideo.classList.remove('hidden');
     } else {
-        botonVideo.classList.add('hidden'); // Oculta el botón si el producto no tiene video
+        botonVideo.classList.add('hidden');
     }
 
-    // 6. Mostrar modal y overlay
     document.getElementById('producto-modal').classList.remove('hidden');
     document.getElementById('producto-modal-overlay').classList.remove('hidden');
 }
 
-// Cambia de imagen y oculta el video
+// ABRIR INFO BLUE (CORREGIDO E INDEPENDIENTE)
+function abrirModalGeneral2(producto) {
+    document.getElementById('modal-nombre-2').textContent = producto.nombre;
+    document.getElementById('modal-precio-2').textContent = `S/ ${producto.precio.toFixed(2)}`;
+    document.getElementById('modal-categoria-2').textContent = producto.categoria;
+    document.getElementById('modal-descripcion-2').textContent = producto.descripcion;
+    
+    cambiarImagenPrincipal2(producto.imagenes[0]); // Llama a la función independiente del modal 2
+
+    const listaCaracteristicas = document.getElementById('modal-caracteristicas-2');
+    listaCaracteristicas.innerHTML = '';
+    producto.caracteristicas.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        listaCaracteristicas.appendChild(li);
+    });
+
+    const contenedorMiniaturas = document.getElementById('modal-miniaturas-2');
+    contenedorMiniaturas.innerHTML = '';
+    
+    producto.imagenes.forEach(imgUrl => {
+        const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
+        
+        if (esVideo) {
+            const videoThumb = document.createElement('video');
+            videoThumb.src = imgUrl;
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0 cursor-pointer';
+            
+            videoThumb.onclick = () => {
+                const botonVideo2 = document.getElementById('btn-video-modal-2');
+                if (botonVideo2) {
+                    botonVideo2.setAttribute('data-video-url', imgUrl);
+                }
+                reproducirVideoDelBoton2(); // Llama a la función del botón 2
+            };
+            
+            contenedorMiniaturas.appendChild(videoThumb);
+        } else {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
+            // Al hacer clic cambia la imagen del modal 2
+            img.onclick = () => cambiarImagenPrincipal2(imgUrl);
+            contenedorMiniaturas.appendChild(img);
+        }
+    });
+
+    const botonAgregar = document.getElementById('modal-boton-agregar-2');
+    if (botonAgregar) {
+        botonAgregar.onclick = function() {
+            agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+            cerrarModalProducto();
+            abrirCarrito();
+        };
+    }
+
+    const botonVideo2 = document.getElementById('btn-video-modal-2');
+    const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
+
+    if (urlVideo && botonVideo2) {
+        botonVideo2.setAttribute('data-video-url', urlVideo);
+        botonVideo2.classList.remove('hidden');
+    } else if (botonVideo2) {
+        botonVideo2.classList.add('hidden');
+    }
+
+    // Inicialización del modal 2 (Oculta el video y muestra la imagen al cargar)
+    const imgElemento2 = document.getElementById('modal-imagen-2');
+    const videoElemento2 = document.getElementById('modal-video-2');
+
+    if (videoElemento2) {
+        videoElemento2.classList.add('hidden');
+        videoElemento2.pause();
+    }
+
+    if (imgElemento2) {
+        imgElemento2.src = producto.imagenes[0];
+        imgElemento2.classList.remove('hidden');
+        imgElemento2.style.objectFit = 'contain';
+    }
+
+    document.getElementById('producto-modal-2').classList.remove('hidden');
+    document.getElementById('producto-modal-overlay').classList.remove('hidden');
+}
+
+// 1. Cambia de imagen - Modal 1
 function cambiarImagenPrincipal(nuevaSrc) {
     const imgElemento = document.getElementById('modal-imagen');
     const videoElemento = document.getElementById('modal-video');
 
-    // Ocultar el reproductor de video
-    videoElemento.classList.add('hidden');
-    videoElemento.pause();
+    if (videoElemento) {
+        videoElemento.classList.add('hidden');
+        videoElemento.pause();
+    }
 
-    // Mostrar y actualizar la imagen
-    imgElemento.classList.remove('hidden');
-    imgElemento.src = nuevaSrc;
+    if (imgElemento) {
+        imgElemento.classList.remove('hidden');
+        imgElemento.src = nuevaSrc;
+        imgElemento.style.objectFit = 'contain';
+    }
 }
 
-// Reproduce el video del botón (fuera de las miniaturas)
+// 2. Cambia de imagen - Modal 2 (Independiente)
+function cambiarImagenPrincipal2(nuevaSrc) {
+    const imgElemento2 = document.getElementById('modal-imagen-2');
+    const videoElemento2 = document.getElementById('modal-video-2');
+
+    if (videoElemento2) {
+        videoElemento2.classList.add('hidden');
+        videoElemento2.pause();
+    }
+
+    if (imgElemento2) {
+        imgElemento2.classList.remove('hidden');
+        imgElemento2.src = nuevaSrc;
+        imgElemento2.style.objectFit = 'contain';
+    }
+}
+
+// Reproduce el video del botón - Modal 1
 function reproducirVideoDelBoton() {
     const botonVideo = document.getElementById('btn-video-modal');
     const urlVideo = botonVideo.getAttribute('data-video-url');
@@ -471,31 +564,56 @@ function reproducirVideoDelBoton() {
     const videoElemento = document.getElementById('modal-video');
     const videoSource = document.getElementById('modal-video-source');
 
-    // 1. Ocultar imagen y mostrar video
     imgElemento.classList.add('hidden');
-    
-    // 2. Cargar el video en el source
     videoSource.src = urlVideo;
     videoElemento.load();
     
     videoElemento.classList.remove('hidden');
     videoElemento.play().catch(error => {
         console.log("Reproducción automática bloqueada por el navegador.");
+        videoElemento.controls = true;
     });
 }
 
-// Cierra el modal y pausa cualquier video en reproducción
-function cerrarModalProducto() {
-    document.getElementById('producto-modal').classList.add('hidden');
-    document.getElementById('producto-modal-overlay').classList.add('hidden');
+// Reproduce el video del botón - Modal 2 (Independiente)
+function reproducirVideoDelBoton2(botonId = 'btn-video-modal-2') {
+    const botonVideo = document.getElementById(botonId);
+    const urlVideo = botonVideo ? botonVideo.getAttribute('data-video-url') : null;
 
-    const videoElemento = document.getElementById('modal-video');
+    if (!urlVideo) return;
+
+    const imgElemento = document.getElementById('modal-imagen-2');
+    const videoElemento = document.getElementById('modal-video-2');
+    const videoSource = document.getElementById('modal-video-source-2');
+
+    imgElemento.classList.add('hidden');
+    
+    if (videoSource) {
+        videoSource.src = urlVideo;
+    }
+    
     if (videoElemento) {
-        videoElemento.pause();
+        videoElemento.load();
+        videoElemento.classList.remove('hidden');
+        videoElemento.play().catch(error => {
+            console.log("Reproducción automática bloqueada en modal 2.");
+            videoElemento.controls = true;
+        });
     }
 }
 
+// Cierra cualquier modal y pausa todos los videos activos
+function cerrarModalProducto() {
+    document.getElementById('producto-modal').classList.add('hidden');
+    document.getElementById('producto-modal-2').classList.add('hidden');
+    document.getElementById('producto-modal-overlay').classList.add('hidden');
 
+    const videoElemento1 = document.getElementById('modal-video');
+    const videoElemento2 = document.getElementById('modal-video-2');
+
+    if (videoElemento1) videoElemento1.pause();
+    if (videoElemento2) videoElemento2.pause();
+}
 
 
 
