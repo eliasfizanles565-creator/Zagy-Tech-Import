@@ -58,6 +58,22 @@
     cursor:url('../assets/touchDegradado.png'), auto;
 }
 
+.text-stroke-black {
+        -webkit-text-stroke: 2px #000000; /* Puedes cambiar el color y el grosor aquí */
+    }
+    
+.text-stroke-white {
+        -webkit-text-stroke: 1px #ffffff;
+    }
+
+.text-stroke-blue {
+        -webkit-text-stroke: 1px #00fbff;
+    }
+
+
+
+
+
 :root {
     --pink-color: 328.25; /*pink-500 #f6339a #fb64b6 */
     --blue-color: 216.89; /*blue-500 #2b7fff */
