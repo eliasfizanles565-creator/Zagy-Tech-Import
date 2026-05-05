@@ -1045,7 +1045,7 @@
                     precio: 24.90,
                     categoria: 'Soportes',
                     descripcion: 'Este soporte magnético para celular combina una poderosa ventosa al vacío con un imán de alta potencia para ofrecer una sujeción firme y segura en todo momento. Su diseño y brazo ajustable te permite colocar tu teléfono en el ángulo perfecto, ya sea para ver videos, navegar o hacer videollamadas.',
-                    caracteristicas: ['Rotación 360°', 'Fijación Magnética Potente', 'Ventosa de Alta Adherencia', 'Compatibilidad Universal', 'Instalación Sencilla', 'Plegable y portátil', 'Construido con imán de grado N52', 'Ventosa de silicona', 'Fijación bidireccional del teléfono', 'Se adhiere a superficies lisas','Ideal para el auto, baño, cocina o escritorio'],
+                    caracteristicas: ['Aleación de Aluminio', 'Fijación Magnética Potente', 'Ventosa de Alta Adherencia', 'Compatibilidad Universal', 'Instalación Sencilla', 'Plegable y portátil', 'Construido con imán de grado N52', 'Ventosa de silicona', 'Fijación bidireccional del teléfono', 'Se adhiere a superficies lisas','Ideal para el auto, baño, cocina o escritorio'],
                     imagenes: ['assets/02 SOPORTE IMANTADO 360/01.webp','assets/02 SOPORTE IMANTADO 360/02.webp','assets/02 SOPORTE IMANTADO 360/03.avif','assets/02 SOPORTE IMANTADO 360/04.avif','assets/02 SOPORTE IMANTADO 360/05.avif','assets/02 SOPORTE IMANTADO 360/06.webp','assets/02 SOPORTE IMANTADO 360/07.webp','assets/02 SOPORTE IMANTADO 360/08.webp','assets/02 SOPORTE IMANTADO 360/09.webp','assets/02 SOPORTE IMANTADO 360/10.avif','assets/02 SOPORTE IMANTADO 360/11.avif','assets/02 SOPORTE IMANTADO 360/12.webp','assets/02 SOPORTE IMANTADO 360/13.webp','assets/02 SOPORTE IMANTADO 360/14.webp','assets/02 SOPORTE IMANTADO 360/15.webp','assets/02 SOPORTE IMANTADO 360/16.webp','assets/02 SOPORTE IMANTADO 360/17.avif','assets/02 SOPORTE IMANTADO 360/18.avif']
                     })"
                     >   
@@ -1107,8 +1107,8 @@
                     precio: 29.90,
                     categoria: 'Soportes',
                     descripcion: 'Nuevo soporte para teléfono magnético fuerte, giratorio 360°, plegable y extensible, ajustable en múltiples ángulos, soporte para teléfono de escritorio para transmisiones en vivo, soporte para teléfono de coche, soporte para teléfono de oficina y hogar, soporte de navegación para teléfono de coche.',
-                    caracteristicas: ['Rotación 360°', 'Fijación Magnética Potente', 'Ventosa de Alta Adherencia', 'Compatibilidad Universal', 'Instalación Sencilla'],
-                    imagenes: ['assets/03 SOPORTE IMANTADO 360 -SUPREME/01.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/02.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/04.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/05.avif', 'assets/03 SOPORTE IMANTADO 360 -SUPREME/06.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/07.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/08.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/09.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/10.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/11.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/12.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/13.webp']
+                    caracteristicas: ['Aleación de Aluminio', 'Rotación 360°', 'Fijación Magnética Potente', 'Ventosa de Alta Adherencia', 'Compatibilidad Universal', 'Instalación Sencilla'],
+                    imagenes: ['assets/03 SOPORTE IMANTADO 360 -SUPREME/01.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/02.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/04.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/05.avif', 'assets/03 SOPORTE IMANTADO 360 -SUPREME/06.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/07.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/08.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/09.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/10.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/11.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/12.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/13.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/15.mp4']
                     })"
                     >   
                         <div class="size-80 mx-auto">
@@ -1202,14 +1202,22 @@
 
     <div id="producto-modal" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110] bg-white/20 dark:bg-zinc-950/80 backdrop-blur-md border rounded-3xl pt-4 px-6 pb-6 w-11/12 max-w-5xl  hidden max-h-[90vh] overflow-y-auto shadow-2xl transition-all duration-300 infoOculta card-pink card-pinkCursor">
         
-        <button onclick="cerrarModalProducto()" class="absolute top-3 right-3 z-[120]  text-white w-10 h-10  rounded-[50%] p-2 transition flex items-center justify-center botonInfoOculta card-pinkTouch">
+        <button onclick="cerrarModalProducto()" class="absolute top-3 right-3 z-[120] text-white w-10 h-10 rounded-[50%] p-2 transition flex items-center justify-center botonInfoOculta card-pinkTouch">
             <span class="text-3xl leading-none">&times;</span>
+        </button>
+        <button id="btn-video-modal" onclick="reproducirVideoDelBoton()" class="absolute top-15 right-3 z-[120] text-white w-10 h-10 rounded-[50%] p-2 transition flex items-center justify-center botonInfoOculta card-pinkTouch hidden">
+            <i class="ri-video-line text-2xl"></i>
         </button>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-y-0 md:gap-8">
             <div>
-                <div class="aspect-square  rounded-2xl overflow-hidden flex items-center justify-center border infoOculta zoomEpic">
-                    <img id="modal-imagen" src="https://via.placeholder.com/600x600" alt="Producto" class="w-full h-full object-cover transition-opacity duration-300  zoomPro">
+                <div class="aspect-square rounded-2xl overflow-hidden flex items-center justify-center border infoOculta zoomEpic relative">
+                    <img id="modal-imagen" src="https://via.placeholder.com/600x600" alt="Producto" class="w-full h-full object-cover transition-opacity duration-300 zoomPro">
+
+                    <video id="modal-video" class="w-full h-full object-contain transition-opacity duration-300" controls autoplay loop muted>
+                        <source id="modal-video-source" src="" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
                 </div>
                 
                 <div id="modal-miniaturas" class="flex flex-wrap gap-3 justify-center items-start  w-full overflow-y-auto ocultar-scrollbar pt-4 

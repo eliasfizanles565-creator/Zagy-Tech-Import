@@ -366,13 +366,16 @@ botones.forEach(boton => {
 
 //// ====== CARDS PRODUCTOS INFO EXPANSION ======
 
+// Función para abrir el modal general
 function abrirModalGeneral(producto) {
     // 1. Rellenar textos básicos
     document.getElementById('modal-nombre').textContent = producto.nombre;
     document.getElementById('modal-precio').textContent = `S/ ${producto.precio.toFixed(2)}`;
     document.getElementById('modal-categoria').textContent = producto.categoria;
     document.getElementById('modal-descripcion').textContent = producto.descripcion;
-    document.getElementById('modal-imagen').src = producto.imagenes[0]; // Muestra la primera imagen por defecto
+    
+    // Mostramos la primera imagen por defecto al abrir el modal y ocultamos cualquier video anterior
+    cambiarImagenPrincipal(producto.imagenes[0]);
 
     // 2. Llenar características dinámicamente
     const listaCaracteristicas = document.getElementById('modal-caracteristicas');
@@ -388,34 +391,112 @@ function abrirModalGeneral(producto) {
     contenedorMiniaturas.innerHTML = '';
     
     producto.imagenes.forEach(imgUrl => {
-        const img = document.createElement('img');
-        img.src = imgUrl;
-        img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
-        img.onclick = () => cambiarImagenPrincipal(imgUrl);
-        contenedorMiniaturas.appendChild(img);
+        const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
+        
+        if (esVideo) {
+            // Creamos un contenedor o elemento para la miniatura de video
+            const videoThumb = document.createElement('video'); // O puedes usar un img con ícono de video si prefieres
+            videoThumb.src = imgUrl;
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0 cursor-pointer'; // Añadimos cursor-pointer
+            
+            // Llama a la misma función del botón de video cuando haces clic en esta miniatura
+            videoThumb.onclick = () => {
+                // Actualizamos el botón del video con la URL de este video
+                const botonVideo = document.getElementById('btn-video-modal');
+                if (botonVideo) {
+                    botonVideo.setAttribute('data-video-url', imgUrl);
+                }
+                // Ejecutamos la función que reproduce el video
+                reproducirVideoDelBoton();
+            };
+            
+            contenedorMiniaturas.appendChild(videoThumb);
+        } else {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
+            img.onclick = () => cambiarImagenPrincipal(imgUrl);
+            contenedorMiniaturas.appendChild(img);
+        }
     });
 
     // 4. Configurar botón de agregar al carrito
     const botonAgregar = document.getElementById('modal-boton-agregar');
-    botonAgregar.onclick = function() {
-        agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
-        cerrarModalProducto();
-        abrirCarrito();
-    };
+    if (botonAgregar) {
+        botonAgregar.onclick = function() {
+            agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+            cerrarModalProducto();
+            abrirCarrito();
+        };
+    }
 
-    // 5. Mostrar modal y overlay
+    // 5. Configurar el botón de video para este producto
+    const botonVideo = document.getElementById('btn-video-modal');
+    const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
+
+    if (urlVideo) {
+        botonVideo.setAttribute('data-video-url', urlVideo);
+        botonVideo.classList.remove('hidden'); // Muestra el botón si el producto tiene video
+    } else {
+        botonVideo.classList.add('hidden'); // Oculta el botón si el producto no tiene video
+    }
+
+    // 6. Mostrar modal y overlay
     document.getElementById('producto-modal').classList.remove('hidden');
     document.getElementById('producto-modal-overlay').classList.remove('hidden');
 }
 
+// Cambia de imagen y oculta el video
 function cambiarImagenPrincipal(nuevaSrc) {
-    document.getElementById('modal-imagen').src = nuevaSrc;
+    const imgElemento = document.getElementById('modal-imagen');
+    const videoElemento = document.getElementById('modal-video');
+
+    // Ocultar el reproductor de video
+    videoElemento.classList.add('hidden');
+    videoElemento.pause();
+
+    // Mostrar y actualizar la imagen
+    imgElemento.classList.remove('hidden');
+    imgElemento.src = nuevaSrc;
 }
 
+// Reproduce el video del botón (fuera de las miniaturas)
+function reproducirVideoDelBoton() {
+    const botonVideo = document.getElementById('btn-video-modal');
+    const urlVideo = botonVideo.getAttribute('data-video-url');
+
+    if (!urlVideo) return;
+
+    const imgElemento = document.getElementById('modal-imagen');
+    const videoElemento = document.getElementById('modal-video');
+    const videoSource = document.getElementById('modal-video-source');
+
+    // 1. Ocultar imagen y mostrar video
+    imgElemento.classList.add('hidden');
+    
+    // 2. Cargar el video en el source
+    videoSource.src = urlVideo;
+    videoElemento.load();
+    
+    videoElemento.classList.remove('hidden');
+    videoElemento.play().catch(error => {
+        console.log("Reproducción automática bloqueada por el navegador.");
+    });
+}
+
+// Cierra el modal y pausa cualquier video en reproducción
 function cerrarModalProducto() {
     document.getElementById('producto-modal').classList.add('hidden');
     document.getElementById('producto-modal-overlay').classList.add('hidden');
+
+    const videoElemento = document.getElementById('modal-video');
+    if (videoElemento) {
+        videoElemento.pause();
+    }
 }
+
+
+
 
 
 // ////////////////////////////////////////////////
