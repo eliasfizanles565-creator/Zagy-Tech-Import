@@ -365,7 +365,7 @@ botones.forEach(boton => {
 ///////////////////////////////////////////////
 
 //// ====== CARDS PRODUCTOS INFO EXPANSION ======
-
+// ABRIR INFO PINK
 function abrirModalGeneral(producto) {
     document.getElementById('modal-nombre').textContent = producto.nombre;
     document.getElementById('modal-precio').textContent = `S/ ${producto.precio.toFixed(2)}`;
@@ -391,7 +391,7 @@ function abrirModalGeneral(producto) {
         if (esVideo) {
             const videoThumb = document.createElement('video');
             videoThumb.src = imgUrl;
-            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0 cursor-pointer';
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
             
             videoThumb.onclick = () => {
                 const botonVideo = document.getElementById('btn-video-modal');
@@ -434,7 +434,7 @@ function abrirModalGeneral(producto) {
     document.getElementById('producto-modal-overlay').classList.remove('hidden');
 }
 
-// ABRIR INFO BLUE (CORREGIDO E INDEPENDIENTE)
+// ABRIR INFO BLUE (INDEPENDIENTE)
 function abrirModalGeneral2(producto) {
     document.getElementById('modal-nombre-2').textContent = producto.nombre;
     document.getElementById('modal-precio-2').textContent = `S/ ${producto.precio.toFixed(2)}`;
@@ -460,7 +460,7 @@ function abrirModalGeneral2(producto) {
         if (esVideo) {
             const videoThumb = document.createElement('video');
             videoThumb.src = imgUrl;
-            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0 cursor-pointer';
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-blueTouch carrito3 transition flex-shrink-0';
             
             videoThumb.onclick = () => {
                 const botonVideo2 = document.getElementById('btn-video-modal-2');
@@ -474,7 +474,7 @@ function abrirModalGeneral2(producto) {
         } else {
             const img = document.createElement('img');
             img.src = imgUrl;
-            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-blueTouch carrito3 transition flex-shrink-0';
             // Al hacer clic cambia la imagen del modal 2
             img.onclick = () => cambiarImagenPrincipal2(imgUrl);
             contenedorMiniaturas.appendChild(img);
@@ -518,7 +518,10 @@ function abrirModalGeneral2(producto) {
     document.getElementById('producto-modal-2').classList.remove('hidden');
     document.getElementById('producto-modal-overlay').classList.remove('hidden');
 }
+/////////////
 
+
+/////////////
 // 1. Cambia de imagen - Modal 1
 function cambiarImagenPrincipal(nuevaSrc) {
     const imgElemento = document.getElementById('modal-imagen');
@@ -535,7 +538,6 @@ function cambiarImagenPrincipal(nuevaSrc) {
         imgElemento.style.objectFit = 'contain';
     }
 }
-
 // 2. Cambia de imagen - Modal 2 (Independiente)
 function cambiarImagenPrincipal2(nuevaSrc) {
     const imgElemento2 = document.getElementById('modal-imagen-2');
@@ -552,7 +554,10 @@ function cambiarImagenPrincipal2(nuevaSrc) {
         imgElemento2.style.objectFit = 'contain';
     }
 }
+/////////////
 
+
+/////////////
 // Reproduce el video del botón - Modal 1
 function reproducirVideoDelBoton() {
     const botonVideo = document.getElementById('btn-video-modal');
@@ -574,7 +579,6 @@ function reproducirVideoDelBoton() {
         videoElemento.controls = true;
     });
 }
-
 // Reproduce el video del botón - Modal 2 (Independiente)
 function reproducirVideoDelBoton2(botonId = 'btn-video-modal-2') {
     const botonVideo = document.getElementById(botonId);
@@ -601,6 +605,8 @@ function reproducirVideoDelBoton2(botonId = 'btn-video-modal-2') {
         });
     }
 }
+///////////////////////
+
 
 // Cierra cualquier modal y pausa todos los videos activos
 function cerrarModalProducto() {
@@ -649,67 +655,68 @@ function agregarYVerCarrito(event, id, nombre, precio, imagen) {
 // ======== ZOOM TIPO AMAZON ==========
 
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector('.zoomEpic');
-    const img = container.querySelector('.zoomPro');
 
-    // Función para manejar la posición del cursor o el dedo
-    function actualizarZoom(e, rect) {
-        let clientX, clientY;
+    const containers = document.querySelectorAll('.zoomEpic');
 
-        // Detecta si es un evento táctil (móvil) o de ratón (PC)
-        if (e.type.startsWith('touch')) {
-            // e.targetTouches[0] obtiene el primer dedo en la pantalla
-            clientX = e.targetTouches[0].clientX;
-            clientY = e.targetTouches[0].clientY;
-        } else {
-            clientX = e.clientX;
-            clientY = e.clientY;
+    containers.forEach(container => {
+        const img = container.querySelector('.zoomPro');
+
+        if (!img) return;
+
+        function actualizarZoom(e, rect) {
+            let clientX, clientY;
+
+            if (e.type.startsWith('touch')) {
+                clientX = e.targetTouches[0].clientX;
+                clientY = e.targetTouches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
+
+            const xPercent = (x / rect.width) * 100;
+            const yPercent = (y / rect.height) * 100;
+
+            img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
         }
 
-        // Calcula la posición relativa dentro del contenedor
-        const x = clientX - rect.left;
-        const y = clientY - rect.top;
-        
-        const xPercent = (x / rect.width) * 100;
-        const yPercent = (y / rect.height) * 100;
-        
-        img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
-    }
+        // PC
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            actualizarZoom(e, rect);
+        });
 
-    // --- Eventos para PC (Ratón) ---
-    container.addEventListener('mousemove', (e) => {
-        const rect = container.getBoundingClientRect();
-        actualizarZoom(e, rect);
+        container.addEventListener('mouseenter', () => {
+            img.style.transform = 'scale(2.5)';
+        });
+
+        container.addEventListener('mouseleave', () => {
+            img.style.transform = 'scale(1)';
+            img.style.transformOrigin = 'center center';
+        });
+
+        // Móvil
+        container.addEventListener('touchstart', (e) => {
+            img.style.transform = 'scale(2.5)';
+            const rect = container.getBoundingClientRect();
+            actualizarZoom(e, rect);
+        }, { passive: true });
+
+        container.addEventListener('touchmove', (e) => {
+            const rect = container.getBoundingClientRect();
+            actualizarZoom(e, rect);
+        }, { passive: true });
+
+        container.addEventListener('touchend', () => {
+            img.style.transform = 'scale(1)';
+            img.style.transformOrigin = 'center center';
+        });
+
     });
 
-    container.addEventListener('mouseenter', () => {
-        img.style.transform = 'scale(2.5)';
-    });
-
-    container.addEventListener('mouseleave', () => {
-        img.style.transform = 'scale(1)';
-        img.style.transformOrigin = 'center center';
-    });
-
-    // --- Eventos para Celular (Táctil) ---
-    container.addEventListener('touchstart', (e) => {
-        // Aumenta la imagen al tocarla
-        img.style.transform = 'scale(2.5)';
-        const rect = container.getBoundingClientRect();
-        actualizarZoom(e, rect);
-    }, { passive: true });
-
-    container.addEventListener('touchmove', (e) => {
-        // Actualiza el origen mientras el dedo se desplaza por la imagen
-        const rect = container.getBoundingClientRect();
-        actualizarZoom(e, rect);
-    }, { passive: true });
-
-    container.addEventListener('touchend', () => {
-        // Devuelve la imagen a su estado original al retirar el dedo
-        img.style.transform = 'scale(1)';
-        img.style.transformOrigin = 'center center';
-    });
 });
 
 

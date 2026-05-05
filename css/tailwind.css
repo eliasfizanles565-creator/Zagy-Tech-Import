@@ -92,6 +92,15 @@
 .card-blue {
     --hue: var(--blue-color);
 }
+.card-blueTouch{
+    cursor: url('../assets/touchCeleste.png'), auto;
+}
+.card-blueCursor{
+    cursor: url('../assets/cursorCeleste.png'), auto;
+}
+
+
+
 .card-fuchsia {
     --hue: var(--fuchsia-color);
 }
@@ -590,6 +599,9 @@
 .card-pink .swiper-pagination-bullet {
     cursor: url('../assets/cursorPink.png'), auto;
 }
+.card-blue .swiper-pagination-bullet {
+    cursor: url('../assets/cursorCeleste.png'), auto;
+}
 
 .testimonial .swiper-button-prev {
     left: calc(50% - 3rem);
@@ -617,6 +629,9 @@
 
 .card-pink :is(.swiper-button-prev, .swiper-button-next){
     cursor: url('../assets/touchPink.png'), auto;
+}
+.card-blue :is(.swiper-button-prev, .swiper-button-next){
+    cursor: url('../assets/touchCeleste.png'), auto;
 }
 
 
