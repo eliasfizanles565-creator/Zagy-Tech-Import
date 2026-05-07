@@ -58,18 +58,6 @@
     cursor:url('../assets/touchDegradado.png'), auto;
 }
 
-.text-stroke-black {
-        -webkit-text-stroke: 2px #000000; /* Puedes cambiar el color y el grosor aquí */
-    }
-    
-.text-stroke-white {
-        -webkit-text-stroke: 1px #ffffff;
-    }
-
-.text-stroke-blue {
-        -webkit-text-stroke: 1px #00fbff;
-    }
-
 
 
 
@@ -120,6 +108,15 @@
 .card-fuchsia {
     --hue: var(--fuchsia-color);
 }
+.card-fuchsiaTouch{
+    cursor: url('../assets/touchFuchsia.png'), auto;
+}
+.card-fuchsiaCursor{
+    cursor: url('../assets/cursorFuchsia.png'), auto;
+}
+
+
+
 .card-lime {
     --hue: var(--lime-color);
 }
@@ -618,6 +615,18 @@
 .card-blue .swiper-pagination-bullet {
     cursor: url('../assets/cursorCeleste.png'), auto;
 }
+.card-fuchsia .swiper-pagination-bullet {
+    cursor: url('../assets/cursorFuchsia.png'), auto;
+}
+.card-lime .swiper-pagination-bullet {
+    cursor: url('../assets/cursorVerde.png'), auto;
+}
+.card-amber .swiper-pagination-bullet {
+    cursor: url('../assets/cursorAmber.png'), auto;
+}
+.card-purple .swiper-pagination-bullet {
+    cursor: url('../assets/cursorPurple.png'), auto;
+}
 
 .testimonial .swiper-button-prev {
     left: calc(50% - 3rem);
@@ -648,6 +657,18 @@
 }
 .card-blue :is(.swiper-button-prev, .swiper-button-next){
     cursor: url('../assets/touchCeleste.png'), auto;
+}
+.card-fuchsia :is(.swiper-button-prev, .swiper-button-next){
+    cursor: url('../assets/touchFuchsia.png'), auto;
+}
+.card-lime :is(.swiper-button-prev, .swiper-button-next){
+    cursor: url('../assets/touchVerde.png'), auto;
+}
+.card-amber :is(.swiper-button-prev, .swiper-button-next){
+    cursor: url('../assets/touchAmber.png'), auto;
+}
+.card-purple :is(.swiper-button-prev, .swiper-button-next){
+    cursor: url('../assets/touchPurple.png'), auto;
 }
 
 

@@ -521,8 +521,95 @@ function abrirModalGeneral2(producto) {
 /////////////
 
 
+// ABRIR INFO FUCHSIA (INDEPENDIENTE)
+function abrirModalGeneral3(producto) {
+    document.getElementById('modal-nombre-3').textContent = producto.nombre;
+    document.getElementById('modal-precio-3').textContent = `S/ ${producto.precio.toFixed(2)}`;
+    document.getElementById('modal-categoria-3').textContent = producto.categoria;
+    document.getElementById('modal-descripcion-3').textContent = producto.descripcion;
+    
+    cambiarImagenPrincipal3(producto.imagenes[0]); // Llama a la función independiente del modal 2
+
+    const listaCaracteristicas = document.getElementById('modal-caracteristicas-3');
+    listaCaracteristicas.innerHTML = '';
+    producto.caracteristicas.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        listaCaracteristicas.appendChild(li);
+    });
+
+    const contenedorMiniaturas = document.getElementById('modal-miniaturas-3');
+    contenedorMiniaturas.innerHTML = '';
+    
+    producto.imagenes.forEach(imgUrl => {
+        const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
+        
+        if (esVideo) {
+            const videoThumb = document.createElement('video');
+            videoThumb.src = imgUrl;
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-pinkTouch carrito3 transition flex-shrink-0';
+            
+            videoThumb.onclick = () => {
+                const botonVideo3 = document.getElementById('btn-video-modal-3');
+                if (botonVideo3) {
+                    botonVideo3.setAttribute('data-video-url', imgUrl);
+                }
+                reproducirVideoDelBoton3(); // Llama a la función del botón 3
+            };
+            
+            contenedorMiniaturas.appendChild(videoThumb);
+        } else {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-fuchsiaTouch carrito3 transition flex-shrink-0';
+            // Al hacer clic cambia la imagen del modal 3
+            img.onclick = () => cambiarImagenPrincipal3(imgUrl);
+            contenedorMiniaturas.appendChild(img);
+        }
+    });
+
+    const botonAgregar = document.getElementById('modal-boton-agregar-3');
+    if (botonAgregar) {
+        botonAgregar.onclick = function() {
+            agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+            cerrarModalProducto();
+            abrirCarrito();
+        };
+    }
+
+    const botonVideo3 = document.getElementById('btn-video-modal-3');
+    const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
+
+    if (urlVideo && botonVideo3) {
+        botonVideo3.setAttribute('data-video-url', urlVideo);
+        botonVideo3.classList.remove('hidden');
+    } else if (botonVideo3) {
+        botonVideo3.classList.add('hidden');
+    }
+
+    // Inicialización del modal 3 (Oculta el video y muestra la imagen al cargar)
+    const imgElemento3 = document.getElementById('modal-imagen-3');
+    const videoElemento3 = document.getElementById('modal-video-3');
+
+    if (videoElemento3) {
+        videoElemento3.classList.add('hidden');
+        videoElemento3.pause();
+    }
+
+    if (imgElemento3) {
+        imgElemento3.src = producto.imagenes[0];
+        imgElemento3.classList.remove('hidden');
+        imgElemento3.style.objectFit = 'contain';
+    }
+
+    document.getElementById('producto-modal-3').classList.remove('hidden');
+    document.getElementById('producto-modal-overlay').classList.remove('hidden');
+}
 /////////////
-// 1. Cambia de imagen - Modal 1
+
+
+/////////////
+// 1. Cambia de imagen - Modal 1 - PINK
 function cambiarImagenPrincipal(nuevaSrc) {
     const imgElemento = document.getElementById('modal-imagen');
     const videoElemento = document.getElementById('modal-video');
@@ -538,7 +625,7 @@ function cambiarImagenPrincipal(nuevaSrc) {
         imgElemento.style.objectFit = 'contain';
     }
 }
-// 2. Cambia de imagen - Modal 2 (Independiente)
+// 2. Cambia de imagen - Modal 2 (Independiente) - BLUE
 function cambiarImagenPrincipal2(nuevaSrc) {
     const imgElemento2 = document.getElementById('modal-imagen-2');
     const videoElemento2 = document.getElementById('modal-video-2');
@@ -554,11 +641,28 @@ function cambiarImagenPrincipal2(nuevaSrc) {
         imgElemento2.style.objectFit = 'contain';
     }
 }
+
+// 3. Cambia de imagen - Modal 3 (Independiente) - FUCHSIA
+function cambiarImagenPrincipal3(nuevaSrc) {
+    const imgElemento3 = document.getElementById('modal-imagen-3');
+    const videoElemento3 = document.getElementById('modal-video-3');
+
+    if (videoElemento3) {
+        videoElemento3.classList.add('hidden');
+        videoElemento3.pause();
+    }
+
+    if (imgElemento3) {
+        imgElemento3.classList.remove('hidden');
+        imgElemento3.src = nuevaSrc;
+        imgElemento3.style.objectFit = 'contain';
+    }
+}
 /////////////
 
 
 /////////////
-// Reproduce el video del botón - Modal 1
+// Reproduce el video del botón - Modal 1 - PINK
 function reproducirVideoDelBoton() {
     const botonVideo = document.getElementById('btn-video-modal');
     const urlVideo = botonVideo.getAttribute('data-video-url');
@@ -579,7 +683,7 @@ function reproducirVideoDelBoton() {
         videoElemento.controls = true;
     });
 }
-// Reproduce el video del botón - Modal 2 (Independiente)
+// Reproduce el video del botón - Modal 2 (Independiente) - BLUE
 function reproducirVideoDelBoton2(botonId = 'btn-video-modal-2') {
     const botonVideo = document.getElementById(botonId);
     const urlVideo = botonVideo ? botonVideo.getAttribute('data-video-url') : null;
@@ -605,6 +709,33 @@ function reproducirVideoDelBoton2(botonId = 'btn-video-modal-2') {
         });
     }
 }
+
+// Reproduce el video del botón - Modal 3 (Independiente) - FUCHSIA
+function reproducirVideoDelBoton3(botonId = 'btn-video-modal-3') {
+    const botonVideo = document.getElementById(botonId);
+    const urlVideo = botonVideo ? botonVideo.getAttribute('data-video-url') : null;
+
+    if (!urlVideo) return;
+
+    const imgElemento = document.getElementById('modal-imagen-3');
+    const videoElemento = document.getElementById('modal-video-3');
+    const videoSource = document.getElementById('modal-video-source-3');
+
+    imgElemento.classList.add('hidden');
+    
+    if (videoSource) {
+        videoSource.src = urlVideo;
+    }
+    
+    if (videoElemento) {
+        videoElemento.load();
+        videoElemento.classList.remove('hidden');
+        videoElemento.play().catch(error => {
+            console.log("Reproducción automática bloqueada en modal 3.");
+            videoElemento.controls = true;
+        });
+    }
+}
 ///////////////////////
 
 
@@ -612,13 +743,16 @@ function reproducirVideoDelBoton2(botonId = 'btn-video-modal-2') {
 function cerrarModalProducto() {
     document.getElementById('producto-modal').classList.add('hidden');
     document.getElementById('producto-modal-2').classList.add('hidden');
+    document.getElementById('producto-modal-3').classList.add('hidden');
     document.getElementById('producto-modal-overlay').classList.add('hidden');
 
     const videoElemento1 = document.getElementById('modal-video');
     const videoElemento2 = document.getElementById('modal-video-2');
+    const videoElemento3 = document.getElementById('modal-video-3');
 
     if (videoElemento1) videoElemento1.pause();
     if (videoElemento2) videoElemento2.pause();
+    if (videoElemento3) videoElemento3.pause();
 }
 
 
