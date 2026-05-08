@@ -1974,6 +1974,11 @@
       margin-top: calc(var(--spacing) * 17);
     }
   }
+  .max-md\:mb-12 {
+    @media (width < 52rem) {
+      margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
   .max-md\:mb-17 {
     @media (width < 52rem) {
       margin-bottom: calc(var(--spacing) * 17);
@@ -1997,6 +2002,11 @@
   .max-sm\:mb-11 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 11);
+    }
+  }
+  .max-sm\:mb-12 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 12);
     }
   }
   .max-sm\:min-h-\[calc\(100vh-208px\)\] {
