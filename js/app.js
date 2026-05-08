@@ -1271,44 +1271,54 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====== POSICIONAR SCROLL DE SECTIONS =========
 let isScrolling;
 
-// Usamos 'scroll' en lugar de 'wheel' para capturar PC y Móvil
+// Usamos el evento 'scroll' pero con un tiempo de espera que ignore el "inercia" del móvil
 window.addEventListener('scroll', () => {
     window.clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
+        // Obtenemos la posición actual de forma más precisa para móvil
+        const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
+        const centroPantalla = scrollActual + (window.innerHeight / 2);
+        
         const secciones = document.querySelectorAll('.seccion-snap');
-        let seccionActual = secciones[0];
+        let seccionActual = null;
         let menorDistancia = Infinity;
 
-        const centroPantalla = window.scrollY + (window.innerHeight / 2);
-
+        // Buscamos la sección que esté más cerca del centro de la vista
         secciones.forEach((seccion) => {
             const centroSeccion = seccion.offsetTop + (seccion.offsetHeight / 2);
             const distancia = Math.abs(centroPantalla - centroSeccion);
+            
             if (distancia < menorDistancia) {
                 menorDistancia = distancia;
                 seccionActual = seccion;
             }
         });
 
+        if (!seccionActual) return;
+
+        const inicioSeccion = seccionActual.offsetTop;
         const altoSeccion = seccionActual.offsetHeight;
         const altoPantalla = window.innerHeight;
-        const inicioSeccion = seccionActual.offsetTop;
         const finSeccion = inicioSeccion + altoSeccion;
 
-        // Lógica para secciones largas o normales
-        if (altoSeccion > altoPantalla + 50) {
-            // Imán inferior: si el final de la sección está cerca del fondo de la pantalla
-            if (window.scrollY + altoPantalla > finSeccion - 100) {
+        // LÓGICA DE IMÁN
+        if (altoSeccion > altoPantalla + 60) {
+            // SECCIÓN LARGA: Solo imanta si estás muy cerca de los bordes
+            if (scrollActual + altoPantalla > finSeccion - 80) {
+                // Imán al final
                 window.scrollTo({ top: finSeccion - altoPantalla, behavior: 'smooth' });
-            } 
-            // Imán superior: si el inicio está cerca del tope
-            else if (window.scrollY < inicioSeccion + 100) {
+            } else if (scrollActual < inicioSeccion + 80) {
+                // Imán al principio
                 window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
             }
+            // Si estás en el medio, no hace nada para que puedas leer
         } else {
-            // Secciones normales (h-screen)
-            window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+            // SECCIÓN NORMAL (h-screen): Imanta siempre al inicio
+            // Añadimos un pequeño margen para evitar bucles infinitos
+            if (Math.abs(scrollActual - inicioSeccion) > 10) {
+                window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+            }
         }
-    }, 1000); // Tiempo ajustado para celulares (más rápido)
+    }, 150); // 150ms es el tiempo ideal para detectar que el dedo se levantó
 }, { passive: true });
