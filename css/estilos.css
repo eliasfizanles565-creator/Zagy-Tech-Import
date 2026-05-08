@@ -1969,6 +1969,11 @@
       }
     }
   }
+  .max-md\:mb-17 {
+    @media (width < 52rem) {
+      margin-bottom: calc(var(--spacing) * 17);
+    }
+  }
   .max-md\:h-25 {
     @media (width < 52rem) {
       height: calc(var(--spacing) * 25);
