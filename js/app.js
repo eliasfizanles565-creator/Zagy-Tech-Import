@@ -1271,54 +1271,41 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====== POSICIONAR SCROLL DE SECTIONS =========
 let isScrolling;
 
-// Usamos el evento 'scroll' pero con un tiempo de espera que ignore el "inercia" del móvil
 window.addEventListener('scroll', () => {
     window.clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
-        // Obtenemos la posición actual de forma más precisa para móvil
-        const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
-        const centroPantalla = scrollActual + (window.innerHeight / 2);
-        
         const secciones = document.querySelectorAll('.seccion-snap');
-        let seccionActual = null;
+        let seccionCercana = null;
         let menorDistancia = Infinity;
 
-        // Buscamos la sección que esté más cerca del centro de la vista
+        // 1. Buscamos qué sección está más presente en pantalla
         secciones.forEach((seccion) => {
-            const centroSeccion = seccion.offsetTop + (seccion.offsetHeight / 2);
-            const distancia = Math.abs(centroPantalla - centroSeccion);
-            
-            if (distancia < menorDistancia) {
-                menorDistancia = distancia;
-                seccionActual = seccion;
+            const rect = seccion.getBoundingClientRect();
+            const distanciaAlCentro = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+
+            if (distanciaAlCentro < menorDistancia) {
+                menorDistancia = distanciaAlCentro;
+                seccionCercana = seccion;
             }
         });
 
-        if (!seccionActual) return;
+        if (seccionCercana) {
+            const rect = seccionCercana.getBoundingClientRect();
+            const altoPantalla = window.innerHeight;
+            const margenAjuste = 100; // Sensibilidad del imán en píxeles
 
-        const inicioSeccion = seccionActual.offsetTop;
-        const altoSeccion = seccionActual.offsetHeight;
-        const altoPantalla = window.innerHeight;
-        const finSeccion = inicioSeccion + altoSeccion;
-
-        // LÓGICA DE IMÁN
-        if (altoSeccion > altoPantalla + 60) {
-            // SECCIÓN LARGA: Solo imanta si estás muy cerca de los bordes
-            if (scrollActual + altoPantalla > finSeccion - 80) {
-                // Imán al final
-                window.scrollTo({ top: finSeccion - altoPantalla, behavior: 'smooth' });
-            } else if (scrollActual < inicioSeccion + 80) {
-                // Imán al principio
-                window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+            // 2. LÓGICA DE DECISIÓN
+            
+            // ¿Estamos cerca del FINAL de la sección?
+            if (rect.bottom < altoPantalla + margenAjuste && rect.bottom > altoPantalla - margenAjuste) {
+                window.scrollBy({ top: rect.bottom - altoPantalla, behavior: 'smooth' });
             }
-            // Si estás en el medio, no hace nada para que puedas leer
-        } else {
-            // SECCIÓN NORMAL (h-screen): Imanta siempre al inicio
-            // Añadimos un pequeño margen para evitar bucles infinitos
-            if (Math.abs(scrollActual - inicioSeccion) > 10) {
-                window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+            // ¿O estamos cerca del INICIO de la sección?
+            else if (rect.top < margenAjuste && rect.top > -margenAjuste) {
+                window.scrollBy({ top: rect.top, behavior: 'smooth' });
             }
+            // Si la sección es gigante y estamos en el medio, NO hace nada (libertad total)
         }
-    }, 1000); // 150ms es el tiempo ideal para detectar que el dedo se levantó
+    }, 1000); 
 }, { passive: true });
