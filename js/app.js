@@ -1271,7 +1271,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====== POSICIONAR SCROLL DE SECTIONS =========
 let isScrolling;
 
-window.addEventListener('wheel', (event) => {
+// Usamos 'scroll' en lugar de 'wheel' para capturar PC y Móvil
+window.addEventListener('scroll', () => {
     window.clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
@@ -1279,11 +1280,11 @@ window.addEventListener('wheel', (event) => {
         let seccionActual = secciones[0];
         let menorDistancia = Infinity;
 
-        // 1. Detectar en qué sección estamos (basado en el centro de la pantalla)
         const centroPantalla = window.scrollY + (window.innerHeight / 2);
 
         secciones.forEach((seccion) => {
-            const distancia = Math.abs(centroPantalla - (seccion.offsetTop + seccion.offsetHeight / 2));
+            const centroSeccion = seccion.offsetTop + (seccion.offsetHeight / 2);
+            const distancia = Math.abs(centroPantalla - centroSeccion);
             if (distancia < menorDistancia) {
                 menorDistancia = distancia;
                 seccionActual = seccion;
@@ -1295,21 +1296,19 @@ window.addEventListener('wheel', (event) => {
         const inicioSeccion = seccionActual.offsetTop;
         const finSeccion = inicioSeccion + altoSeccion;
 
-        // 2. Lógica de posicionamiento inteligente
+        // Lógica para secciones largas o normales
         if (altoSeccion > altoPantalla + 50) {
-            // SI LA SECCIÓN ES GRANDE:
-            // Si el usuario scrolleó cerca del final, imantamos al fondo.
-            if (window.scrollY + altoPantalla > finSeccion - 150) {
+            // Imán inferior: si el final de la sección está cerca del fondo de la pantalla
+            if (window.scrollY + altoPantalla > finSeccion - 100) {
                 window.scrollTo({ top: finSeccion - altoPantalla, behavior: 'smooth' });
             } 
-            // Si está cerca del inicio, imantamos al principio.
-            else if (window.scrollY < inicioSeccion + 150) {
+            // Imán superior: si el inicio está cerca del tope
+            else if (window.scrollY < inicioSeccion + 100) {
                 window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
             }
-            // Si está en el medio, NO hacemos nada (lo dejamos leer tranquilo).
         } else {
-            // SI LA SECCIÓN ES NORMAL (h-screen):
+            // Secciones normales (h-screen)
             window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
         }
-    }, 1000); // 200ms para que sea rápido pero deje terminar el gesto
+    }, 1000); // Tiempo ajustado para celulares (más rápido)
 }, { passive: true });
