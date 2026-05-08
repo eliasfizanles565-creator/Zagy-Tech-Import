@@ -1271,41 +1271,45 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====== POSICIONAR SCROLL DE SECTIONS =========
 let isScrolling;
 
-window.addEventListener('scroll', () => {
+window.addEventListener('wheel', (event) => {
     window.clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
         const secciones = document.querySelectorAll('.seccion-snap');
-        let seccionCercana = null;
+        let seccionActual = secciones[0];
         let menorDistancia = Infinity;
 
-        // 1. Buscamos qué sección está más presente en pantalla
-        secciones.forEach((seccion) => {
-            const rect = seccion.getBoundingClientRect();
-            const distanciaAlCentro = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+        // 1. Detectar en qué sección estamos (basado en el centro de la pantalla)
+        const centroPantalla = window.scrollY + (window.innerHeight / 2);
 
-            if (distanciaAlCentro < menorDistancia) {
-                menorDistancia = distanciaAlCentro;
-                seccionCercana = seccion;
+        secciones.forEach((seccion) => {
+            const distancia = Math.abs(centroPantalla - (seccion.offsetTop + seccion.offsetHeight / 2));
+            if (distancia < menorDistancia) {
+                menorDistancia = distancia;
+                seccionActual = seccion;
             }
         });
 
-        if (seccionCercana) {
-            const rect = seccionCercana.getBoundingClientRect();
-            const altoPantalla = window.innerHeight;
-            const margenAjuste = 100; // Sensibilidad del imán en píxeles
+        const altoSeccion = seccionActual.offsetHeight;
+        const altoPantalla = window.innerHeight;
+        const inicioSeccion = seccionActual.offsetTop;
+        const finSeccion = inicioSeccion + altoSeccion;
 
-            // 2. LÓGICA DE DECISIÓN
-            
-            // ¿Estamos cerca del FINAL de la sección?
-            if (rect.bottom < altoPantalla + margenAjuste && rect.bottom > altoPantalla - margenAjuste) {
-                window.scrollBy({ top: rect.bottom - altoPantalla, behavior: 'smooth' });
+        // 2. Lógica de posicionamiento inteligente
+        if (altoSeccion > altoPantalla + 50) {
+            // SI LA SECCIÓN ES GRANDE:
+            // Si el usuario scrolleó cerca del final, imantamos al fondo.
+            if (window.scrollY + altoPantalla > finSeccion - 150) {
+                window.scrollTo({ top: finSeccion - altoPantalla, behavior: 'smooth' });
+            } 
+            // Si está cerca del inicio, imantamos al principio.
+            else if (window.scrollY < inicioSeccion + 150) {
+                window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
             }
-            // ¿O estamos cerca del INICIO de la sección?
-            else if (rect.top < margenAjuste && rect.top > -margenAjuste) {
-                window.scrollBy({ top: rect.top, behavior: 'smooth' });
-            }
-            // Si la sección es gigante y estamos en el medio, NO hace nada (libertad total)
+            // Si está en el medio, NO hacemos nada (lo dejamos leer tranquilo).
+        } else {
+            // SI LA SECCIÓN ES NORMAL (h-screen):
+            window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
         }
-    }, 1000); 
+    }, 1000); // 200ms para que sea rápido pero deje terminar el gesto
 }, { passive: true });
