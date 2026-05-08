@@ -30,7 +30,7 @@
 <!-- ///////////////////////////////////////////////// -->
 
     <!-- NAVEGACIÓN -->
-    <nav class="sticky top-0 flex items-center justify-between py-6 px-5 bg-indigo-100/10 dark:bg-zinc-950/10 backdrop-blur-md z-40 border-b border-slate-200 dark:border-zinc-800 font-Russo
+    <nav class="sticky top-0 flex items-center justify-between py-4 px-5 bg-indigo-100/10 dark:bg-zinc-950/10 backdrop-blur-md z-40 border-b border-slate-200 dark:border-zinc-800 font-Russo
     max-sm:py-4
     lg:px-10
     ">
@@ -956,7 +956,7 @@
     <!-- ========== PRODUCTOS CARDS DESLIZANTES ================ -->
 
     <!-- ACCESORIOS -->
-    <div id="accesorios" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPink.png),pointer] relative seccion-snap h-screen">
+    <div id="accesorios" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPink.png),pointer] relative seccion-snap min-h-dvh">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -970,14 +970,15 @@
             <!-- .background -->
 
         <section class="testimonial card-pink bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorPink.png),pointer]">
-            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-pink-500">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-pink-500 lg:max-xl:mb-5 lg:max-xl:mt-5">
                 Accesorios
             </h2>
 
             <div class="testimonial__swiper swiper w-full mx-auto pb-35">
-                <div class="swiper-wrapper mb-25 mt-5">
+                <div class="swiper-wrapper mb-25 mt-5 lg:max-xl:mb-15">
                     <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-pink-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral({
                     id: 1,
                     nombre: 'Soporte Imantado Clásico',
@@ -988,7 +989,7 @@
                     imagenes: ['assets/01 SOPORTE IMANTADO/01.webp','assets/01 SOPORTE IMANTADO/02.webp','assets/01 SOPORTE IMANTADO/03.webp','assets/01 SOPORTE IMANTADO/04.avif','assets/01 SOPORTE IMANTADO/05.avif','assets/01 SOPORTE IMANTADO/06.avif','assets/01 SOPORTE IMANTADO/09.avif','assets/01 SOPORTE IMANTADO/10.avif','assets/01 SOPORTE IMANTADO/11.avif','assets/01 SOPORTE IMANTADO/12.avif','assets/01 SOPORTE IMANTADO/13.avif','assets/01 SOPORTE IMANTADO/14.avif','assets/01 SOPORTE IMANTADO/15.avif','assets/01 SOPORTE IMANTADO/16.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/01 SOPORTE IMANTADO/01.webp" alt="image" >
@@ -1038,8 +1039,9 @@
                         </div>
                     </article>
 
-                    <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
+                    <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15 
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-pink-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral({
                     id: 2,
                     nombre: 'Soporte Imantado X68',
@@ -1050,7 +1052,7 @@
                     imagenes: ['assets/02 SOPORTE IMANTADO 360/01.webp','assets/02 SOPORTE IMANTADO 360/02.webp','assets/02 SOPORTE IMANTADO 360/03.avif','assets/02 SOPORTE IMANTADO 360/04.avif','assets/02 SOPORTE IMANTADO 360/05.avif','assets/02 SOPORTE IMANTADO 360/06.webp','assets/02 SOPORTE IMANTADO 360/07.webp','assets/02 SOPORTE IMANTADO 360/08.webp','assets/02 SOPORTE IMANTADO 360/09.webp','assets/02 SOPORTE IMANTADO 360/10.avif','assets/02 SOPORTE IMANTADO 360/11.avif','assets/02 SOPORTE IMANTADO 360/12.webp','assets/02 SOPORTE IMANTADO 360/13.webp','assets/02 SOPORTE IMANTADO 360/14.webp','assets/02 SOPORTE IMANTADO 360/15.webp','assets/02 SOPORTE IMANTADO 360/16.webp','assets/02 SOPORTE IMANTADO 360/17.avif','assets/02 SOPORTE IMANTADO 360/18.avif','assets/02 SOPORTE IMANTADO 360/19.mp4','assets/02 SOPORTE IMANTADO 360/20.mp4','assets/02 SOPORTE IMANTADO 360/21.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/02 SOPORTE IMANTADO 360/01.webp" alt="image" >
@@ -1100,8 +1102,9 @@
                         </div>
                     </article>
 
-                    <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
+                    <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15 
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-pink-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral({
                     id: 3,
                     nombre: 'Soporte Imantado 360° Supreme',
@@ -1112,7 +1115,7 @@
                     imagenes: ['assets/03 SOPORTE IMANTADO 360 -SUPREME/01.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/02.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.5.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/04.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/05.avif', 'assets/03 SOPORTE IMANTADO 360 -SUPREME/06.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/07.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/08.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/09.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/10.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/11.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/12.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/13.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/14.mp4','assets/03 SOPORTE IMANTADO 360 -SUPREME/15.mp4','assets/03 SOPORTE IMANTADO 360 -SUPREME/16.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/03 SOPORTE IMANTADO 360 -SUPREME/01.webp" alt="image" >
@@ -1162,8 +1165,9 @@
                         </div>
                     </article>
 
-                    <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
+                    <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15 
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-pink-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral({
                     id: 4,
                     nombre: 'Espejo Led de 2 Botones',
@@ -1174,7 +1178,7 @@
                     imagenes: ['assets/04 ESPEJO LED DE 2 BOTONES/01.webp','assets/04 ESPEJO LED DE 2 BOTONES/02.5.webp','assets/04 ESPEJO LED DE 2 BOTONES/02.avif','assets/04 ESPEJO LED DE 2 BOTONES/03.avif','assets/04 ESPEJO LED DE 2 BOTONES/04.avif','assets/04 ESPEJO LED DE 2 BOTONES/05.avif','assets/04 ESPEJO LED DE 2 BOTONES/06.avif','assets/04 ESPEJO LED DE 2 BOTONES/07.avif','assets/04 ESPEJO LED DE 2 BOTONES/08.avif','assets/04 ESPEJO LED DE 2 BOTONES/09.avif','assets/04 ESPEJO LED DE 2 BOTONES/10.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/04 ESPEJO LED DE 2 BOTONES/01.webp" alt="image" >
@@ -1226,6 +1230,7 @@
 
                     <article class="cursor-[url(../assets/cursorPink.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-pink-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral({
                     id: 5,
                     nombre: 'Espejo Led de 1 Botón',
@@ -1236,7 +1241,7 @@
                     imagenes: ['assets/05 ESPEJO LED DE 1 BOTON/01.webp','assets/05 ESPEJO LED DE 1 BOTON/02.7.webp','assets/05 ESPEJO LED DE 1 BOTON/02.avif','assets/05 ESPEJO LED DE 1 BOTON/03.avif','assets/05 ESPEJO LED DE 1 BOTON/04.avif','assets/05 ESPEJO LED DE 1 BOTON/05.avif','assets/05 ESPEJO LED DE 1 BOTON/06.avif','assets/05 ESPEJO LED DE 1 BOTON/07.avif','assets/05 ESPEJO LED DE 1 BOTON/08.avif','assets/05 ESPEJO LED DE 1 BOTON/09.avif','assets/05 ESPEJO LED DE 1 BOTON/10.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/05 ESPEJO LED DE 1 BOTON/01.webp" alt="image" >
@@ -1304,7 +1309,7 @@
 
 
     <!-- SONIDO -->
-    <div id="sonido" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorCeleste.png),pointer] relative seccion-snap h-screen">
+    <div id="sonido" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorCeleste.png),pointer] relative seccion-snap min-h-dvh">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -1318,14 +1323,15 @@
             <!-- .background -->
 
         <section class="testimonial card-blue bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorCeleste.png),pointer]">
-            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-blue-500">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-blue-500 lg:max-xl:mb-5 lg:max-xl:mt-5">
                 Sonido
             </h2>
 
             <div class="testimonial__swiper swiper w-full mx-auto pb-35">
-                <div class="swiper-wrapper mb-25 mt-5">
+                <div class="swiper-wrapper mb-25 mt-5 lg:max-xl:mb-15">
                     <article class="cursor-[url(../assets/cursorCeleste.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-blue-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral2({
                     id: 6,
                     nombre: 'JBL Essential Original',
@@ -1336,7 +1342,7 @@
                     imagenes: ['assets/06 JBL ESSENTIAL/01.webp', 'assets/06 JBL ESSENTIAL/02.webp','assets/06 JBL ESSENTIAL/03.webp','assets/06 JBL ESSENTIAL/04.webp','assets/06 JBL ESSENTIAL/05.webp','assets/06 JBL ESSENTIAL/06.webp','assets/06 JBL ESSENTIAL/07.webp','assets/06 JBL ESSENTIAL/08.webp','assets/06 JBL ESSENTIAL/09.png', 'assets/06 JBL ESSENTIAL/10.png','assets/06 JBL ESSENTIAL/11.png','assets/06 JBL ESSENTIAL/12.png','assets/06 JBL ESSENTIAL/13.png','assets/06 JBL ESSENTIAL/14.avif','assets/06 JBL ESSENTIAL/15.avif','assets/06 JBL ESSENTIAL/16.avif','assets/06 JBL ESSENTIAL/17.avif', 'assets/06 JBL ESSENTIAL/18.webp','assets/06 JBL ESSENTIAL/19.webp','assets/06 JBL ESSENTIAL/20.webp','assets/06 JBL ESSENTIAL/21.png','assets/06 JBL ESSENTIAL/22.mp4','assets/06 JBL ESSENTIAL/23.mp4','assets/06 JBL ESSENTIAL/24.mp4','assets/06 JBL ESSENTIAL/25.mp4','assets/06 JBL ESSENTIAL/24.mp4','assets/06 JBL ESSENTIAL/26.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/06 JBL ESSENTIAL/01.webp" alt="image" >
@@ -1388,6 +1394,7 @@
 
                     <article class="cursor-[url(../assets/cursorCeleste.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-blue-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral2({
                     id: 7,
                     nombre: 'Mini Parlante G200',
@@ -1398,7 +1405,7 @@
                     imagenes: ['assets/07 MINI PARLANTE G200/01.webp','assets/07 MINI PARLANTE G200/02.webp','assets/07 MINI PARLANTE G200/03.webp','assets/07 MINI PARLANTE G200/04.webp','assets/07 MINI PARLANTE G200/05.webp','assets/07 MINI PARLANTE G200/06.avif','assets/07 MINI PARLANTE G200/07.avif','assets/07 MINI PARLANTE G200/08.avif','assets/07 MINI PARLANTE G200/09.avif','assets/07 MINI PARLANTE G200/10.avif','assets/07 MINI PARLANTE G200/11.avif','assets/07 MINI PARLANTE G200/12.mp4','assets/07 MINI PARLANTE G200/13.mp4','assets/07 MINI PARLANTE G200/14.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/07 MINI PARLANTE G200/01.webp" alt="image" >
@@ -1450,6 +1457,7 @@
 
                     <article class="cursor-[url(../assets/cursorCeleste.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-blue-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral2({
                     id: 8,
                     nombre: 'Mini Parlante MX-G60',
@@ -1460,7 +1468,7 @@
                     imagenes: ['assets/08 MINI PARLANTE MX-G60/01.webp','assets/08 MINI PARLANTE MX-G60/02.webp','assets/08 MINI PARLANTE MX-G60/03.avif','assets/08 MINI PARLANTE MX-G60/04.avif','assets/08 MINI PARLANTE MX-G60/05.avif','assets/08 MINI PARLANTE MX-G60/06.avif','assets/08 MINI PARLANTE MX-G60/07.avif','assets/08 MINI PARLANTE MX-G60/08.avif','assets/08 MINI PARLANTE MX-G60/09.avif','assets/08 MINI PARLANTE MX-G60/10.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/08 MINI PARLANTE MX-G60/01.webp" alt="image" >
@@ -1512,6 +1520,7 @@
 
                     <article class="cursor-[url(../assets/cursorCeleste.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-blue-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral2({
                     id: 9,
                     nombre: 'JBL GO 4 Original',
@@ -1522,7 +1531,7 @@
                     imagenes: ['assets/09 JBL GO 04/01.webp','assets/09 JBL GO 04/02.webp','assets/09 JBL GO 04/03.webp','assets/09 JBL GO 04/04.webp','assets/09 JBL GO 04/05.webp','assets/09 JBL GO 04/06.webp','assets/09 JBL GO 04/07.webp','assets/09 JBL GO 04/08.webp','assets/09 JBL GO 04/09.webp','assets/09 JBL GO 04/10.webp','assets/09 JBL GO 04/11.webp','assets/09 JBL GO 04/12.webp','assets/09 JBL GO 04/13.avif','assets/09 JBL GO 04/14.avif','assets/09 JBL GO 04/15.avif','assets/09 JBL GO 04/16.avif','assets/09 JBL GO 04/17.avif','assets/09 JBL GO 04/18.avif','assets/09 JBL GO 04/19.avif','assets/09 JBL GO 04/20.webp','assets/09 JBL GO 04/21.webp','assets/09 JBL GO 04/22.webp','assets/09 JBL GO 04/23.mp4','assets/09 JBL GO 04/24.mp4','assets/09 JBL GO 04/25.mp4','assets/09 JBL GO 04/26.mp4','assets/09 JBL GO 04/27.mp4','assets/09 JBL GO 04/28.mp4',]
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/09 JBL GO 04/01.webp" alt="image" >
@@ -1574,6 +1583,7 @@
 
                     <article class="cursor-[url(../assets/cursorCeleste.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-blue-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral2({
                     id: 10,
                     nombre: 'JBL Flip 7 Original',
@@ -1584,7 +1594,7 @@
                     imagenes: ['assets/10 JBL FLIP 07/01.webp','assets/10 JBL FLIP 07/02.webp','assets/10 JBL FLIP 07/03.webp','assets/10 JBL FLIP 07/04.webp','assets/10 JBL FLIP 07/05.webp','assets/10 JBL FLIP 07/06.webp','assets/10 JBL FLIP 07/07.webp','assets/10 JBL FLIP 07/08.avif','assets/10 JBL FLIP 07/09.avif','assets/10 JBL FLIP 07/10.avif','assets/10 JBL FLIP 07/11.avif','assets/10 JBL FLIP 07/12.avif','assets/10 JBL FLIP 07/13.avif','assets/10 JBL FLIP 07/14.webp','assets/10 JBL FLIP 07/15.avif','assets/10 JBL FLIP 07/16.avif','assets/10 JBL FLIP 07/17.webp','assets/10 JBL FLIP 07/18.webp','assets/10 JBL FLIP 07/19.mp4','assets/10 JBL FLIP 07/20.mp4','assets/10 JBL FLIP 07/21.mp4','assets/10 JBL FLIP 07/22.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/10 JBL FLIP 07/01.webp" alt="image" >
@@ -1656,7 +1666,7 @@
 
 
     <!-- CONFORT -->
-    <div id="confort" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorFuchsia.png),pointer] relative seccion-snap h-screen">
+    <div id="confort" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorFuchsia.png),pointer] relative seccion-snap min-h-dvh">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -1670,15 +1680,16 @@
             <!-- .background -->
 
         <section class="testimonial card-fuchsia bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorFuchsia.png),pointer]">
-            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-fuchsia-500">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-fuchsia-500 lg:max-xl:mb-5 lg:max-xl:mt-5">
                 Confort
             </h2>
 
             <div class="testimonial__swiper swiper w-full mx-auto pb-35">
-                <div class="swiper-wrapper mb-25 mt-5">
+                <div class="swiper-wrapper mb-25 mt-5 lg:max-xl:mb-15">
                     
                     <article class="cursor-[url(../assets/cursorFuchsia.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-fuchsia-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral3({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -1689,7 +1700,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -1741,6 +1752,7 @@
 
                     <article class="cursor-[url(../assets/cursorFuchsia.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-fuchsia-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral3({
                     id: 12,
                     nombre: 'Masajeador 4 Botones',
@@ -1751,7 +1763,7 @@
                     imagenes: ['assets/12 ALMOHADA DE 4 BOTONES/01.webp','assets/12 ALMOHADA DE 4 BOTONES/02.webp','assets/12 ALMOHADA DE 4 BOTONES/03.webp','assets/12 ALMOHADA DE 4 BOTONES/04.avif','assets/12 ALMOHADA DE 4 BOTONES/05.avif','assets/12 ALMOHADA DE 4 BOTONES/06.avif','assets/12 ALMOHADA DE 4 BOTONES/07.avif','assets/12 ALMOHADA DE 4 BOTONES/08.avif','assets/12 ALMOHADA DE 4 BOTONES/09.avif','assets/12 ALMOHADA DE 4 BOTONES/10.avif','assets/12 ALMOHADA DE 4 BOTONES/11.avif','assets/12 ALMOHADA DE 4 BOTONES/12.avif','assets/12 ALMOHADA DE 4 BOTONES/13.avif','assets/12 ALMOHADA DE 4 BOTONES/14.avif','assets/12 ALMOHADA DE 4 BOTONES/15.mp4','assets/12 ALMOHADA DE 4 BOTONES/16.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/12 ALMOHADA DE 4 BOTONES/01.webp" alt="image" >
@@ -1803,6 +1815,7 @@
 
                     <article class="cursor-[url(../assets/cursorFuchsia.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-fuchsia-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral3({
                     id: 13,
                     nombre: 'Manita Masajeadora',
@@ -1813,7 +1826,7 @@
                     imagenes: ['assets/13 MANITA MASAJEADORA/01.webp','assets/13 MANITA MASAJEADORA/02.webp','assets/13 MANITA MASAJEADORA/03.avif','assets/13 MANITA MASAJEADORA/04.avif','assets/13 MANITA MASAJEADORA/05.avif','assets/13 MANITA MASAJEADORA/06.avif','assets/13 MANITA MASAJEADORA/07.avif','assets/13 MANITA MASAJEADORA/08.avif','assets/13 MANITA MASAJEADORA/09.avif','assets/13 MANITA MASAJEADORA/10.avif','assets/13 MANITA MASAJEADORA/11.webp','assets/13 MANITA MASAJEADORA/19.webp','assets/13 MANITA MASAJEADORA/21.webp','assets/13 MANITA MASAJEADORA/22.mp4','assets/13 MANITA MASAJEADORA/23.mp4','assets/13 MANITA MASAJEADORA/24.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/13 MANITA MASAJEADORA/01.webp" alt="image" >
@@ -1863,9 +1876,6 @@
                         </div>
                     </article>
 
-                    
-
-                    
 
                 </div>
 
@@ -1886,7 +1896,7 @@
 
 
     <!-- NOVEDADES -->
-    <div id="novedades" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorVerde.png),pointer] relative seccion-snap h-screen">
+    <div id="novedades" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorVerde.png),pointer] relative seccion-snap min-h-dvh">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -1900,15 +1910,16 @@
             <!-- .background -->
 
         <section class="testimonial card-lime bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorVerde.png),pointer]">
-            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-lime-500">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-lime-500 lg:max-xl:mb-5 lg:max-xl:mt-5">
                 Novedades
             </h2>
 
             <div class="testimonial__swiper swiper w-full mx-auto pb-35">
-                <div class="swiper-wrapper mb-25 mt-5">
+                <div class="swiper-wrapper mb-25 mt-5 lg:max-xl:mb-15">
                     
                     <article class="cursor-[url(../assets/cursorVerde.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-lime-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral4({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -1919,7 +1930,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -1971,6 +1982,7 @@
 
                     <article class="cursor-[url(../assets/cursorVerde.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-lime-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral4({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -1981,7 +1993,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -2031,6 +2043,7 @@
                         </div>
                     </article>
 
+                    
                     
 
 
@@ -2053,7 +2066,7 @@
 
 
     <!-- HOGAR -->
-    <div id="hogar" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorAmber.png),pointer] relative seccion-snap h-screen">
+    <div id="hogar" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorAmber.png),pointer] relative seccion-snap min-h-dvh">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -2067,15 +2080,16 @@
             <!-- .background -->
 
         <section class="testimonial card-amber bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorAmber.png),pointer]">
-            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-amber-500">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-amber-500 lg:max-xl:mb-5 lg:max-xl:mt-5">
                 Hogar
             </h2>
 
             <div class="testimonial__swiper swiper w-full mx-auto pb-35">
-                <div class="swiper-wrapper mb-25 mt-5">
+                <div class="swiper-wrapper mb-25 mt-5 lg:max-xl:mb-15">
                     
                     <article class="cursor-[url(../assets/cursorAmber.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-amber-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral5({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -2086,7 +2100,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -2138,6 +2152,7 @@
 
                     <article class="cursor-[url(../assets/cursorAmber.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-amber-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral5({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -2148,7 +2163,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -2175,7 +2190,7 @@
                                 <i class="ri-heart-fill"></i>
                             </button>
 
-                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-amber-500 left-5 top-3 text-uppercase font-bold text-amber-500 dark:text-white shadow-lg shadow-purple-500/10
+                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-amber-500 left-5 top-3 text-uppercase font-bold text-amber-500 dark:text-white shadow-lg shadow-amber-500/10
                             cursor-[url(../assets/touchAmber.png),pointer] flex items-center justify-center"
                             onclick="event.stopPropagation()" href="#CardHogar">
                                 Relax
@@ -2198,8 +2213,7 @@
                         </div>
                     </article>
 
-                    
-
+                
                     
 
 
@@ -2222,7 +2236,7 @@
 
 
     <!-- ROPA -->
-    <div id="ropa" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPurple.png),pointer] relative seccion-snap h-screen">
+    <div id="ropa" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPurple.png),pointer] relative seccion-snap min-h-dvh">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -2236,15 +2250,16 @@
             <!-- .background -->
 
         <section class="testimonial card-purple bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorPurple.png),pointer]">
-            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-purple-500">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-purple-500 lg:max-xl:mb-5 lg:max-xl:mt-5">
                 Ropa
             </h2>
 
             <div class="testimonial__swiper swiper w-full mx-auto pb-35">
-                <div class="swiper-wrapper mb-25 mt-5">
+                <div class="swiper-wrapper mb-25 mt-5 lg:max-xl:mb-15">
                     
                     <article class="cursor-[url(../assets/cursorPurple.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-purple-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral6({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -2255,7 +2270,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -2307,6 +2322,7 @@
 
                     <article class="cursor-[url(../assets/cursorPurple.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
                     rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-purple-500
+                    md:max-2xl:max-w-80
                     "onclick="abrirModalGeneral6({
                     id: 11,
                     nombre: 'Masajeador 3 Botones',
@@ -2317,7 +2333,7 @@
                     imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
                     })"
                     >   
-                        <div class="size-80 mx-auto">
+                        <div class="size-80 mx-auto md:max-2xl:size-60">
                             <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
 
                             " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
@@ -2903,8 +2919,8 @@
 <!-- ////////////////////////////////////////////////////// -->
 
     <!-- BOTÓN MODO OSCURO Y CLARO -->
-    <button id="btn-color" class="size-12 fixed top-5 right-5 flex items-center luna cursor-pointer justify-center rounded-full shadow-lg bg-zinc-800 text-white dark:bg-violet-100 dark:text-zinc-900 z-60 transition-all active:scale-95
-    max-sm:top-2.5
+    <button id="btn-color" class="size-11 fixed top-3.25 right-5 flex items-center luna cursor-pointer justify-center rounded-full shadow-lg bg-zinc-800 text-white dark:bg-violet-100 dark:text-zinc-900 z-60 transition-all active:scale-95
+    
     ">
         <i class="ri-moon-line text-xl dark:hidden"></i>
         <i class="ri-sun-line text-xl hidden dark:block"></i>
