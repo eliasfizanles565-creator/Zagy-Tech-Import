@@ -14,6 +14,8 @@
     --color-lime-400: oklch(84.1% 0.238 128.85);
     --color-lime-500: oklch(76.8% 0.233 130.85);
     --color-lime-600: oklch(64.8% 0.2 131.684);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-600: oklch(62.7% 0.194 149.214);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-sky-400: oklch(74.6% 0.16 232.661);
@@ -745,6 +747,9 @@
   .cursor-\[url\(\'\.\.\/assets\/touchVerde\.png\'\)\,pointer\] {
     cursor: url('../assets/touchVerde.png'),pointer;
   }
+  .cursor-\[url\(\.\.\/assets\/CursorAmber\.png\)\,pointer\] {
+    cursor: url(../assets/CursorAmber.png),pointer;
+  }
   .cursor-\[url\(\.\.\/assets\/CursorCeleste\.png\)\,pointer\] {
     cursor: url(../assets/CursorCeleste.png),pointer;
   }
@@ -753,6 +758,9 @@
   }
   .cursor-\[url\(\.\.\/assets\/CursorPink\.png\)\,pointer\] {
     cursor: url(../assets/CursorPink.png),pointer;
+  }
+  .cursor-\[url\(\.\.\/assets\/CursorVerde\.png\)\,pointer\] {
+    cursor: url(../assets/CursorVerde.png),pointer;
   }
   .cursor-\[url\(\.\.\/assets\/cursorAmber\.png\)\,pointer\] {
     cursor: url(../assets/cursorAmber.png),pointer;
@@ -772,6 +780,9 @@
   .cursor-\[url\(\.\.\/assets\/cursorVerde\.png\)\,pointer\] {
     cursor: url(../assets/cursorVerde.png),pointer;
   }
+  .cursor-\[url\(\.\.\/assets\/touchAmber\.png\)\,pointer\] {
+    cursor: url(../assets/touchAmber.png),pointer;
+  }
   .cursor-\[url\(\.\.\/assets\/touchCeleste\.png\)\,pointer\] {
     cursor: url(../assets/touchCeleste.png),pointer;
   }
@@ -780,6 +791,9 @@
   }
   .cursor-\[url\(\.\.\/assets\/touchPink\.png\)\,pointer\] {
     cursor: url(../assets/touchPink.png),pointer;
+  }
+  .cursor-\[url\(\.\.\/assets\/touchVerde\.png\)\,pointer\] {
+    cursor: url(../assets/touchVerde.png),pointer;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -1095,6 +1109,12 @@
     background-color: color-mix(in srgb, #fff 70%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
+    }
+  }
+  .bg-white\/80 {
+    background-color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
   }
   .bg-zinc-800 {
@@ -1462,6 +1482,9 @@
   .text-\[\#d3f35f\] {
     color: #d3f35f;
   }
+  .text-amber-500 {
+    color: var(--color-amber-500);
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -1483,8 +1506,17 @@
   .text-fuchsia-500 {
     color: var(--color-fuchsia-500);
   }
+  .text-green-500 {
+    color: var(--color-green-500);
+  }
+  .text-green-600 {
+    color: var(--color-green-600);
+  }
   .text-lime-500 {
     color: var(--color-lime-500);
+  }
+  .text-lime-600 {
+    color: var(--color-lime-600);
   }
   .text-negrito {
     color: var(--color-negrito);
@@ -1568,6 +1600,18 @@
       --tw-shadow-color: color-mix(in oklab, var(--color-amber-500) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-amber-500\/10 {
+    --tw-shadow-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-amber-500) 10%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-amber-500\/20 {
+    --tw-shadow-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-amber-500) 20%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .shadow-blue-400 {
     --tw-shadow-color: oklch(70.7% 0.165 254.624);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1604,10 +1648,28 @@
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-fuchsia-500) 10%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-fuchsia-500\/20 {
+    --tw-shadow-color: color-mix(in srgb, oklch(66.7% 0.295 322.15) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-fuchsia-500) 20%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .shadow-lime-500 {
     --tw-shadow-color: oklch(76.8% 0.233 130.85);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-lime-500) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-lime-500\/10 {
+    --tw-shadow-color: color-mix(in srgb, oklch(76.8% 0.233 130.85) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-lime-500) 10%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-lime-500\/20 {
+    --tw-shadow-color: color-mix(in srgb, oklch(76.8% 0.233 130.85) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-lime-500) 20%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
   .shadow-pink-500 {
@@ -2565,6 +2627,11 @@
       border-color: var(--color-zinc-800);
     }
   }
+  .dark\:bg-amber-500 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-amber-500);
+    }
+  }
   .dark\:bg-black\/20 {
     &:where(.dark, .dark *) {
       background-color: color-mix(in srgb, #000 20%, transparent);
@@ -2805,11 +2872,29 @@
 .card-lime {
   --hue: var(--lime-color);
 }
+.card-limeTouch {
+  cursor: url('../assets/touchVerde.png'), auto;
+}
+.card-limeCursor {
+  cursor: url('../assets/cursorVerde.png'), auto;
+}
 .card-amber {
   --hue: var(--amber-color);
 }
+.card-amberTouch {
+  cursor: url('../assets/touchAmber.png'), auto;
+}
+.card-amberCursor {
+  cursor: url('../assets/cursorAmber.png'), auto;
+}
 .card-purple {
   --hue: var(--purple-color);
+}
+.card-purpleTouch {
+  cursor: url('../assets/touchPurple.png'), auto;
+}
+.card-purpleCursor {
+  cursor: url('../assets/cursorPurple.png'), auto;
 }
 .degradado {
   background-clip: text;

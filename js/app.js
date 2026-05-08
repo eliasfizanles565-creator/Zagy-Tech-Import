@@ -434,6 +434,7 @@ function abrirModalGeneral(producto) {
     document.getElementById('producto-modal-overlay').classList.remove('hidden');
 }
 
+
 // ABRIR INFO BLUE (INDEPENDIENTE)
 function abrirModalGeneral2(producto) {
     document.getElementById('modal-nombre-2').textContent = producto.nombre;
@@ -608,6 +609,183 @@ function abrirModalGeneral3(producto) {
 /////////////
 
 
+// ABRIR INFO LIME (INDEPENDIENTE)
+function abrirModalGeneral4(producto) {
+    document.getElementById('modal-nombre-4').textContent = producto.nombre;
+    document.getElementById('modal-precio-4').textContent = `S/ ${producto.precio.toFixed(2)}`;
+    document.getElementById('modal-categoria-4').textContent = producto.categoria;
+    document.getElementById('modal-descripcion-4').textContent = producto.descripcion;
+    
+    cambiarImagenPrincipal4(producto.imagenes[0]); // Llama a la función independiente del modal 4
+
+    const listaCaracteristicas = document.getElementById('modal-caracteristicas-4');
+    listaCaracteristicas.innerHTML = '';
+    producto.caracteristicas.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        listaCaracteristicas.appendChild(li);
+    });
+
+    const contenedorMiniaturas = document.getElementById('modal-miniaturas-4');
+    contenedorMiniaturas.innerHTML = '';
+    
+    producto.imagenes.forEach(imgUrl => {
+        const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
+        
+        if (esVideo) {
+            const videoThumb = document.createElement('video');
+            videoThumb.src = imgUrl;
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-limeTouch carrito3 transition flex-shrink-0';
+            
+            videoThumb.onclick = () => {
+                const botonVideo4 = document.getElementById('btn-video-modal-4');
+                if (botonVideo4) {
+                    botonVideo4.setAttribute('data-video-url', imgUrl);
+                }
+                reproducirVideoDelBoton4(); // Llama a la función del botón 4
+            };
+            
+            contenedorMiniaturas.appendChild(videoThumb);
+        } else {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-limeTouch carrito3 transition flex-shrink-0';
+            // Al hacer clic cambia la imagen del modal 4
+            img.onclick = () => cambiarImagenPrincipal4(imgUrl);
+            contenedorMiniaturas.appendChild(img);
+        }
+    });
+
+    const botonAgregar = document.getElementById('modal-boton-agregar-4');
+    if (botonAgregar) {
+        botonAgregar.onclick = function() {
+            agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+            cerrarModalProducto();
+            abrirCarrito();
+        };
+    }
+
+    const botonVideo4 = document.getElementById('btn-video-modal-4');
+    const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
+
+    if (urlVideo && botonVideo4) {
+        botonVideo4.setAttribute('data-video-url', urlVideo);
+        botonVideo4.classList.remove('hidden');
+    } else if (botonVideo4) {
+        botonVideo4.classList.add('hidden');
+    }
+
+    // Inicialización del modal 4 (Oculta el video y muestra la imagen al cargar)
+    const imgElemento4 = document.getElementById('modal-imagen-4');
+    const videoElemento4 = document.getElementById('modal-video-4');
+
+    if (videoElemento4) {
+        videoElemento4.classList.add('hidden');
+        videoElemento4.pause();
+    }
+
+    if (imgElemento4) {
+        imgElemento4.src = producto.imagenes[0];
+        imgElemento4.classList.remove('hidden');
+        imgElemento4.style.objectFit = 'contain';
+    }
+
+    document.getElementById('producto-modal-4').classList.remove('hidden');
+    document.getElementById('producto-modal-overlay').classList.remove('hidden');
+}
+/////////////
+
+
+// ABRIR INFO AMBER (INDEPENDIENTE)
+function abrirModalGeneral5(producto) {
+    document.getElementById('modal-nombre-5').textContent = producto.nombre;
+    document.getElementById('modal-precio-5').textContent = `S/ ${producto.precio.toFixed(2)}`;
+    document.getElementById('modal-categoria-5').textContent = producto.categoria;
+    document.getElementById('modal-descripcion-5').textContent = producto.descripcion;
+    
+    cambiarImagenPrincipal5(producto.imagenes[0]); // Llama a la función independiente del modal 4
+
+    const listaCaracteristicas = document.getElementById('modal-caracteristicas-5');
+    listaCaracteristicas.innerHTML = '';
+    producto.caracteristicas.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        listaCaracteristicas.appendChild(li);
+    });
+
+    const contenedorMiniaturas = document.getElementById('modal-miniaturas-5');
+    contenedorMiniaturas.innerHTML = '';
+    
+    producto.imagenes.forEach(imgUrl => {
+        const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
+        
+        if (esVideo) {
+            const videoThumb = document.createElement('video');
+            videoThumb.src = imgUrl;
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-amberTouch carrito3 transition flex-shrink-0';
+            
+            videoThumb.onclick = () => {
+                const botonVideo5 = document.getElementById('btn-video-modal-5');
+                if (botonVideo5) {
+                    botonVideo5.setAttribute('data-video-url', imgUrl);
+                }
+                reproducirVideoDelBoton5(); // Llama a la función del botón 4
+            };
+            
+            contenedorMiniaturas.appendChild(videoThumb);
+        } else {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-amberTouch carrito3 transition flex-shrink-0';
+            // Al hacer clic cambia la imagen del modal 4
+            img.onclick = () => cambiarImagenPrincipal5(imgUrl);
+            contenedorMiniaturas.appendChild(img);
+        }
+    });
+
+    const botonAgregar = document.getElementById('modal-boton-agregar-5');
+    if (botonAgregar) {
+        botonAgregar.onclick = function() {
+            agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+            cerrarModalProducto();
+            abrirCarrito();
+        };
+    }
+
+    const botonVideo5 = document.getElementById('btn-video-modal-5');
+    const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
+
+    if (urlVideo && botonVideo5) {
+        botonVideo5.setAttribute('data-video-url', urlVideo);
+        botonVideo5.classList.remove('hidden');
+    } else if (botonVideo5) {
+        botonVideo5.classList.add('hidden');
+    }
+
+    // Inicialización del modal 4 (Oculta el video y muestra la imagen al cargar)
+    const imgElemento5 = document.getElementById('modal-imagen-5');
+    const videoElemento5 = document.getElementById('modal-video-5');
+
+    if (videoElemento5) {
+        videoElemento5.classList.add('hidden');
+        videoElemento5.pause();
+    }
+
+    if (imgElemento5) {
+        imgElemento5.src = producto.imagenes[0];
+        imgElemento5.classList.remove('hidden');
+        imgElemento5.style.objectFit = 'contain';
+    }
+
+    document.getElementById('producto-modal-5').classList.remove('hidden');
+    document.getElementById('producto-modal-overlay').classList.remove('hidden');
+}
+/////////////
+
+
+
+//////////////////////////////
+
 /////////////
 // 1. Cambia de imagen - Modal 1 - PINK
 function cambiarImagenPrincipal(nuevaSrc) {
@@ -656,6 +834,40 @@ function cambiarImagenPrincipal3(nuevaSrc) {
         imgElemento3.classList.remove('hidden');
         imgElemento3.src = nuevaSrc;
         imgElemento3.style.objectFit = 'contain';
+    }
+}
+
+// 4. Cambia de imagen - Modal 4 (Independiente) - FUCHSIA
+function cambiarImagenPrincipal4(nuevaSrc) {
+    const imgElemento4 = document.getElementById('modal-imagen-4');
+    const videoElemento4 = document.getElementById('modal-video-4');
+
+    if (videoElemento4) {
+        videoElemento4.classList.add('hidden');
+        videoElemento4.pause();
+    }
+
+    if (imgElemento4) {
+        imgElemento4.classList.remove('hidden');
+        imgElemento4.src = nuevaSrc;
+        imgElemento4.style.objectFit = 'contain';
+    }
+}
+
+// 5. Cambia de imagen - Modal 5 (Independiente) - FUCHSIA
+function cambiarImagenPrincipal5(nuevaSrc) {
+    const imgElemento5 = document.getElementById('modal-imagen-5');
+    const videoElemento5 = document.getElementById('modal-video-5');
+
+    if (videoElemento5) {
+        videoElemento5.classList.add('hidden');
+        videoElemento5.pause();
+    }
+
+    if (imgElemento5) {
+        imgElemento5.classList.remove('hidden');
+        imgElemento5.src = nuevaSrc;
+        imgElemento5.style.objectFit = 'contain';
     }
 }
 /////////////
@@ -736,6 +948,60 @@ function reproducirVideoDelBoton3(botonId = 'btn-video-modal-3') {
         });
     }
 }
+
+// Reproduce el video del botón - Modal 4 (Independiente) - FUCHSIA
+function reproducirVideoDelBoton4(botonId = 'btn-video-modal-4') {
+    const botonVideo = document.getElementById(botonId);
+    const urlVideo = botonVideo ? botonVideo.getAttribute('data-video-url') : null;
+
+    if (!urlVideo) return;
+
+    const imgElemento = document.getElementById('modal-imagen-4');
+    const videoElemento = document.getElementById('modal-video-4');
+    const videoSource = document.getElementById('modal-video-source-4');
+
+    imgElemento.classList.add('hidden');
+    
+    if (videoSource) {
+        videoSource.src = urlVideo;
+    }
+    
+    if (videoElemento) {
+        videoElemento.load();
+        videoElemento.classList.remove('hidden');
+        videoElemento.play().catch(error => {
+            console.log("Reproducción automática bloqueada en modal 4.");
+            videoElemento.controls = true;
+        });
+    }
+}
+
+// Reproduce el video del botón - Modal 5 (Independiente) - LIME
+function reproducirVideoDelBoton5(botonId = 'btn-video-modal-5') {
+    const botonVideo = document.getElementById(botonId);
+    const urlVideo = botonVideo ? botonVideo.getAttribute('data-video-url') : null;
+
+    if (!urlVideo) return;
+
+    const imgElemento = document.getElementById('modal-imagen-5');
+    const videoElemento = document.getElementById('modal-video-5');
+    const videoSource = document.getElementById('modal-video-source-5');
+
+    imgElemento.classList.add('hidden');
+    
+    if (videoSource) {
+        videoSource.src = urlVideo;
+    }
+    
+    if (videoElemento) {
+        videoElemento.load();
+        videoElemento.classList.remove('hidden');
+        videoElemento.play().catch(error => {
+            console.log("Reproducción automática bloqueada en modal 5.");
+            videoElemento.controls = true;
+        });
+    }
+}
 ///////////////////////
 
 
@@ -744,15 +1010,24 @@ function cerrarModalProducto() {
     document.getElementById('producto-modal').classList.add('hidden');
     document.getElementById('producto-modal-2').classList.add('hidden');
     document.getElementById('producto-modal-3').classList.add('hidden');
+    document.getElementById('producto-modal-4').classList.add('hidden');
+    document.getElementById('producto-modal-5').classList.add('hidden');
+  
     document.getElementById('producto-modal-overlay').classList.add('hidden');
 
     const videoElemento1 = document.getElementById('modal-video');
     const videoElemento2 = document.getElementById('modal-video-2');
     const videoElemento3 = document.getElementById('modal-video-3');
+    const videoElemento4 = document.getElementById('modal-video-4');
+    const videoElemento5 = document.getElementById('modal-video-5');
+
 
     if (videoElemento1) videoElemento1.pause();
     if (videoElemento2) videoElemento2.pause();
     if (videoElemento3) videoElemento3.pause();
+    if (videoElemento4) videoElemento4.pause();
+    if (videoElemento5) videoElemento5.pause();
+    
 }
 
 

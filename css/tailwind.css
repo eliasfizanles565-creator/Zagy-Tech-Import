@@ -120,13 +120,34 @@
 .card-lime {
     --hue: var(--lime-color);
 }
+.card-limeTouch{
+    cursor: url('../assets/touchVerde.png'), auto;
+}
+.card-limeCursor{
+    cursor: url('../assets/cursorVerde.png'), auto;
+}
+
+
 .card-amber {
     --hue: var(--amber-color);
 }
+.card-amberTouch{
+    cursor: url('../assets/touchAmber.png'), auto;
+}
+.card-amberCursor{
+    cursor: url('../assets/cursorAmber.png'), auto;
+}
+
+
 .card-purple {
     --hue: var(--purple-color);
 }
-
+.card-purpleTouch{
+    cursor: url('../assets/touchPurple.png'), auto;
+}
+.card-purpleCursor{
+    cursor: url('../assets/cursorPurple.png'), auto;
+}
 
 
 
