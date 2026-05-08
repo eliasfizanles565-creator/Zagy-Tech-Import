@@ -1320,5 +1320,5 @@ window.addEventListener('scroll', () => {
                 window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
             }
         }
-    }, 150); // 150ms es el tiempo ideal para detectar que el dedo se levantó
+    }, 1000); // 150ms es el tiempo ideal para detectar que el dedo se levantó
 }, { passive: true });
