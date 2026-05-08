@@ -2019,6 +2019,11 @@
       margin-bottom: calc(var(--spacing) * 3);
     }
   }
+  .max-sm\:mb-4 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+  }
   .max-sm\:mb-5 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 5);
