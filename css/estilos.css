@@ -576,6 +576,9 @@
   .h-\[64px\] {
     height: 64px;
   }
+  .h-dvh {
+    height: 100dvh;
+  }
   .h-full {
     height: 100%;
   }
@@ -759,6 +762,9 @@
   .cursor-\[url\(\.\.\/assets\/CursorPink\.png\)\,pointer\] {
     cursor: url(../assets/CursorPink.png),pointer;
   }
+  .cursor-\[url\(\.\.\/assets\/CursorPurple\.png\)\,pointer\] {
+    cursor: url(../assets/CursorPurple.png),pointer;
+  }
   .cursor-\[url\(\.\.\/assets\/CursorVerde\.png\)\,pointer\] {
     cursor: url(../assets/CursorVerde.png),pointer;
   }
@@ -777,6 +783,9 @@
   .cursor-\[url\(\.\.\/assets\/cursorPink\.png\)\,pointer\] {
     cursor: url(../assets/cursorPink.png),pointer;
   }
+  .cursor-\[url\(\.\.\/assets\/cursorPurple\.png\)\,pointer\] {
+    cursor: url(../assets/cursorPurple.png),pointer;
+  }
   .cursor-\[url\(\.\.\/assets\/cursorVerde\.png\)\,pointer\] {
     cursor: url(../assets/cursorVerde.png),pointer;
   }
@@ -792,6 +801,9 @@
   .cursor-\[url\(\.\.\/assets\/touchPink\.png\)\,pointer\] {
     cursor: url(../assets/touchPink.png),pointer;
   }
+  .cursor-\[url\(\.\.\/assets\/touchPurple\.png\)\,pointer\] {
+    cursor: url(../assets/touchPurple.png),pointer;
+  }
   .cursor-\[url\(\.\.\/assets\/touchVerde\.png\)\,pointer\] {
     cursor: url(../assets/touchVerde.png),pointer;
   }
@@ -803,6 +815,15 @@
   }
   .resize {
     resize: both;
+  }
+  .snap-y {
+    scroll-snap-type: y var(--tw-scroll-snap-strictness);
+  }
+  .snap-mandatory {
+    --tw-scroll-snap-strictness: mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
   }
   .list-inside {
     list-style-position: inside;
@@ -904,6 +925,9 @@
   }
   .overflow-y-auto {
     overflow-y: auto;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -1109,12 +1133,6 @@
     background-color: color-mix(in srgb, #fff 70%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
-    }
-  }
-  .bg-white\/80 {
-    background-color: color-mix(in srgb, #fff 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
   }
   .bg-zinc-800 {
@@ -1506,17 +1524,8 @@
   .text-fuchsia-500 {
     color: var(--color-fuchsia-500);
   }
-  .text-green-500 {
-    color: var(--color-green-500);
-  }
-  .text-green-600 {
-    color: var(--color-green-600);
-  }
   .text-lime-500 {
     color: var(--color-lime-500);
-  }
-  .text-lime-600 {
-    color: var(--color-lime-600);
   }
   .text-negrito {
     color: var(--color-negrito);
@@ -1529,6 +1538,9 @@
   }
   .text-primario {
     color: var(--color-primario);
+  }
+  .text-purple-500 {
+    color: var(--color-purple-500);
   }
   .text-transparent {
     color: transparent;
@@ -1694,6 +1706,18 @@
     --tw-shadow-color: oklch(62.7% 0.265 303.9);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-purple-500) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-purple-500\/10 {
+    --tw-shadow-color: color-mix(in srgb, oklch(62.7% 0.265 303.9) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-purple-500) 10%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-purple-500\/20 {
+    --tw-shadow-color: color-mix(in srgb, oklch(62.7% 0.265 303.9) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-purple-500) 20%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
   .filter-\[drop-shadow\(1px_1px_0px_\#ff7a01\)\] {
@@ -2665,6 +2689,11 @@
       background-color: var(--color-pink-500);
     }
   }
+  .dark\:bg-purple-500 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-purple-500);
+    }
+  }
   .dark\:bg-transparent {
     &:where(.dark, .dark *) {
       background-color: transparent;
@@ -3492,6 +3521,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-scroll-snap-strictness {
+  syntax: "*";
+  inherits: false;
+  initial-value: proximity;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -3705,6 +3739,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-scroll-snap-strictness: proximity;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;

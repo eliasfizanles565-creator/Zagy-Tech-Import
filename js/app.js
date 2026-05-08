@@ -783,6 +783,93 @@ function abrirModalGeneral5(producto) {
 /////////////
 
 
+// ABRIR INFO PURPLE (INDEPENDIENTE)
+function abrirModalGeneral6(producto) {
+    document.getElementById('modal-nombre-6').textContent = producto.nombre;
+    document.getElementById('modal-precio-6').textContent = `S/ ${producto.precio.toFixed(2)}`;
+    document.getElementById('modal-categoria-6').textContent = producto.categoria;
+    document.getElementById('modal-descripcion-6').textContent = producto.descripcion;
+    
+    cambiarImagenPrincipal6(producto.imagenes[0]); // Llama a la función independiente del modal 4
+
+    const listaCaracteristicas = document.getElementById('modal-caracteristicas-6');
+    listaCaracteristicas.innerHTML = '';
+    producto.caracteristicas.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        listaCaracteristicas.appendChild(li);
+    });
+
+    const contenedorMiniaturas = document.getElementById('modal-miniaturas-6');
+    contenedorMiniaturas.innerHTML = '';
+    
+    producto.imagenes.forEach(imgUrl => {
+        const esVideo = imgUrl.toLowerCase().endsWith('.mp4');
+        
+        if (esVideo) {
+            const videoThumb = document.createElement('video');
+            videoThumb.src = imgUrl;
+            videoThumb.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-purpleTouch carrito3 transition flex-shrink-0';
+            
+            videoThumb.onclick = () => {
+                const botonVideo6 = document.getElementById('btn-video-modal-6');
+                if (botonVideo6) {
+                    botonVideo6.setAttribute('data-video-url', imgUrl);
+                }
+                reproducirVideoDelBoton6(); // Llama a la función del botón 6
+            };
+            
+            contenedorMiniaturas.appendChild(videoThumb);
+        } else {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.className = 'w-[64px] h-[64px] object-cover rounded-xl border infoOculta card-purpleTouch carrito3 transition flex-shrink-0';
+            // Al hacer clic cambia la imagen del modal 4
+            img.onclick = () => cambiarImagenPrincipal6(imgUrl);
+            contenedorMiniaturas.appendChild(img);
+        }
+    });
+
+    const botonAgregar = document.getElementById('modal-boton-agregar-6');
+    if (botonAgregar) {
+        botonAgregar.onclick = function() {
+            agregarAlCarrito(producto.id, producto.nombre, producto.precio, producto.imagenes[0]);
+            cerrarModalProducto();
+            abrirCarrito();
+        };
+    }
+
+    const botonVideo6 = document.getElementById('btn-video-modal-6');
+    const urlVideo = producto.imagenes.find(url => url.toLowerCase().endsWith('.mp4'));
+
+    if (urlVideo && botonVideo6) {
+        botonVideo6.setAttribute('data-video-url', urlVideo);
+        botonVideo6.classList.remove('hidden');
+    } else if (botonVideo6) {
+        botonVideo6.classList.add('hidden');
+    }
+
+    // Inicialización del modal 4 (Oculta el video y muestra la imagen al cargar)
+    const imgElemento6 = document.getElementById('modal-imagen-6');
+    const videoElemento6 = document.getElementById('modal-video-6');
+
+    if (videoElemento6) {
+        videoElemento6.classList.add('hidden');
+        videoElemento6.pause();
+    }
+
+    if (imgElemento6) {
+        imgElemento6.src = producto.imagenes[0];
+        imgElemento6.classList.remove('hidden');
+        imgElemento6.style.objectFit = 'contain';
+    }
+
+    document.getElementById('producto-modal-6').classList.remove('hidden');
+    document.getElementById('producto-modal-overlay').classList.remove('hidden');
+}
+/////////////
+
+
 
 //////////////////////////////
 
@@ -868,6 +955,23 @@ function cambiarImagenPrincipal5(nuevaSrc) {
         imgElemento5.classList.remove('hidden');
         imgElemento5.src = nuevaSrc;
         imgElemento5.style.objectFit = 'contain';
+    }
+}
+
+// 6. Cambia de imagen - Modal 6 (Independiente) - FUCHSIA
+function cambiarImagenPrincipal6(nuevaSrc) {
+    const imgElemento6 = document.getElementById('modal-imagen-6');
+    const videoElemento6 = document.getElementById('modal-video-6');
+
+    if (videoElemento6) {
+        videoElemento6.classList.add('hidden');
+        videoElemento6.pause();
+    }
+
+    if (imgElemento6) {
+        imgElemento6.classList.remove('hidden');
+        imgElemento6.src = nuevaSrc;
+        imgElemento6.style.objectFit = 'contain';
     }
 }
 /////////////
@@ -1002,6 +1106,33 @@ function reproducirVideoDelBoton5(botonId = 'btn-video-modal-5') {
         });
     }
 }
+
+// Reproduce el video del botón - Modal 6 (Independiente) - LIME
+function reproducirVideoDelBoton6(botonId = 'btn-video-modal-6') {
+    const botonVideo = document.getElementById(botonId);
+    const urlVideo = botonVideo ? botonVideo.getAttribute('data-video-url') : null;
+
+    if (!urlVideo) return;
+
+    const imgElemento = document.getElementById('modal-imagen-6');
+    const videoElemento = document.getElementById('modal-video-6');
+    const videoSource = document.getElementById('modal-video-source-6');
+
+    imgElemento.classList.add('hidden');
+    
+    if (videoSource) {
+        videoSource.src = urlVideo;
+    }
+    
+    if (videoElemento) {
+        videoElemento.load();
+        videoElemento.classList.remove('hidden');
+        videoElemento.play().catch(error => {
+            console.log("Reproducción automática bloqueada en modal 6.");
+            videoElemento.controls = true;
+        });
+    }
+}
 ///////////////////////
 
 
@@ -1012,6 +1143,7 @@ function cerrarModalProducto() {
     document.getElementById('producto-modal-3').classList.add('hidden');
     document.getElementById('producto-modal-4').classList.add('hidden');
     document.getElementById('producto-modal-5').classList.add('hidden');
+    document.getElementById('producto-modal-6').classList.add('hidden');
   
     document.getElementById('producto-modal-overlay').classList.add('hidden');
 
@@ -1020,6 +1152,7 @@ function cerrarModalProducto() {
     const videoElemento3 = document.getElementById('modal-video-3');
     const videoElemento4 = document.getElementById('modal-video-4');
     const videoElemento5 = document.getElementById('modal-video-5');
+    const videoElemento6 = document.getElementById('modal-video-6');
 
 
     if (videoElemento1) videoElemento1.pause();
@@ -1027,6 +1160,7 @@ function cerrarModalProducto() {
     if (videoElemento3) videoElemento3.pause();
     if (videoElemento4) videoElemento4.pause();
     if (videoElemento5) videoElemento5.pause();
+    if (videoElemento6) videoElemento6.pause();
     
 }
 
@@ -1128,6 +1262,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// /////////////////////////////////////////////////
+
 
 
 // /////////////////////////////////////////////////
+
+// ====== POSICIONAR SCROLL DE SECTIONS =========
+let isScrolling;
+
+window.addEventListener('wheel', (event) => {
+    window.clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(() => {
+        const secciones = document.querySelectorAll('.seccion-snap');
+        let seccionActual = secciones[0];
+        let menorDistancia = Infinity;
+
+        // 1. Detectar en qué sección estamos (basado en el centro de la pantalla)
+        const centroPantalla = window.scrollY + (window.innerHeight / 2);
+
+        secciones.forEach((seccion) => {
+            const distancia = Math.abs(centroPantalla - (seccion.offsetTop + seccion.offsetHeight / 2));
+            if (distancia < menorDistancia) {
+                menorDistancia = distancia;
+                seccionActual = seccion;
+            }
+        });
+
+        const altoSeccion = seccionActual.offsetHeight;
+        const altoPantalla = window.innerHeight;
+        const inicioSeccion = seccionActual.offsetTop;
+        const finSeccion = inicioSeccion + altoSeccion;
+
+        // 2. Lógica de posicionamiento inteligente
+        if (altoSeccion > altoPantalla + 50) {
+            // SI LA SECCIÓN ES GRANDE:
+            // Si el usuario scrolleó cerca del final, imantamos al fondo.
+            if (window.scrollY + altoPantalla > finSeccion - 150) {
+                window.scrollTo({ top: finSeccion - altoPantalla, behavior: 'smooth' });
+            } 
+            // Si está cerca del inicio, imantamos al principio.
+            else if (window.scrollY < inicioSeccion + 150) {
+                window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+            }
+            // Si está en el medio, NO hacemos nada (lo dejamos leer tranquilo).
+        } else {
+            // SI LA SECCIÓN ES NORMAL (h-screen):
+            window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+        }
+    }, 1000); // 200ms para que sea rápido pero deje terminar el gesto
+}, { passive: true });

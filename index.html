@@ -24,6 +24,7 @@
 
 <body class="bg-indigo-50 dark:bg-zinc-950 transition-colors duration-500 dark:text-white  overflow-x-hidden mx-auto select-none touch-manipulation
 
+
 "draggable="false" oncontextmenu="return false;">
 
 <!-- ///////////////////////////////////////////////// -->
@@ -154,7 +155,7 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- HERO -->
-    <section id="inicio" class="flex flex-col-reverse mx-auto max-w-7xl relative w-[90%] items-center gap-y-5 
+    <section id="inicio" class="flex flex-col-reverse mx-auto max-w-7xl relative w-[90%] items-center gap-y-5 seccion-snap
     max-sm:w-[97%] max-sm:min-h-[calc(100vh-208px)] max-sm:scroll-mt-30
     sm:max-lg:w-[97%]
     lg:flex-row lg:mb-20
@@ -293,7 +294,7 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- CARDS DE CATEGORÍAS -->
-    <section id="categorias" class="relative min-h-dvh pt-8 flex flex-col justify-center items-center pb-30
+    <section id="categorias" class="relative min-h-dvh pt-8 flex flex-col justify-center items-center pb-30 seccion-snap 
     ">
         <!-- Background -->
         <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300"
@@ -316,7 +317,7 @@
         <div class="relative flex gap-5 flex-wrap justify-center max-w-7xl">
 
             <!-- CARD 1 -->
-            <article id="CardAccesorios" class="card-pink w-90 h-120 rounded-4xl overflow-hidden relative border-pink-500 border-4 shadow-2xl shadow-pink-500 card__article1
+            <article id="CardAccesorios" class="card-pink w-90 h-120 rounded-4xl overflow-hidden relative border-pink-500 border-4 shadow-2xl shadow-pink-500 card__article1 seccion-snap
             cursor-[url('../assets/cursorPink.png'),pointer]
             ">
 
@@ -730,7 +731,7 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- OFERTAS -->
-        <div class="pt-23 min-h-dvh relative">
+        <div class="pt-23 min-h-dvh relative seccion-snap">
 
             <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -952,9 +953,9 @@
 <!-- /////////////////////////////////////////////////// -->
 
     <!-- ========== PRODUCTOS CARDS DESLIZANTES ================ -->
-    
+
     <!-- ACCESORIOS -->
-    <div id="accesorios" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPink.png),pointer] relative">
+    <div id="accesorios" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPink.png),pointer] relative seccion-snap h-screen">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -1302,7 +1303,7 @@
 
 
     <!-- SONIDO -->
-    <div id="sonido" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorCeleste.png),pointer] relative">
+    <div id="sonido" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorCeleste.png),pointer] relative seccion-snap h-screen">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -1654,7 +1655,7 @@
 
 
     <!-- CONFORT -->
-    <div id="confort" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorFuchsia.png),pointer] relative">
+    <div id="confort" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorFuchsia.png),pointer] relative seccion-snap h-screen">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -1884,7 +1885,7 @@
 
 
     <!-- NOVEDADES -->
-    <div id="novedades" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorVerde.png),pointer] relative">
+    <div id="novedades" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorVerde.png),pointer] relative seccion-snap h-screen">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
@@ -2051,17 +2052,17 @@
 
 
     <!-- HOGAR -->
-    <div id="hogar" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorAmber.png),pointer] relative">
+    <div id="hogar" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorAmber.png),pointer] relative seccion-snap h-screen">
 
         <!-- Background -->
             <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
             max-lg:object-center"
-            src="assets/GIRLS PRO/Novedades.png" alt="background">
+            src="assets/GIRLS PRO/Hogar.png" alt="background">
 
             <img class="absolute inset-0 w-full h-full object-cover object-center opacity-0  dark:opacity-100 invisible dark:visible transition-all 
             duration-300
             max-lg:object-center"
-            src="assets/GIRLS PRO/ConfortDark.png" alt="background">
+            src="assets/GIRLS PRO/HogarDark.png" alt="background">
             <!-- .background -->
 
         <section class="testimonial card-amber bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorAmber.png),pointer]">
@@ -2111,7 +2112,7 @@
                                 <i class="ri-heart-fill"></i>
                             </button>
 
-                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-amber-500 left-5 top-3 text-uppercase font-bold text-amber-500 dark:text-white shadow-lg shadow-lime-500/10
+                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-amber-500 left-5 top-3 text-uppercase font-bold text-amber-500 dark:text-white shadow-lg shadow-amber-500/10
                             cursor-[url(../assets/touchAmber.png),pointer] flex items-center justify-center"
                             onclick="event.stopPropagation()" href="#CardHogar">
                                 Relax
@@ -2173,7 +2174,7 @@
                                 <i class="ri-heart-fill"></i>
                             </button>
 
-                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-amber-500 left-5 top-3 text-uppercase font-bold text-amber-500 dark:text-white shadow-lg shadow-lime-500/10
+                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-amber-500 left-5 top-3 text-uppercase font-bold text-amber-500 dark:text-white shadow-lg shadow-purple-500/10
                             cursor-[url(../assets/touchAmber.png),pointer] flex items-center justify-center"
                             onclick="event.stopPropagation()" href="#CardHogar">
                                 Relax
@@ -2216,9 +2217,175 @@
             </div>
         </section>
     </div>
+    <!-- .hogar -->
+
+
+    <!-- ROPA -->
+    <div id="ropa" class="bg-white dark:bg-neutral-950 cursor-[url(../assets/cursorPurple.png),pointer] relative seccion-snap h-screen">
+
+        <!-- Background -->
+            <img class="absolute inset-0 w-full h-full object-cover object-center dark:invisible transition-all duration-300
+            max-lg:object-center"
+            src="assets/GIRLS PRO/Ropa.png" alt="background">
+
+            <img class="absolute inset-0 w-full h-full object-cover object-center opacity-0  dark:opacity-100 invisible dark:visible transition-all 
+            duration-300
+            max-lg:object-center"
+            src="assets/GIRLS PRO/RopaDark.png" alt="background">
+            <!-- .background -->
+
+        <section class="testimonial card-purple bg min-h-dvh flex flex-col justify-center items-center overflow-hidden max-w-3xl mx-auto cursor-[url(../assets/cursorPurple.png),pointer]">
+            <h2 class="testimonial__title font-Russo text-center mb-12 text-5xl relative text-purple-500">
+                Ropa
+            </h2>
+
+            <div class="testimonial__swiper swiper w-full mx-auto pb-35">
+                <div class="swiper-wrapper mb-25 mt-5">
+                    
+                    <article class="cursor-[url(../assets/cursorPurple.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
+                    rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-purple-500
+                    "onclick="abrirModalGeneral6({
+                    id: 11,
+                    nombre: 'Masajeador 3 Botones',
+                    precio: 54.90,
+                    categoria: 'Relax',
+                    descripcion: 'La Almohada masajeadora de cuello ofrece un masaje shiatsu profundo en cualquier lugar y en cualquier momento. El control integrado le permite controlar su experiencia de masaje. Agregue calor y experimente un masaje de cuello y hombros más profundo y relajante.',
+                    caracteristicas: ['Fácil de llevar', 'Masaje  bidireccional', 'Ruido silencioso de alta frecuencia', 'Suave y transpirable', 'Ayuda a aliviar el dolor muscular', 'Batería de litio recargable', 'Capacidad de la batería: 2000mAH', 'Potencia nominal: 3,7 W', 'Tensión nominal: DC5.0V', 'Peso neto del producto: 495 gramos', 'Material: Terciopelo transpirable de doble capa', 'Cable de Carga: Si', 'Tipo C: Si'],
+                    imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
+                    })"
+                    >   
+                        <div class="size-80 mx-auto">
+                            <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
+
+                            " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
+                        </div>
+                        
+                        <div class="font-Epic">
+                            <h3 class="testimonial__name mt-2 mb-12 font-bold text-3xl/8.5 text-purple-500
+                            ">
+                                Masajeador<br> 3 Botones
+                            </h3>
+            
+
+                            <button class="size-10 rounded-full bg-white dark:bg-purple-500 absolute right-5 bottom-4 text-purple-500 dark:text-white text-xl shadow-lg shadow-purple-500/20  carrito2 carritoGrande
+                            cursor-[url(../assets/touchPurple.png),pointer]"
+                            onclick="agregarYVerCarrito(event, 11, 'Masajeador 3 Botones', 54.90, 'assets/11 ALMOHADA DE 3 BOTONES/01.webp')" id="carrito">
+                                <i class="ri-shopping-cart-2-line"></i>
+                            </button>
+
+
+                            <button class="size-10 rounded-full bg-white dark:bg-transparent absolute right-5 top-3 text-purple-500 text-xl shadow-lg
+                            shadow-purple-500/10
+                            cursor-[url(../assets/touchPurple.png),pointer]"
+                            >
+                                <i class="ri-heart-fill"></i>
+                            </button>
+
+                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-purple-500 left-5 top-3 text-uppercase font-bold text-purple-500 dark:text-white shadow-lg shadow-purple-500/10
+                            cursor-[url(../assets/touchPurple.png),pointer] flex items-center justify-center"
+                            onclick="event.stopPropagation()" href="#CardRopa">
+                                Relax
+                            </a>
+
+                            <button class="h-10 w-25 rounded-full absolute left-3 bottom-11 text-uppercase font-bold text-xs text-purple-500
+                            cursor-[url(../assets/CursorPurple.png),pointer]"
+                            >
+                                PRECIO
+                            </button>
+
+                            <button class="h-12 w-35 rounded-full absolute left-5 bottom-3 text-uppercase text-3xl font-Russo
+                            cursor-[url(../assets/CursorPurple.png),pointer]"
+                            >
+                                s/ 54 <span class="text-xs">.90</span>
+                            </button>
+
+
+
+                        </div>
+                    </article>
+
+                    <article class="cursor-[url(../assets/cursorPurple.png),pointer] testimonial__card swiper-slide max-w-90 py-6 pb-15
+                    rounded-3xl text-center flex flex-col items-center bg-white/50 dark:bg-zinc-950/80 backdrop-blur-5xl shadow-2xl shadow-purple-500
+                    "onclick="abrirModalGeneral6({
+                    id: 11,
+                    nombre: 'Masajeador 3 Botones',
+                    precio: 54.90,
+                    categoria: 'Relax',
+                    descripcion: 'La Almohada masajeadora de cuello ofrece un masaje shiatsu profundo en cualquier lugar y en cualquier momento. El control integrado le permite controlar su experiencia de masaje. Agregue calor y experimente un masaje de cuello y hombros más profundo y relajante.',
+                    caracteristicas: ['Fácil de llevar', 'Masaje  bidireccional', 'Ruido silencioso de alta frecuencia', 'Suave y transpirable', 'Ayuda a aliviar el dolor muscular', 'Batería de litio recargable', 'Capacidad de la batería: 2000mAH', 'Potencia nominal: 3,7 W', 'Tensión nominal: DC5.0V', 'Peso neto del producto: 495 gramos', 'Material: Terciopelo transpirable de doble capa', 'Cable de Carga: Si', 'Tipo C: Si'],
+                    imagenes: ['assets/11 ALMOHADA DE 3 BOTONES/01.webp','assets/11 ALMOHADA DE 3 BOTONES/02.webp','assets/11 ALMOHADA DE 3 BOTONES/03.avif','assets/11 ALMOHADA DE 3 BOTONES/04.avif','assets/11 ALMOHADA DE 3 BOTONES/05.avif','assets/11 ALMOHADA DE 3 BOTONES/06.avif','assets/11 ALMOHADA DE 3 BOTONES/07.avif','assets/11 ALMOHADA DE 3 BOTONES/08.avif','assets/11 ALMOHADA DE 3 BOTONES/09.mp4']
+                    })"
+                    >   
+                        <div class="size-80 mx-auto">
+                            <img class="testimonial__img w-full h-full object-cover object-center rounded-4xl mt-0 mx-auto mb-2
+
+                            " src="assets/11 ALMOHADA DE 3 BOTONES/01.webp" alt="image" >
+                        </div>
+                        
+                        <div class="font-Epic">
+                            <h3 class="testimonial__name mt-2 mb-12 font-bold text-3xl/8.5 text-purple-500
+                            ">
+                                Masajeador<br> 3 Botones
+                            </h3>
+            
+
+                            <button class="size-10 rounded-full bg-white dark:bg-purple-500 absolute right-5 bottom-4 text-purple-500 dark:text-white text-xl shadow-lg shadow-purple-500/20  carrito2 carritoGrande
+                            cursor-[url(../assets/touchPurple.png),pointer]"
+                            onclick="agregarYVerCarrito(event, 11, 'Masajeador 3 Botones', 54.90, 'assets/11 ALMOHADA DE 3 BOTONES/01.webp')" id="carrito">
+                                <i class="ri-shopping-cart-2-line"></i>
+                            </button>
+
+
+                            <button class="size-10 rounded-full bg-white dark:bg-transparent absolute right-5 top-3 text-purple-500 text-xl shadow-lg
+                            shadow-purple-500/10
+                            cursor-[url(../assets/touchPurple.png),pointer]"
+                            >
+                                <i class="ri-heart-fill"></i>
+                            </button>
+
+                            <a class="h-10 w-25 rounded-full bg-white absolute dark:bg-purple-500 left-5 top-3 text-uppercase font-bold text-purple-500 dark:text-white shadow-lg shadow-purple-500/10
+                            cursor-[url(../assets/touchPurple.png),pointer] flex items-center justify-center"
+                            onclick="event.stopPropagation()" href="#CardRopa">
+                                Relax
+                            </a>
+
+                            <button class="h-10 w-25 rounded-full absolute left-3 bottom-11 text-uppercase font-bold text-xs text-purple-500
+                            cursor-[url(../assets/CursorPurple.png),pointer]"
+                            >
+                                PRECIO
+                            </button>
+
+                            <button class="h-12 w-35 rounded-full absolute left-5 bottom-3 text-uppercase text-3xl font-Russo
+                            cursor-[url(../assets/CursorPurple.png),pointer]"
+                            >
+                                s/ 54 <span class="text-xs">.90</span>
+                            </button>
+
+
+
+                        </div>
+                    </article>
+
+                
+
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev ">
+                    <i class="ri-arrow-left-long-line cursor-[url(../assets/touchPurple.png),pointer]"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-long-line cursor-[url(../assets/touchPurple.png),pointer]"></i>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- .novedades -->
 
-    
 
 
 
@@ -2230,7 +2397,7 @@
 
 <!-- ========= INFO OCULTA ========= -->
     <div id="producto-modal-overlay" class="fixed inset-0 bg-white/10
-    dark:bg-black/20 z-[100] hidden backdrop-blur-sm card-pinkCursor" onclick="cerrarModalProducto()">
+    dark:bg-black/20 z-[100] hidden backdrop-blur-sm" onclick="cerrarModalProducto()">
     </div>
 <!-- ////////////////////////////////////// -->
 
@@ -2580,6 +2747,77 @@
                 </div>
 
                 <button id="modal-boton-agregar-5" class="w-full font-bold py-4 rounded-2xl text-lg transition-all flex items-center justify-center gap-2 transform shadow-md text-white botonInfoOculta card-amberTouch carrito4">
+                    <i class="ri-shopping-cart-2-line"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+    </div>
+<!-- /////////////////////////////////////////////////// -->
+
+
+<!-- ////////////////////////////// -->
+<!-- CARD PURPLE -->
+    <div id="producto-modal-6" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110] bg-white/20 dark:bg-zinc-950/80 backdrop-blur-md border rounded-3xl pt-4 px-6 pb-6 w-11/12 max-w-5xl  hidden max-h-[90vh] overflow-y-auto shadow-2xl transition-all duration-300 infoOculta card-purple card-purpleCursor">
+        
+        <button onclick="cerrarModalProducto()" class="absolute top-3 right-3 z-[120] text-white w-10 h-10 rounded-[50%] p-2 transition flex items-center justify-center botonInfoOculta card-purpleTouch">
+            <span class="text-3xl leading-none">&times;</span>
+        </button>
+        <button id="btn-video-modal-6" onclick="reproducirVideoDelBoton6('btn-video-modal-6')" class="absolute top-15 right-3 z-[120] text-white w-10 h-10 rounded-[50%] p-2 transition flex items-center justify-center botonInfoOculta card-purpleTouch hidden">
+            <i class="ri-video-line text-2xl"></i>
+        </button>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-0 md:gap-8">
+            <div>
+                <div class="aspect-square rounded-2xl overflow-hidden flex items-center justify-center border infoOculta zoomEpic relative">
+                    <img id="modal-imagen-6" src="https://via.placeholder.com/600x600" alt="Producto" class="w-full h-full object-cover transition-opacity duration-300 zoomPro hidden">
+
+                    <video id="modal-video-6" class="w-full h-full object-contain transition-opacity duration-300" controls autoplay loop muted>
+                        <source id="modal-video-source-6" src="" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                </div>
+                
+                <div id="modal-miniaturas-6" class="flex flex-wrap gap-3 justify-center items-start  w-full overflow-y-auto ocultar-scrollbar pt-4 
+                max-md:h-25 md:h-45">
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between gap-6 ">
+                <div class="overflow-y-auto ocultar-scrollbar w-full max-md:h-40
+                md:h-150">
+                    <span id="modal-categoria-6" class="px-3 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white botonInfoOculta absolute top-2 left-2">
+                        Categoría
+                    </span>
+                    
+                    <h2 id="modal-nombre-6" class="text-4xl/10 font-bold mt-4 mb-2 mt-1  textoInfoOculta">
+                        Nombre del Producto
+                    </h2>
+                    
+                    <p id="modal-precio-6" class="text-3xl font-Russo font-bold mb-6">
+                        S/ 0.00
+                    </p>
+                    
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold  mb-2 textoInfoOculta">
+                            Descripción
+                        </h3>
+                        <p id="modal-descripcion-6" class="leading-relaxed md:text-[15px]">
+                                Cargando...
+                        </p>
+                    </div>
+                        
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold  mb-2 textoInfoOculta">
+                            Características
+                        </h3>
+                        <ul id="modal-caracteristicas-6" class="space-y-1 list-disc list-inside md:text-[15px]">
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                <button id="modal-boton-agregar-6" class="w-full font-bold py-4 rounded-2xl text-lg transition-all flex items-center justify-center gap-2 transform shadow-md text-white botonInfoOculta card-purpleTouch carrito4">
                     <i class="ri-shopping-cart-2-line"></i> Agregar al Carrito
                 </button>
             </div>
