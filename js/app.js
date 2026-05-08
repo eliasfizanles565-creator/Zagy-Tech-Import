@@ -1271,39 +1271,45 @@ document.addEventListener("DOMContentLoaded", () => {
 // ====== POSICIONAR SCROLL DE SECTIONS =========
 let isScrolling;
 
-window.addEventListener('scroll', () => {
+window.addEventListener('wheel', (event) => {
     window.clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
         const secciones = document.querySelectorAll('.seccion-snap');
-        const altoPantalla = window.innerHeight;
-        const puntoDeCorte = 200; // Sensibilidad del imán (px)
+        let seccionActual = secciones[0];
+        let menorDistancia = Infinity;
+
+        // 1. Detectar en qué sección estamos (basado en el centro de la pantalla)
+        const centroPantalla = window.scrollY + (window.innerHeight / 2);
 
         secciones.forEach((seccion) => {
-            const rect = seccion.getBoundingClientRect();
-
-            // 1. DETECTAR EL FINAL DE LA SECCIÓN
-            // Si el borde inferior de la sección está cerca del fondo de la pantalla
-            if (rect.bottom < altoPantalla + puntoDeCorte && rect.bottom > altoPantalla - puntoDeCorte) {
-                // Solo ajustamos si no estamos ya alineados (margen de 5px)
-                if (Math.abs(rect.bottom - altoPantalla) > 5) {
-                    window.scrollBy({
-                        top: rect.bottom - altoPantalla,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-            
-            // 2. DETECTAR EL INICIO DE LA SECCIÓN
-            // Si el tope de la sección está cerca del tope de la pantalla
-            else if (rect.top < puntoDeCorte && rect.top > -puntoDeCorte) {
-                if (Math.abs(rect.top) > 5) {
-                    window.scrollBy({
-                        top: rect.top,
-                        behavior: 'smooth'
-                    });
-                }
+            const distancia = Math.abs(centroPantalla - (seccion.offsetTop + seccion.offsetHeight / 2));
+            if (distancia < menorDistancia) {
+                menorDistancia = distancia;
+                seccionActual = seccion;
             }
         });
-    }, 100); // 100ms es lo ideal para "atrapar" el scroll justo cuando el dedo suelta
+
+        const altoSeccion = seccionActual.offsetHeight;
+        const altoPantalla = window.innerHeight;
+        const inicioSeccion = seccionActual.offsetTop;
+        const finSeccion = inicioSeccion + altoSeccion;
+
+        // 2. Lógica de posicionamiento inteligente
+        if (altoSeccion > altoPantalla + 50) {
+            // SI LA SECCIÓN ES GRANDE:
+            // Si el usuario scrolleó cerca del final, imantamos al fondo.
+            if (window.scrollY + altoPantalla > finSeccion - 150) {
+                window.scrollTo({ top: finSeccion - altoPantalla, behavior: 'smooth' });
+            } 
+            // Si está cerca del inicio, imantamos al principio.
+            else if (window.scrollY < inicioSeccion + 150) {
+                window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+            }
+            // Si está en el medio, NO hacemos nada (lo dejamos leer tranquilo).
+        } else {
+            // SI LA SECCIÓN ES NORMAL (h-screen):
+            window.scrollTo({ top: inicioSeccion, behavior: 'smooth' });
+        }
+    }, 1000); // 200ms para que sea rápido pero deje terminar el gesto
 }, { passive: true });
