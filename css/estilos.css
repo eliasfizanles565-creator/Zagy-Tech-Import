@@ -1994,6 +1994,11 @@
       height: calc(var(--spacing) * 40);
     }
   }
+  .max-sm\:mt-5 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 5);
+    }
+  }
   .max-sm\:mt-10 {
     @media (width < 40rem) {
       margin-top: calc(var(--spacing) * 10);
@@ -2032,6 +2037,11 @@
   .max-sm\:mb-12 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .max-sm\:mb-15 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 15);
     }
   }
   .max-sm\:min-h-\[calc\(100vh-208px\)\] {
