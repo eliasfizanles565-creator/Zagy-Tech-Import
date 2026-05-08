@@ -1999,6 +1999,16 @@
       margin-top: calc(var(--spacing) * 10);
     }
   }
+  .max-sm\:mt-15 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 15);
+    }
+  }
+  .max-sm\:mb-2 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 2);
+    }
+  }
   .max-sm\:mb-5 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 5);
