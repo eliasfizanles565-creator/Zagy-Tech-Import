@@ -2293,6 +2293,13 @@
       }
     }
   }
+  .sm\:max-md\:mt-10 {
+    @media (width >= 40rem) {
+      @media (width < 52rem) {
+        margin-top: calc(var(--spacing) * 10);
+      }
+    }
+  }
   .sm\:max-md\:mt-17 {
     @media (width >= 40rem) {
       @media (width < 52rem) {
