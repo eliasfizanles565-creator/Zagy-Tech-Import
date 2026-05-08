@@ -2014,6 +2014,11 @@
       margin-bottom: calc(var(--spacing) * 2);
     }
   }
+  .max-sm\:mb-3 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 3);
+    }
+  }
   .max-sm\:mb-5 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 5);
