@@ -764,15 +764,7 @@
                 card__article card-pink cursor-[url(../assets/cursorPink.png),pointer]
                 sm:h-30
                 lg:h-120 lg:w-110
-                " onclick="abrirModalGeneral({
-                    id: 3,
-                    nombre: 'Soporte Imantado 360° Supreme',
-                    precio: 29.90,
-                    categoria: 'Soportes',
-                    descripcion: 'Nuevo soporte para teléfono magnético fuerte, giratorio 360°, plegable y extensible, ajustable en múltiples ángulos, soporte para teléfono de escritorio para transmisiones en vivo, soporte para teléfono de coche, soporte para teléfono de oficina y hogar, soporte de navegación para teléfono de coche.',
-                    caracteristicas: ['Aleación de Aluminio', 'Rotación 360°', 'Fijación Magnética Potente', 'Ventosa de Alta Adherencia', 'Compatibilidad Universal', 'Instalación Sencilla'],
-                    imagenes: ['assets/03 SOPORTE IMANTADO 360 -SUPREME/01.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/02.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.5.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/04.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/05.avif', 'assets/03 SOPORTE IMANTADO 360 -SUPREME/06.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/07.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/08.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/09.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/10.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/11.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/12.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/13.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/14.mp4','assets/03 SOPORTE IMANTADO 360 -SUPREME/15.mp4','assets/03 SOPORTE IMANTADO 360 -SUPREME/16.mp4']
-                    })">
+                ">
                     <!-- IMAGE & SHADOW -->
                     <img class="absolute object-cover object-[50%_25%] inset-0 h-full w-full
                     card__img
@@ -811,8 +803,31 @@
                                 s/ 29 <span class="text-xs">.90</span>
                             </p> 
                         </div>
-
                     </div>
+
+                    <!-- INFO OCULTA -->
+                    <div class="absolute flex gap-4 items-center right-4 top-4
+                    card__data
+                    " onclick="abrirModalGeneral({
+                    id: 3,
+                    nombre: 'Soporte Imantado 360° Supreme',
+                    precio: 29.90,
+                    categoria: 'Soportes',
+                    descripcion: 'Nuevo soporte para teléfono magnético fuerte, giratorio 360°, plegable y extensible, ajustable en múltiples ángulos, soporte para teléfono de escritorio para transmisiones en vivo, soporte para teléfono de coche, soporte para teléfono de oficina y hogar, soporte de navegación para teléfono de coche.',
+                    caracteristicas: ['Aleación de Aluminio', 'Rotación 360°', 'Fijación Magnética Potente', 'Ventosa de Alta Adherencia', 'Compatibilidad Universal', 'Instalación Sencilla'],
+                    imagenes: ['assets/03 SOPORTE IMANTADO 360 -SUPREME/01.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/02.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.5.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/03.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/04.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/05.avif', 'assets/03 SOPORTE IMANTADO 360 -SUPREME/06.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/07.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/08.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/09.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/10.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/11.avif','assets/03 SOPORTE IMANTADO 360 -SUPREME/12.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/13.webp','assets/03 SOPORTE IMANTADO 360 -SUPREME/14.mp4','assets/03 SOPORTE IMANTADO 360 -SUPREME/15.mp4','assets/03 SOPORTE IMANTADO 360 -SUPREME/16.mp4']
+                    })">
+                        <button class="size-12 rounded-full bg-white dark:bg-pink-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-pink-500/20 
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchPink.png),pointer]
+                        dark:shadow-xl dark:shadow-pink-950
+                        dark:text-shadow-pink-600 dark:text-shadow-lg
+                        ">
+                            <i class="ri-landscape-fill"></i>
+                        </button>
+                    </div>
+
 
                 </article>
 
@@ -860,14 +875,12 @@
                                 s/ 29 <span class="text-[10px]">.90</span>
                             </p> 
                         </div>
-
                     </div>
+
                     <!-- INFO OCULTA -->
                     <div class="absolute flex gap-4 items-center right-4 top-4
                     card__data
                     ">
-
-                        
                         <button class="size-12 rounded-full bg-white dark:bg-blue-500  text-black dark:text-white text-2xl shadow-lg 
                         shadow-blue-500/20 
                         grid place-items-center shrink-0
@@ -885,8 +898,6 @@
                         })">
                             <i class="ri-landscape-fill"></i>
                         </button>
-
-
                     </div>
 
                 </article>
@@ -910,22 +921,57 @@
                     card__data
                     ">
 
-                        <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
+                        <!-- <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
                             <i class="ri-landscape-fill"></i>
-                        </div>
+                        </div> -->
+
+                        <button class="size-12 rounded-full bg-white dark:bg-fuchsia-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-fuchsia-500/20
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchFuchsia.png),pointer]
+                        dark:shadow-xl dark:shadow-fuchsia-950
+                        dark:text-shadow-fuchsia-600 dark:text-shadow-lg"
+                        onclick="agregarYVerCarrito(event, 12, 'Masajeador 4 Botones', 64.90, 'assets/12 ALMOHADA DE 4 BOTONES/01.webp')" id="carrito">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </button>
 
                         <div>
-                            <h2 class="text-2xl font-bold
+                            <h2 class="text-xl font-bold text-white dark:text-fuchsia-500
+                            dark:text-shadow-fuchsia-950 dark:text-shadow-lg
+                            sm:text-2xl leading-5 mt-2
                             ">
-                                Winter Forest
+                                Masajeador 4 Botones
                             </h2>
-                            <p class="text-xs opacity-80
-                            ">
-                                Beautiful scenary to enjoy
-                            </p>
+                            <p class="opacity-80 font-Russo
+                            dark:text-shadow-fuchsia-700/20 dark:text-shadow-lg">
+                                s/ 64 <span class="text-[10px]">.90</span>
+                            </p> 
                         </div>
-
                     </div>
+
+                    <!-- INFO OCULTA -->
+                    <div class="absolute flex gap-4 items-center right-4 top-4
+                    card__data
+                    ">
+                        <button class="size-12 rounded-full bg-white dark:bg-fuchsia-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-fuchsia-500/20 
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchFuchsia.png),pointer]
+                        dark:shadow-xl dark:shadow-fuchsia-950
+                        dark:text-shadow-fuchsia-600 dark:text-shadow-lg
+                        " onclick="abrirModalGeneral3({
+                        id: 12,
+                        nombre: 'Masajeador 4 Botones',
+                        precio: 64.90,
+                        categoria: 'Relax',
+                        descripcion: 'La Almohada masajeadora de cuello ofrece un masaje shiatsu profundo en cualquier lugar y en cualquier momento. El control integrado le permite controlar su experiencia de masaje. Agregue calor y experimente un masaje de cuello y hombros más profundo y relajante.',
+                        caracteristicas: ['Fácil de llevar', 'Masaje  bidireccional', 'Ruido silencioso de alta frecuencia', 'Suave y transpirable', 'Ayuda a aliviar el dolor muscular', 'Batería de litio recargable', 'Capacidad de la batería: 2000mAH', 'Potencia nominal: 3,7 W', 'Tensión nominal: DC5.0V', 'Peso neto del producto: 495 gramos', 'Material: Terciopelo transpirable de doble capa', 'Cable de Carga: Si', 'Tipo C: Si'],
+                        imagenes: ['assets/12 ALMOHADA DE 4 BOTONES/01.webp','assets/12 ALMOHADA DE 4 BOTONES/02.webp','assets/12 ALMOHADA DE 4 BOTONES/03.webp','assets/12 ALMOHADA DE 4 BOTONES/04.avif','assets/12 ALMOHADA DE 4 BOTONES/05.avif','assets/12 ALMOHADA DE 4 BOTONES/06.avif','assets/12 ALMOHADA DE 4 BOTONES/07.avif','assets/12 ALMOHADA DE 4 BOTONES/08.avif','assets/12 ALMOHADA DE 4 BOTONES/09.avif','assets/12 ALMOHADA DE 4 BOTONES/10.avif','assets/12 ALMOHADA DE 4 BOTONES/11.avif','assets/12 ALMOHADA DE 4 BOTONES/12.avif','assets/12 ALMOHADA DE 4 BOTONES/13.avif','assets/12 ALMOHADA DE 4 BOTONES/14.avif','assets/12 ALMOHADA DE 4 BOTONES/15.mp4','assets/12 ALMOHADA DE 4 BOTONES/16.mp4']
+                        })">
+                            <i class="ri-landscape-fill"></i>
+                        </button>
+                    </div>
+
 
                 </article>
 
@@ -947,21 +993,55 @@
                     card__data
                     ">
 
-                        <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
+                        <!-- <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
                             <i class="ri-landscape-fill"></i>
-                        </div>
+                        </div> -->
+
+                        <button class="size-12 rounded-full bg-white dark:bg-lime-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-lime-500/20
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchVerde.png),pointer]
+                        dark:shadow-xl dark:shadow-lime-950
+                        dark:text-shadow-lime-600 dark:text-shadow-lg"
+                        onclick="agregarYVerCarrito(event, 16, 'Tableta UGEE UE16', 649.90, 'assets/16 UGEE UE16/01.webp')" id="carrito">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </button>
 
                         <div>
-                            <h2 class="text-xl font-bold
-                            sm:text-2xl
+                            <h2 class="text-xl font-bold text-white dark:text-lime-500
+                            dark:text-shadow-lime-950 dark:text-shadow-lg
+                            sm:text-2xl leading-5 mt-2
                             ">
-                                Hidden Lake
+                                Tableta UGEE UE16
                             </h2>
-                            <p class="text-xs opacity-80">
-                                Beautiful scenary to enjoy
-                            </p>
+                            <p class="opacity-80 font-Russo
+                            dark:text-shadow-lime-700/20 dark:text-shadow-lg">
+                                s/ 649 <span class="text-[10px]">.90</span>
+                            </p> 
                         </div>
+                    </div>
 
+                    <!-- INFO OCULTA -->
+                    <div class="absolute flex gap-4 items-center right-4 top-4
+                    card__data
+                    ">
+                        <button class="size-12 rounded-full bg-white dark:bg-lime-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-lime-500/20 
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchVerde.png),pointer]
+                        dark:shadow-xl dark:shadow-lime-950
+                        dark:text-shadow-lime-600 dark:text-shadow-lg
+                        " onclick="abrirModalGeneral4({
+                        id: 16,
+                        nombre: 'Tableta UGEE UE16',
+                        precio: 649.90,
+                        categoria: 'Diseño',
+                        descripcion: 'Tu creatividad no tiene límites, tu lienzo tampoco debería tenerlos. Con la ugee UE16, el mundo es tu estudio. Diseña, ilustra y retoca con una libertad artística total en una pantalla de 16 pulgadas que responde a cada trazo con precisión quirúrgica. No es solo una tableta; es la herramienta que convierte tu imaginación en una obra maestra, estés donde estés',
+                        caracteristicas: ['Pantalla de 15.4 pulgadas', 'Peso de 1.28 Kg', 'Resolución: 1920 x 1080', 'Gama de colores ultra-alta de 143% sRGB', 'Teclas de acceso directo flotantes', '16K niveles de presión', 'Cambia entre 4 espacios de color', 'Reproduce 16.7 millones de colores', 'Profundidad de color de 8 bits', 'Soporte ajustable de 10 niveles', 'Fuerte compatibilidad de sistema', 'Tipo C: Si', 'Cable de 3 puntas: Si', 'Cables incluidos: Si', 'Soporte de metal incluido: Si', 'Funciona sin conexión: No', ''],
+                        imagenes: ['assets/16 UGEE UE16/01.webp','assets/16 UGEE UE16/02.webp','assets/16 UGEE UE16/03.webp','assets/16 UGEE UE16/04.avif','assets/16 UGEE UE16/05.webp','assets/16 UGEE UE16/06.webp','assets/16 UGEE UE16/07.avif','assets/16 UGEE UE16/08.webp','assets/16 UGEE UE16/09.jpg','assets/16 UGEE UE16/10.avif','assets/16 UGEE UE16/11.webp','assets/16 UGEE UE16/12.webp','assets/16 UGEE UE16/13.webp','assets/16 UGEE UE16/14.webp','assets/16 UGEE UE16/15.webp','assets/16 UGEE UE16/16.webp','assets/16 UGEE UE16/17.webp','assets/16 UGEE UE16/18.webp','assets/16 UGEE UE16/19.webp','assets/16 UGEE UE16/20.webp','assets/16 UGEE UE16/21.webp','assets/16 UGEE UE16/22.webp','assets/16 UGEE UE16/23.webp','assets/16 UGEE UE16/24.webp','assets/16 UGEE UE16/25.webp','assets/16 UGEE UE16/26.webp','assets/16 UGEE UE16/27.webp','assets/16 UGEE UE16/28.webp','assets/16 UGEE UE16/29.webp','assets/16 UGEE UE16/30.webp','assets/16 UGEE UE16/31.mp4','assets/16 UGEE UE16/32.mp4']
+                        })">
+                            <i class="ri-landscape-fill"></i>
+                        </button>
                     </div>
 
                 </article>
@@ -984,21 +1064,55 @@
                     card__data
                     ">
 
-                        <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
+                        <!-- <div class="size-12 text-black bg-white rounded-full text-2xl grid place-items-center shrink-0">
                             <i class="ri-landscape-fill"></i>
-                        </div>
+                        </div> -->
+
+                        <button class="size-12 rounded-full bg-white dark:bg-amber-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-amber-500/20
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchAmber.png),pointer]
+                        dark:shadow-xl dark:shadow-amber-950
+                        dark:text-shadow-amber-600 dark:text-shadow-lg"
+                        onclick="agregarYVerCarrito(event, 22, 'Proyector L018', 349.90, 'assets/22 PROYECTOR L018/01.webp')" id="carrito">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </button>
 
                         <div>
-                            <h2 class="text-xl font-bold
-                            sm:text-2xl
+                            <h2 class="text-xl font-bold text-white dark:text-amber-500
+                            dark:text-shadow-amber-950 dark:text-shadow-lg
+                            sm:text-2xl leading-5 mt-2
                             ">
-                                Frozen River
+                                Proyector L018
                             </h2>
-                            <p class="text-xs opacity-80">
-                                Beautiful scenary to enjoy
-                            </p>
+                            <p class="opacity-80 font-Russo
+                            dark:text-shadow-amber-700/20 dark:text-shadow-lg">
+                                s/ 349 <span class="text-[10px]">.90</span>
+                            </p> 
                         </div>
+                    </div>
 
+                    <!-- INFO OCULTA -->
+                    <div class="absolute flex gap-4 items-center right-4 top-4
+                    card__data
+                    ">
+                        <button class="size-12 rounded-full bg-white dark:bg-amber-500  text-black dark:text-white text-2xl shadow-lg 
+                        shadow-amber-500/20 
+                        grid place-items-center shrink-0
+                        cursor-[url(../assets/touchAmber.png),pointer]
+                        dark:shadow-xl dark:shadow-amber-950
+                        dark:text-shadow-amber-600 dark:text-shadow-lg
+                        " onclick="abrirModalGeneral5({
+                        id: 22,
+                        nombre: 'Proyector L018',
+                        precio: 349.90,
+                        categoria: 'Cine',
+                        descripcion: 'Deja atrás las limitaciones de una televisión fija. Con el nuevo Magcubic L018, cualquier superficie se convierte en un portal al cine de alta definición. Gracias a su diseño 360° giratorio, puedes proyectar desde el suelo hasta el techo con un solo giro. Cuenta con una resolución nativa 1080P con soporte 4K y Android 14 integrado. No es solo un proyector, es libertad visual absoluta en la palma de tu mano. Magcubic L018: Tu cine, tus reglas, en cualquier lugar.',
+                        caracteristicas: ['Resolución 1080p Nativa','Autoenfoque Instantáneo', 'Ajuste de Pantalla Automático', 'Evitación Inteligente de Obstáculos', 'Soporta la calidad 4K', '3 Modos de Brillo Ajustables' ,'Android 14', 'Wifi 6: Soporta 5G', 'Bluetooth: 5.4', 'Brillo Ansi: 630 lumens', 'Parlante interno integrado', 'Entrada HDMI: Si (1)', 'Entrada USB: Si (1)', 'Entrada Jack 3.5: Si', 'Conectar Parlantes: Si (Jack 3.5)', 'Control Remoto por Voz: Si', 'Control Incluido: Si', 'Cargador Incluido: Si', 'Conección a PC: Si', 'Proyectar Celular: Si', 'Conexión Play Station (3,4,5): Si', 'Apps: (Xuper TV),(Kawaii Anime),(Cine Pro-Nelflix)','Apps Incluidas: Si'],
+                        imagenes: ['assets/22 PROYECTOR L018/01.webp','assets/22 PROYECTOR L018/02.avif','assets/22 PROYECTOR L018/03.webp','assets/22 PROYECTOR L018/04.webp','assets/22 PROYECTOR L018/05.avif','assets/22 PROYECTOR L018/06.avif','assets/22 PROYECTOR L018/07.avif','assets/22 PROYECTOR L018/08.webp','assets/22 PROYECTOR L018/09.avif','assets/22 PROYECTOR L018/10.webp','assets/22 PROYECTOR L018/12.webp','assets/22 PROYECTOR L018/13.jpg','assets/22 PROYECTOR L018/14.webp','assets/22 PROYECTOR L018/15.avif','assets/22 PROYECTOR L018/16.avif','assets/22 PROYECTOR L018/17.webp','assets/22 PROYECTOR L018/18.webp','assets/22 PROYECTOR L018/19.webp','assets/22 PROYECTOR L018/20.mp4','assets/22 PROYECTOR L018/21.mp4','assets/22 PROYECTOR L018/22.mp4','assets/22 PROYECTOR L018/23.mp4','assets/22 PROYECTOR L018/24.mp4','assets/22 PROYECTOR L018/25.mp4','assets/22 PROYECTOR L018/26.mp4','assets/22 PROYECTOR L018/27.mp4','assets/22 PROYECTOR L018/28.mp4','assets/22 PROYECTOR L018/29.mp4','assets/22 PROYECTOR L018/30.mp4','assets/22 PROYECTOR L018/31.mp4','assets/22 PROYECTOR L018/32.mp4','assets/22 PROYECTOR L018/33.mp4']
+                        })">
+                            <i class="ri-landscape-fill"></i>
+                        </button>
                     </div>
 
                 </article>
