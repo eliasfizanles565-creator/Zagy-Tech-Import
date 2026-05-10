@@ -347,6 +347,7 @@
 }
 .dark [class*="iconsitos"]:hover {
     text-shadow: 0 10px 25px rgba(132, 204, 22, 0.1);
+    /* color: #fe9a00; */
 }
 
 /* /////////////////////////////////////////// */
