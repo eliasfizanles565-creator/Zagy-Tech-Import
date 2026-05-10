@@ -42,7 +42,7 @@
 
     body {
         @apply font-Montserrat cursor-[url('../assets/cursorCeleste.png'),pointer]
-        dark:cursor-[url('../assets/cursorDegradado.png'),pointer]
+        dark:cursor-[url('../assets/cursorDorado.png'),pointer]
     }
 
     h1,h2,h3 {
@@ -55,7 +55,7 @@
     cursor:url('../assets/touchCeleste.png'), auto;
 }
 .dark [class*="cursor-pointer"]:hover {
-    cursor:url('../assets/touchDegradado.png'), auto;
+    cursor:url('../assets/touchDorado.png'), auto;
 }
 
 
@@ -67,7 +67,7 @@
     --blue-color: 216.89; /*blue-500 #2b7fff */
     --fuchsia-color: 292.61; /*fuchsia-500 #e12afb #ed6aff */
     --lime-color: 78.99; /*lime-500 #7ccf00 */
-    --amber-color: 40.58; /*pink-500 #fe9a00 #ffb900 */
+    --amber-color: 40.58; /*amber-500 #fe9a00 #ffb900 */
     --purple-color: 272.11; /*purple-500 #ad46ff #c27aff */
 
     /*========== Colors CARD PRODUCTOS ==========*/
@@ -264,7 +264,7 @@
     transform: scale(1.10);
 }
 .dark [class*="lupita"]:hover {
-    color: #7ccf00; /* lime-500 */
+    color: #ffb900; /* #7ccf00;  lime-500 , amber-400*/
 }
 
 /* hover para el botón oscuro y claro */
@@ -273,7 +273,7 @@
     transform: scale(1.10) rotate(-45deg);
 }
 .dark [class*="luna"]:hover {
-    background-color: #7ccf00; /* lime-500 */
+    background-color:#ffa600; /* #7ccf00;  lime-500 , amber-400*/
 }
 
 /* hover para el navPrincipal */
@@ -282,7 +282,7 @@
     transform: scale(1.10);
 }
 .dark [class*="navPrincipal"]:hover {
-    color: #7ccf00; /* lime-500 */
+    color: #ffb900; /* #7ccf00;  lime-500 , amber-400*/
 }
 
 /* /////////////////////////////////////// */
@@ -1043,5 +1043,5 @@
 }
 
 .dark .botonX:hover {
-    background-color: #7ccf00;
+    background-color: #a6a09b; /* #7ccf00;  lime-500 , amber-500*/
 }
