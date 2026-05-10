@@ -2709,6 +2709,11 @@
       scroll-margin-top: calc(var(--spacing) * 30);
     }
   }
+  .\32 xl\:scroll-mt-35 {
+    @media (width >= 96rem) {
+      scroll-margin-top: calc(var(--spacing) * 35);
+    }
+  }
   .\32 xl\:gap-7 {
     @media (width >= 96rem) {
       gap: calc(var(--spacing) * 7);
