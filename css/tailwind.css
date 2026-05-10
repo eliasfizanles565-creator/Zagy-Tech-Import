@@ -303,7 +303,7 @@
         translate: 0 0;
     }
     50% {
-        transform: scale(1.10);
+        transform: scale(1.20);
         /* Usamos translate en lugar de translateX para mejor rendimiento */
         translate: 0 0; 
     }
