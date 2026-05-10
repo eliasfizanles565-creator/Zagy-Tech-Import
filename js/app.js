@@ -300,7 +300,7 @@ const botonHeaderCarrito = document.getElementById('carrito');
 // Debe incluir el código de país (51 para Perú) y sin espacios ni '+'
 // ====== INTEGRACIÓN WHATSAPP CORREGIDA ======
 
-const NUMERO_WHATSAPP_NEGOCIO = "51900556685"; // ¡REEMPLAZA ESTE NÚMERO!
+const NUMERO_WHATSAPP_NEGOCIO = "51915112116"; // ¡REEMPLAZA ESTE NÚMERO!
 
 function finalizarCompraWhatsApp() {
     if (carrito.length === 0) {
