@@ -28,6 +28,7 @@
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-indigo-50: oklch(96.2% 0.018 272.314);
     --color-indigo-100: oklch(93% 0.034 272.788);
@@ -36,10 +37,13 @@
     --color-fuchsia-500: oklch(66.7% 0.295 322.15);
     --color-fuchsia-600: oklch(59.1% 0.293 322.896);
     --color-fuchsia-700: oklch(51.8% 0.253 323.949);
+    --color-fuchsia-800: oklch(45.2% 0.211 324.591);
+    --color-fuchsia-900: oklch(40.1% 0.17 325.612);
     --color-fuchsia-950: oklch(29.3% 0.136 325.661);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-pink-600: oklch(59.2% 0.249 0.584);
     --color-pink-700: oklch(52.5% 0.223 3.958);
+    --color-pink-900: oklch(40.8% 0.153 2.432);
     --color-pink-950: oklch(28.4% 0.109 3.907);
     --color-rose-500: oklch(64.5% 0.246 16.439);
     --color-slate-200: oklch(92.9% 0.013 255.508);
@@ -3088,6 +3092,14 @@
       }
     }
   }
+  .dark\:shadow-pink-900 {
+    &:where(.dark, .dark *) {
+      --tw-shadow-color: oklch(40.8% 0.153 2.432);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-pink-900) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
   .dark\:shadow-pink-950 {
     &:where(.dark, .dark *) {
       --tw-shadow-color: oklch(28.4% 0.109 3.907);
@@ -3144,6 +3156,14 @@
       }
     }
   }
+  .dark\:text-shadow-blue-900 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: oklch(37.9% 0.146 265.522);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, var(--color-blue-900) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
   .dark\:text-shadow-blue-950 {
     &:where(.dark, .dark *) {
       --tw-text-shadow-color: oklch(28.2% 0.091 267.935);
@@ -3160,11 +3180,35 @@
       }
     }
   }
+  .dark\:text-shadow-fuchsia-700 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: oklch(51.8% 0.253 323.949);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, var(--color-fuchsia-700) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
   .dark\:text-shadow-fuchsia-700\/20 {
     &:where(.dark, .dark *) {
       --tw-text-shadow-color: color-mix(in srgb, oklch(51.8% 0.253 323.949) 20%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-fuchsia-700) 20%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:text-shadow-fuchsia-800 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: oklch(45.2% 0.211 324.591);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, var(--color-fuchsia-800) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:text-shadow-fuchsia-900 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: oklch(40.1% 0.17 325.612);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, var(--color-fuchsia-900) var(--tw-text-shadow-alpha), transparent);
       }
     }
   }
@@ -3218,6 +3262,14 @@
       --tw-text-shadow-color: color-mix(in srgb, oklch(52.5% 0.223 3.958) 20%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         --tw-text-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-pink-700) 20%, transparent) var(--tw-text-shadow-alpha), transparent);
+      }
+    }
+  }
+  .dark\:text-shadow-pink-900 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: oklch(40.8% 0.153 2.432);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, var(--color-pink-900) var(--tw-text-shadow-alpha), transparent);
       }
     }
   }
