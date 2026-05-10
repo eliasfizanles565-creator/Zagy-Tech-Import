@@ -2759,6 +2759,16 @@
       padding-top: calc(var(--spacing) * 15);
     }
   }
+  .\32 xl\:pt-35 {
+    @media (width >= 96rem) {
+      padding-top: calc(var(--spacing) * 35);
+    }
+  }
+  .\32 xl\:pt-40 {
+    @media (width >= 96rem) {
+      padding-top: calc(var(--spacing) * 40);
+    }
+  }
   .\32 xl\:pb-10 {
     @media (width >= 96rem) {
       padding-bottom: calc(var(--spacing) * 10);
