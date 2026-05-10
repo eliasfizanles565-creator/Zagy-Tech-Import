@@ -273,7 +273,7 @@
     transform: scale(1.10) rotate(-45deg);
 }
 .dark [class*="luna"]:hover {
-    background-color:#ffa600; /* #7ccf00;  lime-500 , amber-400*/
+    background-color:#ffb900; /* #7ccf00;  lime-500 , amber-400*/
 }
 
 /* hover para el navPrincipal */
@@ -1043,5 +1043,5 @@
 }
 
 .dark .botonX:hover {
-    background-color: #a6a09b; /* #7ccf00;  lime-500 , amber-500*/
+    background-color: #292524; /* #7ccf00;  lime-500 , amber-500*/
 }
