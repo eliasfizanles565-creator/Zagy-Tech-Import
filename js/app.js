@@ -309,7 +309,7 @@ function finalizarCompraWhatsApp() {
     }
 
     // 1. Construir el mensaje
-    let mensaje = `Hola *ZZAGY*, me gustaría finalizar mi pedido:%0A%0A`;
+    let mensaje = `Hola *ZAGY*, me gustaría finalizar mi pedido:%0A%0A`;
     mensaje += `--- *RESUMEN DEL PEDIDO* ---%0A`;
 
     let total = 0;

@@ -54,11 +54,9 @@
 .cursor-pointer {
     cursor:url('../assets/touchCeleste.png'), auto;
 }
-.dark [class*="cursor-pointer"]:hover {
+.dark .cursor-pointer:hover {
     cursor:url('../assets/touchDorado.png'), auto;
 }
-
-
 
 
 
