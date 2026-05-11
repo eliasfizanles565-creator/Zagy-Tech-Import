@@ -2322,6 +2322,11 @@
       margin-right: calc(var(--spacing) * 15);
     }
   }
+  .max-sm\:mb-0 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
   .max-sm\:mb-11 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 11);
