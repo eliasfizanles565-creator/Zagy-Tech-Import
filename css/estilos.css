@@ -2327,6 +2327,11 @@
       margin-bottom: calc(var(--spacing) * 0);
     }
   }
+  .max-sm\:mb-1 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 1);
+    }
+  }
   .max-sm\:mb-11 {
     @media (width < 40rem) {
       margin-bottom: calc(var(--spacing) * 11);
