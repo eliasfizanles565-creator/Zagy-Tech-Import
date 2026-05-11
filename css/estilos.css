@@ -3462,6 +3462,14 @@
       }
     }
   }
+  .dark\:shadow-white {
+    &:where(.dark, .dark *) {
+      --tw-shadow-color: #fff;
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--color-white) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
   .dark\:text-shadow-amber-600 {
     &:where(.dark, .dark *) {
       --tw-text-shadow-color: oklch(66.6% 0.179 58.318);
